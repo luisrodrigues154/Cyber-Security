@@ -14,6 +14,7 @@
 - -sU	UDP port scan
 - -sS	TCP SYN port scan
 - -oA   output to file
+- --script=\<list,of,scripts/categories> (ex: --script=vuln)
 
 
 ## gobuster
@@ -24,6 +25,7 @@
 - -p \<x>	Proxy to use for requests
 - -c \<http cookies>	Specify a cookie for simulating your auth
 - -o Output to file
+  
 ## VI/VIM
 - Vim -O file1 file2 (open two files vertically) <br> 
 - CTRL+W+ARROWS -> switch between panes <br>
@@ -37,8 +39,23 @@
   - Syntax on 
   - Set number 
  
-## CHMOD 
- 
+## CHMOD
+- file perms: xxx(usr)-xxx(group)-xxx(else)
+- 1	That file can be executed
+- 2	That file can be written to
+- 3	That file can be executed and written to
+- 4	That file can be read
+- 5	That file can be read and executed
+- 6	That file can be written to and read
+- 7	That file can be read, written to, and executed
+
+### Examples
+- chmod 755 file : -rwxr-xr-x
+
+## CHOWN (change ownership)
+- chown user:group file
+  
+
 ## Python 
 - Conversions 
   - Int(binary, base)  -> int("111", 2) = 7 
@@ -78,8 +95,47 @@
 - Ln -sf file sym (replaces if exist ) 
  
 ## Find files 
-- find . -perm /4000 (find files at the current directory with specific permissions) 
- 
+- -group \<group_name> : find files for group with groupname
+- -name \<file_name> (case SENSITIVE)
+- -iname \<file_name> (case INSENSITIVE)
+- -print 2>/dev/null -> dont print errors
+- -f \<type> -> specify file type
+- -user \<username> -> sepecify file owner
+- -perm \<permissions> : find file with specific permissions
+  - Format: 
+    - Octal : 644
+    - symbolic: u=r 
+  - Modifiers:
+    - \- : files with at least
+    - / : files with any u,g or e that match
+  - <b>example: -perm -444</b>
+- -size n : find file with size n
+  - -n : size less than
+  - n : size equal
+  - +n : size equal
+  - Type of size
+    - c : bytes
+    - k : KiB's
+    - M : MiB's
+  - <b> example: -size -30c</b> 
+- time
+  - Prefixes
+    - a : accessed
+    - m : modified
+    - c : changed
+  - words
+    - time : days
+    - min : minutes
+  - <b>example: -amin +30 </b> : file accessed more than 30 minutes ago
+  - <b>example 2: -mtime -7 </b> : file modified less than 7 days ago (time 0 specify last 24 hours)
+- -type
+    - b : block special
+    - c : character special
+    - d : directory
+    - f : regular file
+    - l : symbolic link
+    - p : FIFO
+    - s : socket
 ## SSH 
 - Ssh user@ip 
 - Ssh -i rsa_key user@ip 
