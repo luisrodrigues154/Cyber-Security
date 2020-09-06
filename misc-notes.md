@@ -13,7 +13,7 @@
 - -v	Verbose mode
 - -sU	UDP port scan
 - -sS	TCP SYN port scan
-- -oA   output to file
+- -oN   output to normal file
 - --script=\<list,of,scripts/categories> (ex: --script=vuln)
 
 
@@ -141,3 +141,10 @@
 - Ssh -i rsa_key user@ip 
 - Scp user@ip:/file/to/get /path/to/store 
 
+## SMB
+
+Protocol for sharing resources (files, printers, etc)
+
+### Common flaws
+1 - Default credentials
+2 - Samba server (usually insecure)

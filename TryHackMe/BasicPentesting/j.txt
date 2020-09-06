@@ -1,0 +1,7 @@
+For J:
+
+I've been auditing the contents of /etc/shadow to make sure we don't have any weak credentials,
+and I was able to crack your hash really easily. You know our password policy, so please follow
+it? Change that password ASAP.
+
+-K
