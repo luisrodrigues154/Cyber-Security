@@ -1,0 +1,9 @@
+
+2018-04-23: I've been messing with that struts stuff, and it's pretty cool! I think it might be neat
+to host that on this server too. Haven't made any real web apps yet, but I have tried that example
+you get to show off how it works (and it's the REST version of the example!). Oh, and right now I'm 
+using version 2.5.12, because other versions were giving me trouble. -K
+
+2018-04-22: SMB has been configured. -K
+
+2018-04-21: I got Apache set up. Will put in our content later. -J
