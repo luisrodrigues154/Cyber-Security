@@ -1,0 +1,7 @@
+/.hta (Status: 403)
+/.htaccess (Status: 403)
+/.htpasswd (Status: 403)
+/assets (Status: 301)
+/index.html (Status: 200)
+/robots.txt (Status: 200)
+/server-status (Status: 403)
