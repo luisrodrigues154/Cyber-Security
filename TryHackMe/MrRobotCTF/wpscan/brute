@@ -1,0 +1,100 @@
+_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.6
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[32m[+][0m URL: http://10.10.197.116/ [10.10.197.116]
+[32m[+][0m Started: Wed Sep 16 17:20:35 2020
+
+Interesting Finding(s):
+
+[32m[+][0m Headers
+ | Interesting Entries:
+ |  - Server: Apache
+ |  - X-Mod-Pagespeed: 1.9.32.3-4523
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[32m[+][0m robots.txt found: http://10.10.197.116/robots.txt
+ | Found By: Robots Txt (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m XML-RPC seems to be enabled: http://10.10.197.116/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access
+
+[32m[+][0m The external WP-Cron seems to be enabled: http://10.10.197.116/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[32m[+][0m WordPress version 4.3.1 identified (Insecure, released on 2015-09-15).
+ | Found By: Emoji Settings (Passive Detection)
+ |  - http://10.10.197.116/f8edcac.html, Match: 'wp-includes\/js\/wp-emoji-release.min.js?ver=4.3.1'
+ | Confirmed By: Meta Generator (Passive Detection)
+ |  - http://10.10.197.116/f8edcac.html, Match: 'WordPress 4.3.1'
+
+[32m[+][0m WordPress theme in use: twentyfifteen
+ | Location: http://10.10.197.116/wp-content/themes/twentyfifteen/
+ | Last Updated: 2020-08-11T00:00:00.000Z
+ | Readme: http://10.10.197.116/wp-content/themes/twentyfifteen/readme.txt
+ | [33m[!][0m The version is out of date, the latest version is 2.7
+ | Style URL: http://10.10.197.116/wp-content/themes/twentyfifteen/style.css?ver=4.3.1
+ | Style Name: Twenty Fifteen
+ | Style URI: https://wordpress.org/themes/twentyfifteen/
+ | Description: Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.
+ | Author: the WordPress team
+ | Author URI: https://wordpress.org/
+ | License: GNU General Public License v2 or later
+ | License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ | Tags: black, blue, gray, pink, purple, white, yellow, dark, light, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+ | Text Domain: twentyfifteen
+ |
+ | Found By: Css Style In 404 Page (Passive Detection)
+ |
+ | Version: 1.3 (80% confidence)
+ | Found By: Style (Passive Detection)
+ |  - http://10.10.197.116/wp-content/themes/twentyfifteen/style.css?ver=4.3.1, Match: 'Version: 1.3'
+
+
+[34m[i][0m No plugins Found.
+
+
+[34m[i][0m No Config Backups Found.
+
+
+Scan Aborted: SIGHUP
+Trace: /usr/lib/ruby/vendor_ruby/typhoeus/hydra/queueable.rb:17:in `initialize'
+/usr/lib/ruby/vendor_ruby/typhoeus/hydra/queueable.rb:17:in `initialize'
+/usr/lib/ruby/vendor_ruby/typhoeus/hydra/queueable.rb:17:in `initialize'
+/usr/lib/ruby/vendor_ruby/typhoeus/hydra/queueable.rb:17:in `queued_requests'
+/usr/lib/ruby/vendor_ruby/typhoeus/hydra/queueable.rb:76:in `dequeue_many'
+/usr/lib/ruby/vendor_ruby/typhoeus/hydra/runnable.rb:14:in `run'
+/usr/lib/ruby/vendor_ruby/typhoeus/hydra/memoizable.rb:51:in `run'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.12.1/lib/cms_scanner/typhoeus/hydra.rb:9:in `abort'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.12.1/lib/cms_scanner/controllers.rb:56:in `ensure in run'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.12.1/lib/cms_scanner/controllers.rb:64:in `run'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.12.1/lib/cms_scanner/scan.rb:24:in `run'
+/usr/share/rubygems-integration/all/gems/wpscan-3.8.6/bin/wpscan:17:in `block in <top (required)>'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.12.1/lib/cms_scanner/scan.rb:15:in `initialize'
+/usr/share/rubygems-integration/all/gems/wpscan-3.8.6/bin/wpscan:6:in `new'
+/usr/share/rubygems-integration/all/gems/wpscan-3.8.6/bin/wpscan:6:in `<top (required)>'
+/usr/bin/wpscan:23:in `load'
+/usr/bin/wpscan:23:in `<main>'
