@@ -190,3 +190,49 @@ export -f /usr/sbin/service (the trick is in the -f, which refers to functions)
 ```
 
 ## Task 15
+
+Just do the walkthrough. It only explains that in previous versions the Bash program would use environment variables as debugging var to allow an extra prompt and that that can be exploited in order to make execute code as the user running the program. <br> 
+Usefull when there is a SUID file to make a copy of root's bash binary and change its permissions so everybody can use it.
+
+## Task 16
+
+As stated in the task, bash logs its history, and sometimes users insert passwords where they sould not (asides from the designated fields).
+
+The logs in the home folder of the user show a mysql password.
+
+```
+mysql -h somehost.local -uroot -ppassword123
+```
+
+## Task 17
+
+Just showing that files, like a vpn file, may contain paths or credentials in their content. In this case the credentials were at 
+
+```
+/etc/openvpn/auth.txt
+```
+
+## Task 18
+
+This task showcases that a user may have important files that may not have the correct user permissions. In this case it was the root ssh key.
+
+
+## Task 19
+
+Just shows the NFS and root_squashing vuln.
+
+## Task 20
+
+This task just shows how to find exploits for the kernel at the machine using the linux-exploit-suggester-2.
+
+The app lists known exploits and links to the code.
+
+## Task 21
+
+This task intends to use multiple enumeration tools for privesc
+
+```
+linpeas (very good)
+linenum (meh)
+lse     (also very good output)
+```

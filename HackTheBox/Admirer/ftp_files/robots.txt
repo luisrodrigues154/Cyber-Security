@@ -1,0 +1,4 @@
+User-agent: *
+
+# This folder contains personal stuff, so no one (not even robots!) should see it - waldo
+Disallow: /w4ld0s_s3cr3t_d1r
