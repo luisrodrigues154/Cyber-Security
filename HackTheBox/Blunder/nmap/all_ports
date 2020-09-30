@@ -1,0 +1,40 @@
+# Nmap 7.80 scan initiated Wed Sep 30 20:10:59 2020 as: nmap -p- -sC -sV -A -v -oN nmap/all_ports 10.10.10.191
+adjust_timeouts2: packet supposedly had rtt of -633955 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -633955 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -626008 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -626008 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -365641 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -365641 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1027742 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1027742 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -2912007 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -2912007 microseconds.  Ignoring time.
+Nmap scan report for 10.10.10.191
+Host is up (0.22s latency).
+Not shown: 65533 filtered ports
+PORT   STATE  SERVICE VERSION
+21/tcp closed ftp
+80/tcp open   http    Apache httpd 2.4.41 ((Ubuntu))
+|_http-favicon: Unknown favicon MD5: A0F0E5D852F0E3783AF700B6EE9D00DA
+|_http-generator: Blunder
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Blunder | A blunder of interesting facts
+Device type: general purpose
+Running (JUST GUESSING): Linux 2.6.X (89%)
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+Aggressive OS guesses: Linux 2.6.18 - 2.6.22 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 17.469 days (since Sun Sep 13 09:01:49 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=258 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 21/tcp)
+HOP RTT       ADDRESS
+1   222.53 ms 10.10.14.1
+2   220.89 ms 10.10.10.191
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Sep 30 20:16:51 2020 -- 1 IP address (1 host up) scanned in 352.88 seconds

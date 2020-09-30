@@ -1,0 +1,17 @@
+# Nmap 7.80 scan initiated Wed Sep 30 20:01:48 2020 as: nmap -sC -sV -v -oN nmap/initial 10.10.10.191
+Nmap scan report for 10.10.10.191
+Host is up (0.11s latency).
+Not shown: 998 filtered ports
+PORT   STATE  SERVICE VERSION
+21/tcp closed ftp
+80/tcp open   http    Apache httpd 2.4.41 ((Ubuntu))
+|_http-favicon: Unknown favicon MD5: A0F0E5D852F0E3783AF700B6EE9D00DA
+|_http-generator: Blunder
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-title: Blunder | A blunder of interesting facts
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Sep 30 20:02:08 2020 -- 1 IP address (1 host up) scanned in 20.31 seconds
