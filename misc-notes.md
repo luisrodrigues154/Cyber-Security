@@ -103,6 +103,8 @@
 - nc -lvp port (listen on port) 
 - nc -lvp port -e /program (listen on port and lauch program at connection) 
 - nc addr port  (connect to port) 
+- nc -lvnp \<port> > file (RECEIVE)
+- nc \<to_IP> \<to_port> < file (SEND)
  
 ## Symlinks 
 - Ln -s file sym (create soft symbolic link) 
@@ -170,3 +172,12 @@ Protocol for sharing resources (files, printers, etc)
 
 ## Kernel exploits
 - linux-exploit-suggester-2 - identifies applicable exploits to the kernel
+
+## Stabilize shell
+### Python
+```
+  python3 -c 'import pty; pty.spawn("/bin/bash")'; && export TERM=xterm;
+  press ctrl+z key combination 
+  stty raw -echo
+  fg
+```
