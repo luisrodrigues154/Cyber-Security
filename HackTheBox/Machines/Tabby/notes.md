@@ -313,6 +313,7 @@ root
 find / -type f -iname "root.txt" -print 2>/dev/null
 /mnt/root/root/root.txt
 cat /mnt/root/root/root.txt
+
 FLAG: 7ced683256bc943cb1980254e1f86b72
 ```
 
