@@ -176,7 +176,8 @@ Protocol for sharing resources (files, printers, etc)
 ## Stabilize shell
 ### Python
 ```
-  python3 -c 'import pty; pty.spawn("/bin/bash")' && export TERM=xterm;
+  python3 -c 'import pty; pty.spawn("/bin/bash")'
+  export TERM=xterm
   press ctrl+z key combination 
   stty raw -echo
   fg
