@@ -173,6 +173,14 @@ Protocol for sharing resources (files, printers, etc)
 ## Kernel exploits
 - linux-exploit-suggester-2 - identifies applicable exploits to the kernel
 
+## UPX
+- un/pack files
+  - -d : decompress
+  - -o : output file
+
+## DIE (detect it easy)
+- Check file composition 
+
 ## Stabilize shell
 ### Python
 ```
@@ -182,3 +190,5 @@ Protocol for sharing resources (files, printers, etc)
   stty raw -echo
   fg
 ```
+
+## Reverse shells
