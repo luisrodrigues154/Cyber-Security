@@ -152,6 +152,13 @@
     - l : symbolic link
     - p : FIFO
     - s : socket
+
+## Find regex
+### Zgrep 
+- Since it does not support recursive operations do this
+  - zgrep "expr" $(find . -type f) 
+
+
 ## SSH 
 - Ssh user@ip 
 - Ssh -i rsa_key user@ip 
