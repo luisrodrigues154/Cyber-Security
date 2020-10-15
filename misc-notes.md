@@ -1,6 +1,11 @@
 # Notes regarding tools/methods/etc
 
-
+## PowerShell
+- From cmd: powershell -ep bypass (ExecutionPolicy bypass)
+- Enumeration: 
+  - Powerview - Script to enumerate a domain (with shell) 
+    - CHEAT-SHEETS: 
+      - https://book.hacktricks.xyz/windows/basic-powershell-for-pentesters/powerview
 ## Linux misc
 - mkpasswd - Generate password (for /etc/shadow for example)
   - Example: mkpasswd -m sha-512 \<password>
@@ -162,7 +167,8 @@
 ## SSH 
 - Ssh user@ip 
 - Ssh -i rsa_key user@ip 
-- Scp user@ip:/file/to/get /path/to/store 
+- Scp user@ip:/file/to/get /path/to/store
+- scp file_to_send user@ip:/remote/folder/ 
 - Keys security: 600
 
 ## PHP simple rev shell
