@@ -324,7 +324,7 @@ password: soufianeelhaoui
 
 The low user has a file called <b> autorized_keys</b> in his home folder under the .ssh folder ! <br>
 
-Since the python symlink in the venv will run as root, during the setup.py process it can do whatever (not with the OS lib) so we can inject a ssh key in that file and login to the low user!! <br>
+Since the python symlink in the venv will run as the low user, during the setup.py process it can do whatever (not with the OS lib) so we can inject a ssh key in that file and login to the low user!! <br>
 
 
 ```
