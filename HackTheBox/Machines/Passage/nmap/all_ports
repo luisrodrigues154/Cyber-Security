@@ -1,0 +1,12 @@
+# Nmap 7.91 scan initiated Sat Oct 24 13:38:57 2020 as: nmap -f -p- -sC -sV -oN nmap/all_ports 10.10.10.206
+Nmap scan report for 10.10.10.206
+Host is up (0.11s latency).
+Not shown: 65533 closed ports
+PORT   STATE    SERVICE VERSION
+22/tcp filtered ssh
+80/tcp open     http    Apache httpd 2.4.18 ((Ubuntu))
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Passage News
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Oct 24 13:46:43 2020 -- 1 IP address (1 host up) scanned in 466.30 seconds
