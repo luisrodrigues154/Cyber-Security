@@ -1,0 +1,6 @@
+/.htaccess (Status: 403)
+/.htpasswd (Status: 403)
+/joomla (Status: 301)
+/manual (Status: 301)
+/robots.txt (Status: 200)
+/server-status (Status: 403)
