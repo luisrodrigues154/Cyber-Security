@@ -97,6 +97,7 @@
 - Dynamic syms: -T 
 - Reloc: -r 
 - Dynamic reloc: -R 
+- Private headers: -p
  
 ## Strace  
 - Trace syscalls 
