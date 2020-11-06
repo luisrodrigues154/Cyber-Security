@@ -1,5 +1,8 @@
 # Notes regarding tools/methods/etc
 
+
+## Python3
+- Print (payloads): sys.stdout.buffer.write()
 ## PowerShell
 - From cmd: powershell -ep bypass (ExecutionPolicy bypass)
 - Enumeration: 
