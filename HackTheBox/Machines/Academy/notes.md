@@ -219,6 +219,7 @@ First i didnt found anything so i went ahead and checked only the logs that belo
 
 ```
 cmd: find /var/log/ -group adm
+
 /var/log/auth.log.3.gz
 /var/log/dmesg.1.gz
 /var/log/syslog.2.gz
