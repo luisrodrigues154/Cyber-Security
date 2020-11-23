@@ -36,7 +36,7 @@ Same results
 
 Lets visit the webpage <br>
 
-from the first post available i can say that the tcpwrapped port found is due to <b> Fail2Ban <b>
+from the first post available i can say that the tcpwrapped port found is due to <b> Fail2Ban </b>
 
 From the posts we can see some potential users
 ```

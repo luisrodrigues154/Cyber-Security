@@ -1,0 +1,15 @@
+# Nmap 7.91 scan initiated Mon Nov 23 12:47:51 2020 as: nmap -p- -A -sV -oN nmap/all_port 10.10.10.199
+Nmap scan report for 10.10.10.199
+Host is up (0.11s latency).
+Not shown: 65533 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.1 (protocol 2.0)
+| ssh-hostkey: 
+|   3072 5e:ff:81:e9:1f:9b:f8:9a:25:df:5d:82:1a:dd:7a:81 (RSA)
+|   256 64:7a:5a:52:85:c5:6d:d5:4a:6b:a7:1a:9a:8a:b9:bb (ECDSA)
+|_  256 12:35:4b:6e:23:09:dc:ea:00:8c:72:20:c7:50:32:f3 (ED25519)
+80/tcp open  http    OpenBSD httpd
+|_http-title: Site doesn't have a title (text/html).
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov 23 13:37:41 2020 -- 1 IP address (1 host up) scanned in 2990.40 seconds
