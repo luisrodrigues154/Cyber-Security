@@ -189,7 +189,7 @@ Now lets upload something and try to access it in the webpage !! <br>
 
 I'll try to upload a file with <b> phpinfo() </b> only ... 
 ```
-cmd: aws s3 cp ./waza_test.php s3://adserver    --endpoint-url http://s3.bucket.htb/
+cmd: aws s3 cp ./waza_test.php s3://adserver --endpoint-url http://s3.bucket.htb/
 ```
 
 Now, after upload succeeds, access http://bucket.htb/waza_test.php... and voila it works! <br>
