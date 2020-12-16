@@ -286,7 +286,7 @@ When i run it, nothing happen.... Doing strace and ltrace we can see that it tri
 
 After a longggggggggg freakin time, i asked someone for a nudge and, for the fuck sake, i completely overlooked the ltrace comand reference to the path env variable by using <b> chmod </b>  with a relative path .... <br>
 
-We just need to change the start of the path variable to a user writable folder that contains a chmod binary (a fake chmod which give us root priveleges) <b>
+We just need to change the start of the path variable to a user writable folder that contains a chmod binary (a fake chmod which give us root priveleges) <br>
 
 Setup
 ```
