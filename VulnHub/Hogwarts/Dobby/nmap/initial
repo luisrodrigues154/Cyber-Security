@@ -1,0 +1,11 @@
+# Nmap 7.91 scan initiated Sun Jan  3 15:38:26 2021 as: nmap -sC -sV -A -oN nmap/initial 192.168.1.73
+Nmap scan report for HogWarts.lan (192.168.1.73)
+Host is up (0.000096s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Apache httpd 2.4.46 ((Ubuntu))
+|_http-server-header: Apache/2.4.46 (Ubuntu)
+|_http-title: Draco:dG9vIGVhc3kgbm8/IFBvdHRlcg==
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jan  3 15:38:33 2021 -- 1 IP address (1 host up) scanned in 6.59 seconds

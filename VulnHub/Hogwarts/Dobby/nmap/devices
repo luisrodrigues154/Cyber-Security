@@ -1,0 +1,14 @@
+# Nmap 7.91 scan initiated Sun Jan  3 15:36:28 2021 as: nmap -sn -oN nmap/devices 192.168.1.0/24
+Nmap scan report for 192.168.1.64
+Host is up (0.0044s latency).
+Nmap scan report for HogWarts.lan (192.168.1.73)
+Host is up (0.0028s latency).
+Nmap scan report for luis-desk.lan (192.168.1.90)
+Host is up (0.0018s latency).
+Nmap scan report for 192.168.1.94
+Host is up (0.098s latency).
+Nmap scan report for 192.168.1.253
+Host is up (0.0013s latency).
+Nmap scan report for dsldevice.lan (192.168.1.254)
+Host is up (0.0080s latency).
+# Nmap done at Sun Jan  3 15:36:34 2021 -- 256 IP addresses (6 hosts up) scanned in 6.31 seconds

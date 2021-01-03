@@ -31,57 +31,33 @@ signal(0xe,exit); <- call exit() when handling SIGALARM
 alarm(3);
 ```
 
-Since the ghidra code was hard to understand i used binary ninja to verify if it generates better code.. it did and after some renaming it is easier to analyze
+Since the ghidra and binary ninja decompilation was pretty innacurate, i downloaded IDA pro and use its decompiler (which came better than the others)
 ```
-int32_t set_security() (s fcn.00001259)
-{
-    int16_t var_14 = 0xe
-    if (prctl(0x26, 1, 0, 0, 0) s< 0)
-    {
-        perror("prctl(PR_SET_NO_NEW_PRIVS)")
-        exit(status: 2)
-        noreturn
-    }
-    int32_t eax_1 = prctl(0x16, 2, &var_14)
-    if (eax_1 s>= 0)
-        return eax_1
-    perror("prctl(PR_SET_SECCOMP)")
-    exit(status: 2)
-    noreturn
-}
+int main(){
+    void *addr; // ST2C_4
+    void *buf; // ST24_4
+    int v3; // [esp-10h] [ebp-24h]
+    int v4; // [esp-Ch] [ebp-20h]
+    int v5; // [esp-8h] [ebp-1Ch]
+    int v6; // [esp-4h] [ebp-18h]
+    char *dest; // [esp+4h] [ebp-10h]
 
-int32_t get_address() (s fcn.00001170)
-{
-    int32_t file = open("/dev/urandom", 0)
-    int32_t rand_bytes
-    read(file, &rand_bytes, 8)
-    close(file)
-    srand(rand_bytes)
-    int32_t new_addr = 0
-    while ((new_addr < 0x60000000) || (0xf7000000 < new_addr))
-        new_addr = rand() << 0x10
-    return new_addr
-  
-}
-
-int32_t main(int32_t argc, char** argv, char** envp)
-{
-    int32_t addr = get_address()
-    signal(0xe, exit)
-    alarm(3)
-    int32_t new_mapping = mmap(addr, 0x1000, 3, 0x31, 0xffffffff, 0)
-    if (new_mapping != 0xffffffff){
-        strcpy(new_mapping, flag)
-        memset(flag, 0, 0x25)
-        set_security()
-        int32_t user_input = malloc(0x3c)
-        read(0, user_input, 0x3c)
-        user_input()
-        return 0
-    }
-    exit(status: 0xffffffff)
-    noreturn
+    addr = (void *)sub_12E8();
+    signal(14, (__sighandler_t)&exit);
+    alarm(3u);
+    dest = (char *)mmap(addr, 0x1000u, 3, 49, -1, 0);
+    if ( dest == (char *)-1 )
+        sub_1118(-1, v3, v4, v5);
+    strcpy(dest, aHtbXxxxxxxxxxx);
+    memset(aHtbXxxxxxxxxxx, 0, 0x25u);
+    sub_1259();
+    buf = malloc(0x3Cu);
+    read(0, buf, 0x3Cu);
+    ((void (__stdcall *)(int, void *, _DWORD))buf)(v6, buf, 0);
+    return 0;
 }
 ```
 
-The main function calls 
+Although the decompilation is better, i dont have a clue on how to exploit this program... Maybe further down the road <br>
+
+ 

@@ -105,6 +105,8 @@
 - Reloc: -r 
 - Dynamic reloc: -R 
 - Private headers: -p
+- Get all opcodes (raw): objdump -d ./your_program|grep '[0-9a-f]:'|grep -v 'file'|cut -f2 -d:|cut -f1-6 -d' '|tr -s ' '|tr '\t' ' '|sed 's/ $//g'|paste -d '' -s |sed 's/^/"/'|sed 's/$/"/g'
+- Get all opcodes (shellcode format): objdump -d ./your_program|grep '[0-9a-f]:'|grep -v 'file'|cut -f2 -d:|cut -f1-6 -d' '|tr -s ' '|tr '\t' ' '|sed 's/ $//g'|sed 's/ /\\x/g'|paste -d '' -s |sed 's/^/"/'|sed 's/$/"/g'
  
 ## Strace  
 - Trace syscalls 
@@ -195,7 +197,7 @@ Protocol for sharing resources (files, printers, etc)
 - linux-exploit-suggester-2 - identifies applicable exploits to the kernel
 
 ## UPX
-- un/pack files
+- unpack files
   - -d : decompress
   - -o : output file
 
