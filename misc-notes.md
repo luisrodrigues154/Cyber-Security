@@ -57,13 +57,6 @@
 - CTRL+W+ARROWS -> switch between panes <br>
 - O (insert new line and insert) <br>
 - Shift+O (insert new line above and insert) 
-- Settings  
-  - ~/.vimrc 
-  - set autoindent 
-  - set tabstop=4 
-  - colorscheme default 
-  - Syntax on 
-  - Set number 
  
 ## CHMOD
 - file perms: xxx(usr)-xxx(group)-xxx(else)
@@ -210,7 +203,10 @@ Protocol for sharing resources (files, printers, etc)
   python3 -c 'import pty; pty.spawn("/bin/bash")'
   export TERM=xterm
   press ctrl+z key combination 
-  stty raw -echo; fg
+  (for zsh, one command): stty raw -echo; fg
+  (for bash, two commands):
+  			   stty raw -echo
+			   fg
 ```
 
 ## Reverse shells
