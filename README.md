@@ -3,7 +3,7 @@ This repository is used to store the answers when solving ctf challanges. Mainly
 
 
 ## Fast mapping
-Just all the notes.md files in table format and the status of that challenge.
+This README file serves the purpose of quickly visualize any of the challenges i enrolled with, with direct links to the notes i took during the process of solving those challenges.
 
 ## [HackTheBox](https://www.hackthebox.eu) 
 
