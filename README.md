@@ -91,4 +91,5 @@ Just all the notes.md files in table format and the status of that challenge.
 ## [Embedded Security CTF](https://microcorruption.com)
 
 |Name Link (notes) | Progres |
+| :-: | :-: |
 |[New Orleans](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/EmbeddedSecurity/NewOrleans.md) | Solved |
