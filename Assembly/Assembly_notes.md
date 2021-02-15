@@ -159,8 +159,40 @@ Example:
   | 1 | 0 | Upper case & special|
   | 1 | 1 | Lower case & special|
 
+## Registers
 
+* AX - accumulator
+* BX - base address
+* CX - count
+* DX - data
 
+## Instruction Set
+| Instruction | Functionality | Example|
+|:-:|:-:|:-:|
+| mov | move data between intervinients | mov reg, reg/mem/const_hex (and vice-versa)|
+| add | add the 2nd to 1st, stores in 1st | add reg, reg/mem/const_hex |
+| sub | sub the 2nd to 1st, stores in 1st | sub reg, reg/mem/const_hex |
+| cmp | compare the 1st to 2nd, stores in flag | cmp reg, reg/mem/const_hex |
+| and/or | bitwise logical operation, stores in 1st | and/or reg, reg/mem/const_hex |
+| not | inverts the bits | not reg/mem |
+| ja | jump if above | ja dest |
+| jae | jump if above or equal | jae dest |
+| jb | jump if below | jb dest |
+| jbe | jump if below or equal | jbe dest |
+| je | jump if equal | je dest |
+| jne | jump if not equal | jne dest |
+| jmp | unconditional jump | jmp dest |
+| iret | return from an interrupt | iret |
+| get | stops and reads hex value from user (stores in AX) | get |
+| put | displays the value of AX (in hex) | put |
+| halt | exits the program | halt |
+| brk | pauses the program | brk | 
 
+## Addressing modes
 
-
+| Mode | Funtionality |Example |
+| :-:|:-: |
+| immediate | mov ax, cx ; mov bx, 1 |
+| indirect | mov ax, [bx] |
+| indexed | mov ax, [bx+1000] |
+| direct | mov ax, [1000] |
