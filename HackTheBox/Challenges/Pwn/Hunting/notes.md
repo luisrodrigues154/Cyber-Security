@@ -58,6 +58,20 @@ int main(){
 }
 ```
 
-Although the decompilation is better, i dont have a clue on how to exploit this program... Maybe further down the road <br>
+What the program roughly does is
+1. Allocs a new memory block with mmap (dest holds a pointer to it)
+2. Copies the flag to the new memory block (dest)
+3. Clears the initial flag variable (memset)
+4. Allocs a new buffer (buf holds a pointer to it)
+5. Read from STDIN (FD=0) to the buf buffer
+6. Executes the read content 
 
- 
+This can be exploited by providing shellcode that calls a syscall write to stdout (FD=1) on the address which currently holds the flag <br>
+
+At this moment i dont know how to write assembly, so i'll leave this for later <br>
+
+
+```
+useful link: https://stackoverflow.com/questions/55088371/how-to-get-an-objdump-without-nul-bytes
+
+```

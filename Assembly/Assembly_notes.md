@@ -182,6 +182,10 @@ Example:
 | je | jump if equal | je dest |
 | jne | jump if not equal | jne dest |
 | jmp | unconditional jump | jmp dest |
+| jg | jump greater | jg dest |
+| jge | jump greater or equal | jge dest |
+| jl | jump less | jl dest |
+| jle | jump less or equal | jle dest |
 | iret | return from an interrupt | iret |
 | get | stops and reads hex value from user (stores in AX) | get |
 | put | displays the value of AX (in hex) | put |
@@ -196,3 +200,10 @@ Example:
 | indirect | mov ax, [bx] |
 | indexed | mov ax, [bx+1000] |
 | direct | mov ax, [1000] |
+
+## I/O-mappings
+| Method | Functionality |
+|:-:|:-:|
+| I/O-mapped I/O | Outside world communication through special instructions |
+| Memorry-mapped I/O | CPU normal memmory space (special locations) to communicate with the outside world |
+| Direct Memory Access (DMA) | Special MM-I/O (without going through the CPU) |

