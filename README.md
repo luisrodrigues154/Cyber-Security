@@ -56,11 +56,12 @@ This README file serves the purpose of quickly visualize any of the challenges i
 | [Metasploit](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/TryHackMe/Metasploit/notes.md) | Solved |
 | [MrRobotCTF](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/TryHackMe/MrRobotCTF/notes.md) | Solved |
 | [PickleRick](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/TryHackMe/PickleRick/notes.md) | Solved |
-| [PostExploitationBasics](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/TryHackMe/PostExploitationBasics/notes.md) | Solved |
+| [PostExploitationBasics](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/TryHackMe/PostExploitationBasics/notes.md) | On Going |
 | [RootMe](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/TryHackMe/RootMe/notes.md) | Solved |
 | [Tartarus](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/TryHackMe/Tartarus/notes.md) | Solved |
 | [TheFindCommand](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/TryHackMe/TheFindCommand/notes.md) | Solved |
 | [VulnUniversity](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/TryHackMe/VulnUniversity/notes.md) | Solved |
+| [VulnUniversity](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/TryHackMe/IntroTo_x86-64/notes.md) | Solved |
 
 ## [Exploit Education](https://exploit.education/)
 
