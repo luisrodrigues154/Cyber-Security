@@ -62,6 +62,7 @@ This README file serves the purpose of quickly visualize any of the challenges i
 | [TheFindCommand](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/TryHackMe/TheFindCommand/notes.md) | Solved |
 | [VulnUniversity](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/TryHackMe/VulnUniversity/notes.md) | Solved |
 | [IntroTo x86-64](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/TryHackMe/IntroTo_x86-64/notes.md) | Solved |
+| [Reverse Engineering](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/TryHackMe/Reverse_Engineering/notes.md) | Solved |
 | [Classic Passwd](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/TryHackMe/ClassicPasswd/notes.md) | Solved |
 
 ## [Exploit Education](https://exploit.education/)
