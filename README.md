@@ -5,7 +5,11 @@ This repository is used to store the answers when solving ctf challanges. Mainly
 ## Fast mapping
 This README file serves the purpose of quickly visualize any of the challenges i enrolled with, with direct links to the notes i took during the process of solving those challenges.
 
+<br>
+
 ## [HackTheBox](https://www.hackthebox.eu) 
+
+<br>
 
 ### Machines
 
@@ -28,6 +32,9 @@ This README file serves the purpose of quickly visualize any of the challenges i
 |[SneakyMailer](https://github.com/luisrodrigues154/InfoSec-Learning/blob/master/HackTheBox/Machines/SneakyMailer/notes.md)| Solved |
 |[Tabby](https://github.com/luisrodrigues154/InfoSec-Learning/blob/master/HackTheBox/Machines/Tabby/notes.md)| Solved |
 |[Time](https://github.com/luisrodrigues154/InfoSec-Learning/blob/master/HackTheBox/Machines/Time/notes.md)| Solved |
+|[Tenet](https://github.com/luisrodrigues154/InfoSec-Learning/blob/master/HackTheBox/Machines/Tenet/notes.md)| Solved |
+
+<br>
 
 ### Challenges
 
@@ -42,6 +49,15 @@ This README file serves the purpose of quickly visualize any of the challenges i
 | [Bypass](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/HackTheBox/Challenges/Reverse/Bypass/notes.md) | Reverse Engineering | Solved |
 | [Exatlon](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/HackTheBox/Challenges/Reverse/Exatlon/notes.md) | Reverse Engineering | On going |
 | [ImpossiblePassword](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/HackTheBox/Challenges/Reverse/ImpossiblePassword/notes.md) | Reverse Engineering | Solved |
+
+<br>
+
+### [Academy](https://academy.hackthebox.eu)
+| Name Link (notes) | Progress |
+| :-:| :-:|
+| [Windows Fundamentals](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/HackTheBox_Academy/Windows_Fundamentals/notes.md) | Solved | 
+
+<br>
 
 ## [TryHackMe](https://tryhackme.com/)
 
@@ -64,6 +80,8 @@ This README file serves the purpose of quickly visualize any of the challenges i
 | [IntroTo x86-64](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/TryHackMe/IntroTo_x86-64/notes.md) | Solved |
 | [Reverse Engineering](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/TryHackMe/Reverse_Engineering/notes.md) | Solved |
 | [Classic Passwd](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/TryHackMe/ClassicPasswd/notes.md) | Solved |
+
+<br>
 
 ## [Exploit Education](https://exploit.education/)
 
@@ -90,6 +108,8 @@ This README file serves the purpose of quickly visualize any of the challenges i
 | [Level 16](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/Exploit-Education/Nebula/level16.md) | Solved |
 | [Level 17](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/Exploit-Education/Nebula/level17.md) | Solved |
 | [Level 19](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/Exploit-Education/Nebula/level19.md) | Solved |
+
+<br>
 
 ## [Embedded Security CTF](https://microcorruption.com)
 

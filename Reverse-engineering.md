@@ -16,6 +16,8 @@
 | afv | displays local variables values (and stack position)|
 | dm | show memory maps |
 
+<br>
+
 ## Objdump 
 
 | cmd | action |
@@ -31,6 +33,8 @@
 - Get all opcodes (raw): objdump -d ./your_program|grep '[0-9a-f]:'|grep -v 'file'|cut -f2 -d:|cut -f1-6 -d' '|tr -s ' '|tr '\t' ' '|sed 's/ $//g'|paste -d '' -s |sed 's/^/"/'|sed 's/$/"/g'
 - Get all opcodes (shellcode format): objdump -d ./your_program|grep '[0-9a-f]:'|grep -v 'file'|cut -f2 -d:|cut -f1-6 -d' '|tr -s ' '|tr '\t' ' '|sed 's/ $//g'|sed 's/ /\\x/g'|paste -d '' -s |sed 's/^/"/'|sed 's/$/"/g'
  
+<br>
+
 ## UPX
 Binary packer/unpacker <br>
 
@@ -39,8 +43,12 @@ Binary packer/unpacker <br>
 | -d | decompress (unpack) |
 | -o | output file |
 
+<br>
+
 ## DIE (detect it easy)
 Used to check file composition (if it is and how it is packed ) <br>
+
+<br>
 
 ## Python 
 - Conversions 

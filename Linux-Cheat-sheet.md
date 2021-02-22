@@ -3,6 +3,8 @@
 ## Kernel exploits
 - linux-exploit-suggester-2 - identifies applicable exploits to the kernel
 
+<br><br>
+
 ## SSH 
 - Ssh user@ip 
 - Ssh -i rsa_key user@ip 
@@ -10,9 +12,13 @@
 - scp file_to_send user@ip:/remote/folder/ 
 - Keys security: 600
 
+<br><br>
+
 ## Zgrep + find
 - Since zgrep does not support recursive operations, leverage the find command
   - zgrep "expr" $(find . -type f)
+
+<br><br>
 
 ## Find files 
 
@@ -28,6 +34,8 @@
 | -size [-;+;empty]n[c,k,M]  | find file with size n <br>(c=bytes, k=kbytes, M=mbytes) |
 |  -[a,m,c]time/min[+/-]quantity| time related searches (a=accessed, m=modified, c=created)<br><b>example: -amin +30 </b> : file accessed more than 30 minutes ago|
  
+<br><br>
+
 ## CHMOD
 
 | value | action |
@@ -41,6 +49,8 @@
 | 7 | wrx |
 | chmod 755 <file> | -rwxr-xr-x|
 
+<br><br>
+
 ## VIM
 | cmd | action |
 | :-: | :-: |
@@ -49,6 +59,8 @@
 | O | add line below and enter insert mode |
 | SHIFT+O | add line above and enter insert mode |
 
+<br><br>
+
 ## Misc
 
 | cmd | action | 
@@ -56,9 +68,13 @@
 | mkpasswd | Generate password hash <br> Example: mkpasswd -m sha-512 \<password>|
 | openssl passwd \<password> | Generate password hash |
 
+<br><br>
+
 ## Symlinks 
 - Ln -s file sym (create soft symbolic link) 
 - Ln -sf file sym (replaces if exist ) 
+
+<br><br>
 
 ## Nmap
 syntax: namp [options] ip
@@ -76,6 +92,8 @@ syntax: namp [options] ip
 |  -oN |   output to normal file|
 | --script=\<list,of,scripts/categories> | Executes a NSE script <br> (ex: --script=vuln)| 
 
+<br><br>
+
 ## gobuster
 | option | action 
 | :-: | :-:|
@@ -88,10 +106,14 @@ syntax: namp [options] ip
 | -o | Output to file |
 
 
+<br><br>
+
 # Misc things
 ## Env vars
 - LD_PRELOAD - loads a shared object before any others when a program is run. 
 - LD_LIBRARY_PATH - provides a list of directories where shared libraries are searched for first
+
+<br><br>
 
 ## Bash 
 - Version < 4.2-048 - possible to create functions with names like paths
