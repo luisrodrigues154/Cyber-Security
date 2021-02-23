@@ -1,3 +1,4 @@
 theme: jekyll-theme-hacker
 title: My learning path in cyber security
-description: <div style="inline:block"> <script src="https://www.hackthebox.eu/badge/409359"></script> |  <script src="https://tryhackme.com/badge/62009"></script> </div>
+description: 
+downloads: <span><script src="https://www.hackthebox.eu/badge/409359"> </span><span></script> <script src="https://tryhackme.com/badge/62009"></script> </span>
