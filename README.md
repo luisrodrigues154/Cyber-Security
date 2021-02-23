@@ -1,7 +1,5 @@
 # InfoSec-Learning
-This repository is used to store the answers when solving ctf challanges. Mainly how i came to the answer and the line of thought used to reach it (the structure may not follow this all the time).
-
-
+<br>
 ## Fast mapping
 This README file serves the purpose of quickly visualize any of the challenges i enrolled with, with direct links to the notes i took during the process of solving those challenges.
 
