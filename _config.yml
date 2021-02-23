@@ -1,4 +1,4 @@
-theme: jekyll-theme-hacker
+theme: jekyll-theme-cayman
 title: My learning path in cyber security
 <div> 
   <div> This repository is used to store my answers when resolving ctf challanges, how i came to them and the line of thought used to reach it. </div>
