@@ -1,9 +1,6 @@
 theme: jekyll-theme-cayman
 title: My learning path in cyber security
-<div> 
-  <div> This repository is used to store my answers when resolving ctf challanges, how i came to them and the line of thought used to reach it. </div>
-  <div style="display:inline"> <script src="https://www.hackthebox.eu/badge/409359"> <script src="https://tryhackme.com/badge/62009"></script> </div>
-</div>
+
 
 github:
   is_project_page: false
