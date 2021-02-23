@@ -1,4 +1,4 @@
 theme: jekyll-theme-hacker
 title: My learning path in cyber security
-description: 
-downloads: <span><script src="https://www.hackthebox.eu/badge/409359"> </span><span></script> <script src="https://tryhackme.com/badge/62009"></script> </span>
+description: This repository is used to store my answers when resolving ctf challanges, how i came to them and the line of thought used to reach it.
+downloads: <script src="https://www.hackthebox.eu/badge/409359"> <script src="https://tryhackme.com/badge/62009"></script> 
