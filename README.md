@@ -53,6 +53,7 @@ This README file serves the purpose of quickly visualize any of the challenges i
 <br>
 
 ### [Academy](https://academy.hackthebox.eu)
+
 | Name Link (notes) | Progress |
 | :-:| :-:|
 | [Windows Fundamentals](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/HackTheBox_Academy/Windows_Fundamentals/notes.md) | Solved | 
