@@ -1,5 +1,3 @@
-# InfoSec-Learning
-<br>
 
 ## Fast mapping
 
