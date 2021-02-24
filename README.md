@@ -1,7 +1,11 @@
 # Cyber security  
-## Fast mapping
 
-This README file serves the purpose of quickly visualize any of the challenges i enrolled with, with direct links to the notes i took during the process of solving those challenges.
+## What is the content of this repository?
+
+<p> 
+In this repository you can find solved (or on going) cyber security related challenges from multiple of the available platforms (HackTheBox, TryHackMe, etc). The main purpose is that it may help other people getting through a difficulty or to simply view things from other prespective! 
+</p>
+
 
 <br>
 
