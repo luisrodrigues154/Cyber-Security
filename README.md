@@ -35,7 +35,7 @@ In this repository you can find solved (or on going) cyber security related chal
 |[Tabby](https://github.com/luisrodrigues154/InfoSec-Learning/blob/master/HackTheBox/Machines/Tabby/notes.md)| Solved |
 |[Time](https://github.com/luisrodrigues154/InfoSec-Learning/blob/master/HackTheBox/Machines/Time/notes.md)| Solved |
 |[Tenet](https://github.com/luisrodrigues154/InfoSec-Learning/blob/master/HackTheBox/Machines/Tenet/notes.md)| Solved |
-
+|[Ophiuchi](https://github.com/luisrodrigues154/InfoSec-Learning/blob/master/HackTheBox/Machines/Ophiuchi/notes.md)| Solved |
 <br>
 
 ### Challenges

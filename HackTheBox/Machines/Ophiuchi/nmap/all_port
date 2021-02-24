@@ -1,0 +1,25 @@
+# Nmap 7.91 scan initiated Tue Feb 23 18:55:12 2021 as: nmap -p- -A -oN nmap/all_port 10.10.10.227
+Nmap scan report for 10.10.10.227
+Host is up (0.28s latency).
+Not shown: 65533 closed ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 6d:fc:68:e2:da:5e:80:df:bc:d0:45:f5:29:db:04:ee (RSA)
+|   256 7a:c9:83:7e:13:cb:c3:f9:59:1e:53:21:ab:19:76:ab (ECDSA)
+|_  256 17:6b:c3:a8:fc:5d:36:08:a1:40:89:d2:f4:0a:c6:46 (ED25519)
+8080/tcp open  http    Apache Tomcat 9.0.38
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-title: Parse YAML
+Aggressive OS guesses: AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 5.0 - 5.3 (93%), Linux 3.1 (93%), Linux 3.2 (93%), Linux 4.15 - 5.6 (93%), Linux 5.3 - 5.4 (92%), Linux 2.6.32 (92%), Linux 5.4 (91%), ASUS RT-N56U WAP (Linux 3.4) (91%), Linux 3.16 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 23/tcp)
+HOP RTT       ADDRESS
+1   546.53 ms 10.10.16.1
+2   546.53 ms 10.10.10.227
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Feb 23 19:18:17 2021 -- 1 IP address (1 host up) scanned in 1384.73 seconds
