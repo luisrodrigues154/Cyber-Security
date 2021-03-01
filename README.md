@@ -36,6 +36,7 @@ In this repository you can find solved (or on going) cyber security related chal
 |[Time](https://github.com/luisrodrigues154/InfoSec-Learning/blob/master/HackTheBox/Machines/Time/notes.md)| Solved |
 |[Tenet](https://github.com/luisrodrigues154/InfoSec-Learning/blob/master/HackTheBox/Machines/Tenet/notes.md)| Solved |
 |[Ophiuchi](https://github.com/luisrodrigues154/InfoSec-Learning/blob/master/HackTheBox/Machines/Ophiuchi/notes.md)| Solved |
+
 <br>
 
 ### Challenges
@@ -59,6 +60,14 @@ In this repository you can find solved (or on going) cyber security related chal
 | Name Link (notes) | Progress |
 | :-:| :-:|
 | [Windows Fundamentals](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/HackTheBox_Academy/Windows_Fundamentals/notes.md) | Solved | 
+
+<br>
+
+## [CyberDefenders](https://cyberdefenders.org)
+
+| Name Link (notes) | Progress |
+| :-:| :-:|
+| [EscapeRoom_PacketAnalysis](https://github.com/luisrodrigues154/InfoSec-Learning/tree/master/CyberDefenders/EscapeRoom_PacketAnalysis/notes.md) | Solved (1 missing) | 
 
 <br>
 

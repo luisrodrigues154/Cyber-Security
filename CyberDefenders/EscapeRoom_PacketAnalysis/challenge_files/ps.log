@@ -1,0 +1,70 @@
+##	Extracted via 'ps aux > ps.log' immediately after reboot	##
+
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  2.1  0.3  24328  2192 ?        Ss   22:55   0:00 /sbin/init
+root         2  0.0  0.0      0     0 ?        S    22:55   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        S    22:55   0:00 [ksoftirqd/0]
+root         4  0.0  0.0      0     0 ?        S    22:55   0:00 [kworker/0:0]
+root         5  0.1  0.0      0     0 ?        S    22:55   0:00 [kworker/u:0]
+root         6  0.0  0.0      0     0 ?        S    22:55   0:00 [migration/0]
+root         7  0.0  0.0      0     0 ?        S    22:55   0:00 [watchdog/0]
+root         8  0.0  0.0      0     0 ?        S<   22:55   0:00 [cpuset]
+root         9  0.0  0.0      0     0 ?        S<   22:55   0:00 [khelper]
+root        10  0.0  0.0      0     0 ?        S    22:55   0:00 [kdevtmpfs]
+root        11  0.0  0.0      0     0 ?        S<   22:55   0:00 [netns]
+root        12  0.0  0.0      0     0 ?        S    22:55   0:00 [xenwatch]
+root        13  0.2  0.0      0     0 ?        S    22:55   0:00 [xenbus]
+root        14  0.0  0.0      0     0 ?        S    22:55   0:00 [sync_supers]
+root        15  0.0  0.0      0     0 ?        S    22:55   0:00 [bdi-default]
+root        16  0.0  0.0      0     0 ?        S<   22:55   0:00 [kintegrityd]
+root        17  0.0  0.0      0     0 ?        S<   22:55   0:00 [kblockd]
+root        18  0.0  0.0      0     0 ?        S<   22:55   0:00 [ata_sff]
+root        19  0.0  0.0      0     0 ?        S    22:55   0:00 [khubd]
+root        20  0.0  0.0      0     0 ?        S<   22:55   0:00 [md]
+root        21  0.0  0.0      0     0 ?        S    22:55   0:00 [kworker/u:1]
+root        22  0.0  0.0      0     0 ?        S    22:55   0:00 [kworker/0:1]
+root        23  0.0  0.0      0     0 ?        S    22:55   0:00 [khungtaskd]
+root        24  0.0  0.0      0     0 ?        S    22:55   0:00 [kswapd0]
+root        25  0.0  0.0      0     0 ?        SN   22:55   0:00 [ksmd]
+root        26  0.0  0.0      0     0 ?        S    22:55   0:00 [fsnotify_mark]
+root        27  0.0  0.0      0     0 ?        S    22:55   0:00 [ecryptfs-kthrea]
+root        28  0.0  0.0      0     0 ?        S<   22:55   0:00 [crypto]
+root        36  0.0  0.0      0     0 ?        S<   22:55   0:00 [kthrotld]
+root        37  0.0  0.0      0     0 ?        S    22:55   0:00 [khvcd]
+root        56  0.0  0.0      0     0 ?        S<   22:55   0:00 [devfreq_wq]
+root       155  0.0  0.0      0     0 ?        S    22:55   0:00 [jbd2/xvda1-8]
+root       156  0.0  0.0      0     0 ?        S<   22:55   0:00 [ext4-dio-unwrit]
+root       247  0.3  0.1  17224   636 ?        S    22:55   0:00 upstart-udev-bridge --daemon
+root       250  0.3  0.1  21460  1200 ?        Ss   22:55   0:00 /sbin/udevd --daemon
+root       302  0.0  0.1  21456   712 ?        S    22:55   0:00 /sbin/udevd --daemon
+root       303  0.0  0.1  21456   700 ?        S    22:55   0:00 /sbin/udevd --daemon
+root       387  0.0  0.0   7256   604 ?        Ss   22:55   0:00 dhclient3 -e IF_METRIC=100 -pf /var/run/dhclient.eth0.pid -lf /var/lib/dhcp/dhclient.eth0.leases -1 eth0
+root       436  0.0  0.0  15180   396 ?        S    22:55   0:00 upstart-socket-bridge --daemon
+root       602  0.0  0.4  49948  2816 ?        Ss   22:55   0:00 /usr/sbin/sshd -D
+102        608  0.0  0.1  23808   908 ?        Ss   22:55   0:00 dbus-daemon --system --fork --activation=upstart
+syslog     619  0.1  0.2 253708  1480 ?        Sl   22:55   0:00 rsyslogd -c5
+root       682  0.0  0.1  14496   948 tty4     Ss+  22:55   0:00 /sbin/getty -8 38400 tty4
+root       689  0.0  0.1  14496   948 tty5     Ss+  22:55   0:00 /sbin/getty -8 38400 tty5
+root       697  0.0  0.1  14496   948 tty2     Ss+  22:55   0:00 /sbin/getty -8 38400 tty2
+root       698  0.0  0.1  14496   948 tty3     Ss+  22:55   0:00 /sbin/getty -8 38400 tty3
+root       705  0.0  0.1  14496   952 tty6     Ss+  22:55   0:00 /sbin/getty -8 38400 tty6
+root       721  0.0  0.1   4320   656 ?        Ss   22:55   0:00 acpid -c /etc/acpi/events -s /var/run/acpid.socket
+daemon     722  0.0  0.0  16900   376 ?        Ss   22:55   0:00 atd
+root       723  0.0  0.1  19104   868 ?        Ss   22:55   0:00 cron
+root       732  0.1  0.5  73352  3520 ?        Ss   22:55   0:00 sshd: ubuntu [priv] 
+mysql      741  1.5  7.0 492460 42860 ?        Ssl  22:55   0:00 /usr/sbin/mysqld
+whoopsie   746  0.1  0.6 187580  3968 ?        Ssl  22:55   0:00 whoopsie
+root       777  0.0  0.5  74220  3140 ?        Ss   22:55   0:00 /usr/sbin/apache2 -k start
+www-data   779  0.0  0.3  73952  2140 ?        S    22:55   0:00 /usr/sbin/apache2 -k start
+www-data   781  0.0  0.4 428728  2588 ?        Sl   22:55   0:00 /usr/sbin/apache2 -k start
+www-data   784  0.0  0.4 363192  2588 ?        Sl   22:55   0:00 /usr/sbin/apache2 -k start
+root       866  0.0  0.0      0     0 ?        S    22:55   0:00 [flush-202:1]
+root       870  0.0  0.1   4392   608 ?        S    22:55   0:00 /bin/sh /etc/init.d/ondemand background
+root       875  0.0  0.0   4300   348 ?        S    22:55   0:00 sleep 60
+root       888  0.0  0.1  14496   956 tty1     Ss+  22:55   0:00 /sbin/getty -8 38400 tty1
+ubuntu     968  0.0  0.2  73352  1640 ?        S    22:55   0:00 sshd: ubuntu@pts/1  
+ubuntu     970  3.3  1.2  24912  7292 pts/1    Ss   22:55   0:00 -bash
+root      1162  0.1  0.2  41896  1700 pts/1    S    22:55   0:00 sudo su
+root      1163  0.0  0.2  39516  1340 pts/1    S    22:55   0:00 su
+root      1164  0.0  0.3  19704  2092 pts/1    S    22:55   0:00 bash
+root      1176  0.0  0.2  16872  1224 pts/1    R+   22:55   0:00 ps aux
