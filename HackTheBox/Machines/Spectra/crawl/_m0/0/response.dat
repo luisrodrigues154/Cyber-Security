@@ -1,0 +1,16 @@
+HTTP/1.1 200 Partial Content
+Server: nginx/1.17.4
+Date: Thu, 04 Mar 2021 23:11:19 GMT
+Content-Type: text/html
+Content-Length: 283
+Last-Modified: Tue, 02 Feb 2021 22:30:07 GMT
+Connection: keep-alive
+ETag: "6019d26f-11b"
+Content-Range: bytes 0-282/283
+
+<h1>Issue Tracking</h1>
+
+<h2>Until IT set up the Jira we can configure and use this for issue tracking.</h2>
+
+<h2><a href="http://spectra.htb/main/index.php" target="mine">Software Issue Tracker</a></h2>
+<h2><a href="http://spectra.htb/testing/index.php" target="mine">Test</a></h2>
