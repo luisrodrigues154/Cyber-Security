@@ -30,9 +30,15 @@
 | -R | dynamic reloc |
 | -p | private headers |
 
-- Get all opcodes (raw): objdump -d ./your_program|grep '[0-9a-f]:'|grep -v 'file'|cut -f2 -d:|cut -f1-6 -d' '|tr -s ' '|tr '\t' ' '|sed 's/ $//g'|paste -d '' -s |sed 's/^/"/'|sed 's/$/"/g'
-- Get all opcodes (shellcode format): objdump -d ./your_program|grep '[0-9a-f]:'|grep -v 'file'|cut -f2 -d:|cut -f1-6 -d' '|tr -s ' '|tr '\t' ' '|sed 's/ $//g'|sed 's/ /\\x/g'|paste -d '' -s |sed 's/^/"/'|sed 's/$/"/g'
- 
+- Get all opcodes (raw)
+```
+objdump -d ./your_program|grep '[0-9a-f]:'|grep -v 'file'|cut -f2 -d:|cut -f1-6 -d' '|tr -s ' '|tr '\t' ' '|sed 's/ $//g'|paste -d '' -s |sed 's/^/"/'|sed 's/$/"/g'
+```
+- Get all opcodes (shellcode format)
+```
+objdump -d ./your_program|grep '[0-9a-f]:'|grep -v 'file'|cut -f2 -d:|cut -f1-6 -d' '|tr -s ' '|tr '\t' ' '|sed 's/ $//g'|sed 's/ /\\x/g'|paste -d '' -s |sed 's/^/"/'|sed 's/$/"/g'
+ ```
+
 <br>
 
 ## UPX
@@ -65,3 +71,13 @@ Used to check file composition (if it is and how it is packed ) <br>
   - \>  - bing-endian  
   - ! - network (big-endian)
 - Print (payloads): sys.stdout.buffer.write()
+
+
+## IDA debugging remote linux server
+
+1. Ensure that networking is enabled on the guest system and that it can communicate via TCP/IP with the host system.
+2. Copy <IDA installation directory>\dbgsrv\linux_serverx64 to your host system and run it.
+3. Copy the target ELF binary to the guest system and load it into IDA (disassemble it).
+4. In IDA (on the guest system), go to Debugger → Select debugger... in the menu bar and choose Remote Linux debugger.
+5. In IDA (on the guest system), go to Debugger → Process options... in the menu bar and specify the hostname or IP of your host system, the debugging port used by linux_serverx64, and the debugging password (if you specified one when running linux_serverx64).
+6. In IDA (on the guest system), select Debugger → Start process in the menu bar (or Attach to process... if the target is already running on the host system).

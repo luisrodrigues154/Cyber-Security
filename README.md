@@ -59,7 +59,7 @@ In this repository you can find solved (or on going) cyber security related chal
 | [Hunting](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Pwn/0xDiablos/notes.md) | Pwn | On going |
 | [BabyRE](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Reverse/BabyRE/notes.md) | Reverse Engineering | Solved |
 | [Bypass](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Reverse/Bypass/notes.md) | Reverse Engineering | Solved |
-| [Exatlon](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Reverse/Exatlon/notes.md) | Reverse Engineering | On going |
+| [Exatlon](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Reverse/Exatlon/notes.md) | Reverse Engineering | Solved |
 | [ImpossiblePassword](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Reverse/ImpossiblePassword/notes.md) | Reverse Engineering | Solved |
 
 <br>
