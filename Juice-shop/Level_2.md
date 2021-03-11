@@ -181,4 +181,62 @@ Again, from the hints and the description this is not something that is understa
 
 </p>
 
+<hr>
+
+**Name:**       Weird Crypto    </br>
+**Description:** Inform the shop about an algorithm or library it should definitely not use the way it does.    </br> 
+**Category:**   Cryptographic Issues     </br>
+**Solution:**
+<p>
+
+From the hints, it is stated that there is 5 ways to solve this <br>
+
+The way i've done it was to check the source code on github, specially the unaccessible ftp files (which are in the repo) and i noted in the dependencies (**/ftp/package.json.bak**) there was the entry **hashids:1.1**. <br>
+
+So i downloaded the code and greped all of it for **hashid**, and got an interesting result from **/test/api/feedbackApiSpec.js**
+```
+cmd: grep -RE "hashid"
+
+test/api/feedbackApiSpec.js:            comment: 'Lousy crap! You use sequelize 1.7.x? Welcome to SQL Injection-land, morons! As if that is not bad enough, you use z85/base85 and hashids for crypto? Even MD5 to hash passwords! Srsly?!?!',
+``` 
+
+It also states MD5 to hash passwords, lets confirm that <br>
+
+``` 
+cmd: grep -RE "(MD5|md5)"
+
+lib/insecurity.js:exports.hash = data => crypto.createHash('md5').update(data).digest('hex')
+```
+
+Which can be seen being used for hashing passwords
+
+``` 
+Cmd: grep -RE "insecurity"
+(...)
+models/user.js:        this.setDataValue('password', insecurity.hash(clearTextPassword))
+``` 
+
+Since the md5 stuff in that feedback is accurate, i assume that the remaining are correct (as answer) 
+</p>
+
+<hr>
+
+**Name:**       Reflected XSS    </br>
+**Description:**Perform a reflected XSS attack with < iframe src="javascript:alert(`xss`)">. (This challenge is potentially harmful on Docker!)    </br> 
+**Category:**   XSS     </br>
+**Solution:**
+<p>
+
+In order for this to work, we need to find some page that uses the argument (passed via url) to display information. This argument must also be displayed in the content <br>
+
+After digging around the app, i found that the tracking page (accessible through the orders->truck icon) uses the tracking id in the url and so it might be used to solve this challenge (**(url)/track-result?id=track_id_here**) <br>
+
+Although the search functionality (used for the DOM-xss) also have the same characteristics, the payload does not trigger as correct solution for this challenge but it triggers the XSS so i assume that the juice-shop needs it to be specifically done in the tracking page (seems harcoded to avoid conflicts). 
+
+</p>
+
+
+
+
+
 

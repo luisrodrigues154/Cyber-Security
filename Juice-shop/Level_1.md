@@ -159,7 +159,7 @@ component: Ko
 **Solution:**
 <p>
 
-IF we send a normal feedback (with any star value), copy the request, change the rating to 0 resend it, the server accepts it.
+If we send a normal feedback (with any star value), copy the request, change the rating to 0 and resend it, the server accepts it.
 
 </p>
 <hr>
