@@ -13,7 +13,8 @@ In this repository you can find solved (or on going) cyber security related chal
 | Level Link (notes) | Progress | 
 | :-: | :-:|
 | [Level 1](https://github.com/luisrodrigues154/Cyber-Security/blob/master/Juice-shop/Level_1.md) | Solved | 
-| [Level 2](https://github.com/luisrodrigues154/Cyber-Security/blob/master/Juice-shop/Level_2.md) | On Going | 
+| [Level 2](https://github.com/luisrodrigues154/Cyber-Security/blob/master/Juice-shop/Level_2.md) | Solved | 
+| [Level 3](https://github.com/luisrodrigues154/Cyber-Security/blob/master/Juice-shop/Level_3.md) | On Going |
 
 <br>
 
@@ -61,6 +62,7 @@ In this repository you can find solved (or on going) cyber security related chal
 | [Bypass](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Reverse/Bypass/notes.md) | Reverse Engineering | Solved |
 | [Exatlon](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Reverse/Exatlon/notes.md) | Reverse Engineering | Solved |
 | [ImpossiblePassword](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Reverse/ImpossiblePassword/notes.md) | Reverse Engineering | Solved |
+| [HackyBird](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Reverse/HackyBird/notes.md) | Reverse Engineering | On Going |
 
 <br>
 
