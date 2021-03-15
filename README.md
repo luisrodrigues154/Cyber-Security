@@ -46,6 +46,7 @@ In this repository you can find solved (or on going) cyber security related chal
 |[Tenet](https://github.com/luisrodrigues154/Cyber-Security/blob/master/HackTheBox/Machines/Tenet/notes.md)| Solved |
 |[Ophiuchi](https://github.com/luisrodrigues154/Cyber-Security/blob/master/HackTheBox/Machines/Ophiuchi/notes.md)| Solved |
 |[Spectra](https://github.com/luisrodrigues154/Cyber-Security/blob/master/HackTheBox/Machines/Spectra/notes.md)| Solved |
+|[The Notebook](https://github.com/luisrodrigues154/Cyber-Security/blob/master/HackTheBox/Machines/TheNotebook/notes.md)| Solved |
 
 <br>
 

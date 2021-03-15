@@ -1,0 +1,4 @@
+/admin (Status: 403)
+/login (Status: 200)
+/logout (Status: 302)
+/register (Status: 200)

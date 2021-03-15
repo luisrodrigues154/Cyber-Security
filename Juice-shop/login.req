@@ -1,19 +1,14 @@
 POST /rest/user/login HTTP/1.1
 Host: localhost:3000
-Content-Length: 49
-sec-ch-ua: ";Not A Brand";v="99", "Chromium";v="88"
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
 Accept: application/json, text/plain, */*
-sec-ch-ua-mobile: ?0
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36
-Content-Type: application/json
-Origin: http://localhost:3000
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: cors
-Sec-Fetch-Dest: empty
-Referer: http://localhost:3000/
+Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate
-Accept-Language: en-US,en;q=0.9
-Cookie: language=en; welcomebanner_status=dismiss; cookieconsent_status=dismiss
+Content-Type: application/json
+Content-Length: 47
+Origin: http://localhost:3000
 Connection: close
+Referer: http://localhost:3000/
+Cookie: language=en; welcomebanner_status=dismiss; continueCode=zDhEtLIpskSzUVHnhkTwFvillhkYfBySLQu7ncOvI57UmnHVqf8aCXmtnWcvrTM1sq1F97S1eT2p; cookieconsent_status=dismiss
 
-{"email":"email@email.com","password":"password"}
+{"email":"email@email.com","password":"123123"}"e

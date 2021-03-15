@@ -14,4 +14,23 @@ It works like the original game, no surprises! Lets check if the assets theory i
 
 But no, there is no image containing the flag!! <br>
 
-The **.exe** is stripped so its a bit rough to read, the strings in the game are not present in the strings but i noticed that the name of the window (**flappy101**) is set sub_403570
+The **.exe** is stripped so its a bit rough to read, the strings in the game are not present in the strings but i noticed that a windows **.dll** is called to draw the text onto the screen (**DrawTextW**) which was only called from **sub_4018D0** <br>
+
+In this function we can see that some text is actually being used. This can be affirmed with due to the variables naming (if it isn't, i'll blame IDA xD)
+```
+v6 = a5;
+v7 = lpchText;
+v8 = this;
+```
+
+In order to check this i used cheat engine to determine the memory address of the score so by injecting a well-known score we can verify that the variable **lpchText** is actually the score. <br>
+
+The only problem now is the debugging because the game is asynchronous and receives callbacks from multiple dll's having multiple execution flows (+6 threads)
+```
+user32.dll
+msimg32.dll
+kernel32.dll
+gdi32.dll
+ntdll.dll
+```
+

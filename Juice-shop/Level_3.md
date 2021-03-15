@@ -91,5 +91,47 @@ If we are using an online editor, we click it and the request will not work (bec
 
 </p>
 
+<hr>
+
+**Name:**        Client-side XSS Protection   </br>
+**Description:** Perform a persisted XSS attack with < iframe src="javascript:alert(`xss`)"> bypassing a client-side security mechanism. (This challenge is potentially harmful on Docker!)   </br> 
+**Category:**    XSS    </br>
+**Solution:**
+<p>
+
+The description already show us that we need to bypass a security mechanism. Searching for those we can see some at adresses and cards addition (for orders), wallet charging and also at account creation <br>
+
+In order to test it, i used a payload different than the iframe just to see whether or not it is being stored and rendered
+```
+<h1>h1_me</h1>
+```
+
+I started with the cards and addresses, but the things that are being used which are validated are numeric and they are passed to the webserver as json (which expects a number) having a (probably) exception handler that defaults it to something <br> 
+
+The one i found was using the account creation. To do so, intercept with some proxy (burp for example) and modify the request so the email is actually set to the wanted payload. After that, we need to search for something that displays the email <br>
+
+Clearily the menu account thing does not renders it but, and with prior challenge's solution, we can use the **/administration** panel to view the registered users which, indeed, renders the payload. <br>
+
+Now we just need to send the payload in the challenge's description (**need to escape the quotes**)
+```
+email :
+```
+
+</p>
+
+
+<hr>
+
+**Name:**        Database Schema   </br>
+**Description:** Exfiltrate the entire DB schema definition via SQL Injection.   </br> 
+**Category:**    Injection    </br>
+**Solution:**
+<p>
+
+
+
+</p>
+
+
 
 
