@@ -14,7 +14,8 @@ In this repository you can find solved (or on going) cyber security related chal
 | :-: | :-:|
 | [Level 1](https://github.com/luisrodrigues154/Cyber-Security/blob/master/Juice-shop/Level_1.md) | Solved | 
 | [Level 2](https://github.com/luisrodrigues154/Cyber-Security/blob/master/Juice-shop/Level_2.md) | Solved | 
-| [Level 3](https://github.com/luisrodrigues154/Cyber-Security/blob/master/Juice-shop/Level_3.md) | On Going |
+| [Level 3](https://github.com/luisrodrigues154/Cyber-Security/blob/master/Juice-shop/Level_3.md) | Solved |
+| [Level 4](https://github.com/luisrodrigues154/Cyber-Security/blob/master/Juice-shop/Level_4.md) | On Going |
 
 <br>
 
