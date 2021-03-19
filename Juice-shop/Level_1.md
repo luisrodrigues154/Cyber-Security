@@ -127,6 +127,7 @@ data: {
 <p>
 Just open the privacy policy from the left-side menu
 </p>
+
 <hr>
 
 **Name:** Repetitive Registration </br>

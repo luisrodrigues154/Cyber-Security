@@ -1,0 +1,248 @@
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Feature-Policy: payment 'self'
+Content-Type: application/json; charset=utf-8
+ETag: W/"1f11-cLXCDM/3bHS9FuOsBA067pjHg5g"
+Vary: Accept-Encoding
+Date: Wed, 17 Mar 2021 10:54:31 GMT
+Connection: close
+Content-Length: 7953
+
+{
+   "status":"success",
+   "data":[
+      {
+         "id":null,
+         "name":1,
+         "description":2,
+         "price":3,
+         "deluxePrice":4,
+         "image":5,
+         "createdAt":6,
+         "updatedAt":7,
+         "deletedAt":8
+      },
+      {
+         "id":"CREATE TABLE `Addresses` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `fullName` VARCHAR(255), `mobileNum` INTEGER, `zipCode` VARCHAR(255), `streetAddress` VARCHAR(255), `city` VARCHAR(255), `state` VARCHAR(255), `country` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `UserId` INTEGER REFERENCES `Users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)",
+         "name":1,
+         "description":2,
+         "price":3,
+         "deluxePrice":4,
+         "image":5,
+         "createdAt":6,
+         "updatedAt":7,
+         "deletedAt":8
+      },
+      {
+         "id":"CREATE TABLE `BasketItems` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `quantity` INTEGER, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `BasketId` INTEGER REFERENCES `Baskets` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, `ProductId` INTEGER REFERENCES `Products` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, UNIQUE (`BasketId`, `ProductId`))",
+         "name":1,
+         "description":2,
+         "price":3,
+         "deluxePrice":4,
+         "image":5,
+         "createdAt":6,
+         "updatedAt":7,
+         "deletedAt":8
+      },
+      {
+         "id":"CREATE TABLE `Baskets` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `coupon` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `UserId` INTEGER REFERENCES `Users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)",
+         "name":1,
+         "description":2,
+         "price":3,
+         "deluxePrice":4,
+         "image":5,
+         "createdAt":6,
+         "updatedAt":7,
+         "deletedAt":8
+      },
+      {
+         "id":"CREATE TABLE `Captchas` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `captchaId` INTEGER, `captcha` VARCHAR(255), `answer` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL)",
+         "name":1,
+         "description":2,
+         "price":3,
+         "deluxePrice":4,
+         "image":5,
+         "createdAt":6,
+         "updatedAt":7,
+         "deletedAt":8
+      },
+      {
+         "id":"CREATE TABLE `Cards` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `fullName` VARCHAR(255), `cardNum` INTEGER, `expMonth` INTEGER, `expYear` INTEGER, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `UserId` INTEGER REFERENCES `Users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)",
+         "name":1,
+         "description":2,
+         "price":3,
+         "deluxePrice":4,
+         "image":5,
+         "createdAt":6,
+         "updatedAt":7,
+         "deletedAt":8
+      },
+      {
+         "id":"CREATE TABLE `Challenges` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `key` VARCHAR(255), `name` VARCHAR(255), `category` VARCHAR(255), `tags` VARCHAR(255), `description` VARCHAR(255), `difficulty` INTEGER, `hint` VARCHAR(255), `hintUrl` VARCHAR(255), `mitigationUrl` VARCHAR(255), `solved` TINYINT(1), `disabledEnv` VARCHAR(255), `tutorialOrder` NUMBER, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL)",
+         "name":1,
+         "description":2,
+         "price":3,
+         "deluxePrice":4,
+         "image":5,
+         "createdAt":6,
+         "updatedAt":7,
+         "deletedAt":8
+      },
+      {
+         "id":"CREATE TABLE `Complaints` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `message` VARCHAR(255), `file` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `UserId` INTEGER REFERENCES `Users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)",
+         "name":1,
+         "description":2,
+         "price":3,
+         "deluxePrice":4,
+         "image":5,
+         "createdAt":6,
+         "updatedAt":7,
+         "deletedAt":8
+      },
+      {
+         "id":"CREATE TABLE `Deliveries` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` VARCHAR(255), `price` FLOAT, `deluxePrice` FLOAT, `eta` FLOAT, `icon` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL)",
+         "name":1,
+         "description":2,
+         "price":3,
+         "deluxePrice":4,
+         "image":5,
+         "createdAt":6,
+         "updatedAt":7,
+         "deletedAt":8
+      },
+      {
+         "id":"CREATE TABLE `Feedbacks` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `comment` VARCHAR(255), `rating` INTEGER NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `UserId` INTEGER REFERENCES `Users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)",
+         "name":1,
+         "description":2,
+         "price":3,
+         "deluxePrice":4,
+         "image":5,
+         "createdAt":6,
+         "updatedAt":7,
+         "deletedAt":8
+      },
+      {
+         "id":"CREATE TABLE `ImageCaptchas` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `image` VARCHAR(255), `answer` VARCHAR(255), `UserId` INTEGER REFERENCES `Users` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL)",
+         "name":1,
+         "description":2,
+         "price":3,
+         "deluxePrice":4,
+         "image":5,
+         "createdAt":6,
+         "updatedAt":7,
+         "deletedAt":8
+      },
+      {
+         "id":"CREATE TABLE `Memories` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `caption` VARCHAR(255), `imagePath` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `UserId` INTEGER REFERENCES `Users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)",
+         "name":1,
+         "description":2,
+         "price":3,
+         "deluxePrice":4,
+         "image":5,
+         "createdAt":6,
+         "updatedAt":7,
+         "deletedAt":8
+      },
+      {
+         "id":"CREATE TABLE `PrivacyRequests` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `UserId` INTEGER REFERENCES `Users` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE, `deletionRequested` TINYINT(1) DEFAULT 0, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL)",
+         "name":1,
+         "description":2,
+         "price":3,
+         "deluxePrice":4,
+         "image":5,
+         "createdAt":6,
+         "updatedAt":7,
+         "deletedAt":8
+      },
+      {
+         "id":"CREATE TABLE `Products` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` VARCHAR(255), `description` VARCHAR(255), `price` DECIMAL, `deluxePrice` DECIMAL, `image` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `deletedAt` DATETIME)",
+         "name":1,
+         "description":2,
+         "price":3,
+         "deluxePrice":4,
+         "image":5,
+         "createdAt":6,
+         "updatedAt":7,
+         "deletedAt":8
+      },
+      {
+         "id":"CREATE TABLE `Quantities` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `quantity` INTEGER, `limitPerUser` INTEGER DEFAULT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `ProductId` INTEGER REFERENCES `Products` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)",
+         "name":1,
+         "description":2,
+         "price":3,
+         "deluxePrice":4,
+         "image":5,
+         "createdAt":6,
+         "updatedAt":7,
+         "deletedAt":8
+      },
+      {
+         "id":"CREATE TABLE `Recycles` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `quantity` INTEGER(4), `isPickup` TINYINT(1) DEFAULT 0, `date` DATETIME, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `UserId` INTEGER REFERENCES `Users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE, `AddressId` INTEGER REFERENCES `Addresses` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)",
+         "name":1,
+         "description":2,
+         "price":3,
+         "deluxePrice":4,
+         "image":5,
+         "createdAt":6,
+         "updatedAt":7,
+         "deletedAt":8
+      },
+      {
+         "id":"CREATE TABLE `SecurityAnswers` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `answer` VARCHAR(255), `UserId` INTEGER UNIQUE REFERENCES `Users` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `SecurityQuestionId` INTEGER REFERENCES `SecurityQuestions` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)",
+         "name":1,
+         "description":2,
+         "price":3,
+         "deluxePrice":4,
+         "image":5,
+         "createdAt":6,
+         "updatedAt":7,
+         "deletedAt":8
+      },
+      {
+         "id":"CREATE TABLE `SecurityQuestions` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `question` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL)",
+         "name":1,
+         "description":2,
+         "price":3,
+         "deluxePrice":4,
+         "image":5,
+         "createdAt":6,
+         "updatedAt":7,
+         "deletedAt":8
+      },
+      {
+         "id":"CREATE TABLE `Users` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `username` VARCHAR(255) DEFAULT '', `email` VARCHAR(255) UNIQUE, `password` VARCHAR(255), `role` VARCHAR(255) DEFAULT 'customer', `deluxeToken` VARCHAR(255) DEFAULT '', `lastLoginIp` VARCHAR(255) DEFAULT '0.0.0.0', `profileImage` VARCHAR(255) DEFAULT '/assets/public/images/uploads/default.svg', `totpSecret` VARCHAR(255) DEFAULT '', `isActive` TINYINT(1) DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `deletedAt` DATETIME)",
+         "name":1,
+         "description":2,
+         "price":3,
+         "deluxePrice":4,
+         "image":5,
+         "createdAt":6,
+         "updatedAt":7,
+         "deletedAt":8
+      },
+      {
+         "id":"CREATE TABLE `Wallets` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `balance` INTEGER DEFAULT 0, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `UserId` INTEGER REFERENCES `Users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)",
+         "name":1,
+         "description":2,
+         "price":3,
+         "deluxePrice":4,
+         "image":5,
+         "createdAt":6,
+         "updatedAt":7,
+         "deletedAt":8
+      },
+      {
+         "id":"CREATE TABLE sqlite_sequence(name,seq)",
+         "name":1,
+         "description":2,
+         "price":3,
+         "deluxePrice":4,
+         "image":5,
+         "createdAt":6,
+         "updatedAt":7,
+         "deletedAt":8
+      }
+   ]
+}
