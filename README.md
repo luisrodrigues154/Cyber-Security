@@ -8,6 +8,16 @@ In this repository you can find solved (or on going) cyber security related chal
 
 <br>
 
+## [Blue Team Labs](https://blueteamlabs.online) 
+
+| Name Link (notes) | Category | Progress |
+| :-: | :-: | :-:|
+| [Phishing Analysis](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/PhishingAnalysis/notes.md)| Security Operations | Solved |
+| [ILOVEYOU](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/ILOVEYOU/notes.md)| Reverse Engineering | Solved |
+| [Network Analysis - Web Shell](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/WebShell/notes.md)| Reverse Engineering | Solved |
+
+<br>
+
 ## [OWASP - Juice-shop](https://owasp.org/www-project-juice-shop/) 
 
 | Level Link (notes) | Progress | 
