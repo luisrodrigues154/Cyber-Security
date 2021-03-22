@@ -15,6 +15,8 @@ In this repository you can find solved (or on going) cyber security related chal
 | [Phishing Analysis](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/PhishingAnalysis/notes.md)| Security Operations | Solved |
 | [ILOVEYOU](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/ILOVEYOU/notes.md)| Reverse Engineering | Solved |
 | [Network Analysis - Web Shell](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/WebShell/notes.md)| Reverse Engineering | Solved |
+| [Reverse Engineering - A Classic Injection](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/ClassicInjection/notes.md)| Reverse Engineering | Solved |
+| [Log Analysis - Privilege Escalation](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/LogAnalysis_PrivEscalation/notes.md)| Ctf-like | Solved |
 
 <br>
 
