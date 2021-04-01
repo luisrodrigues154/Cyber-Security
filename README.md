@@ -17,7 +17,7 @@ In this repository you can find solved (or on going) cyber security related chal
 | [Network Analysis - Web Shell](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/WebShell/notes.md)| Security Operations | Solved |
 | [Reverse Engineering - A Classic Injection](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/ClassicInjection/notes.md)| Reverse Engineering | Solved |
 | [Log Analysis - Privilege Escalation](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/LogAnalysis_PrivEscalation/notes.md)| Ctf-like | Solved |
-| [The Planet's Prestige](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/PlanetPrestiges/notes.md)| Ctf-like | Solved |
+| [The Planet's Prestige](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/PlanetsPrestige/notes.md)| Ctf-like | Solved |
 
 <br>
 
