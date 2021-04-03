@@ -18,6 +18,8 @@ In this repository you can find solved (or on going) cyber security related chal
 | [Reverse Engineering - A Classic Injection](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/ClassicInjection/notes.md)| Reverse Engineering | Solved |
 | [Log Analysis - Privilege Escalation](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/LogAnalysis_PrivEscalation/notes.md)| Ctf-like | Solved |
 | [The Planet's Prestige](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/PlanetPrestige/notes.md)| Ctf-like | Solved |
+| [Malicious PowerShell Analysis](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/MaliciousPowerShellAnalysis/notes.md)| Security Operations | Solved |
+| [Browser Forensics - Cryptominer](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/Criptominer/notes.md)| Incident Response | Solved |
 
 <br>
 
@@ -72,12 +74,12 @@ In this repository you can find solved (or on going) cyber security related chal
 | [0xDiablos](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Pwn/0xDiablos/notes.md) | Pwn | Solved |
 | [Format](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Pwn/Format/notes.md) | Pwn | Solved |
 | [Space](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Pwn/Space/notes.md) | Pwn | Solved |
-| [Hunting](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Pwn/0xDiablos/notes.md) | Pwn | On going |
+| [Hunting](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Pwn/0xDiablos/notes.md) | Pwn | Solved |
 | [BabyRE](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Reverse/BabyRE/notes.md) | Reverse Engineering | Solved |
 | [Bypass](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Reverse/Bypass/notes.md) | Reverse Engineering | Solved |
 | [Exatlon](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Reverse/Exatlon/notes.md) | Reverse Engineering | Solved |
 | [ImpossiblePassword](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Reverse/ImpossiblePassword/notes.md) | Reverse Engineering | Solved |
-| [HackyBird](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Reverse/HackyBird/notes.md) | Reverse Engineering | On Going |
+| [HackyBird](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Reverse/HackyBird/notes.md) | Reverse Engineering | Solved |
 
 <br>
 

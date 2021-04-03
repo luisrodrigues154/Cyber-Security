@@ -1,4 +1,4 @@
-# A Classinc Injection
+# A Classic Injection
 
 Analyse the attached EXE sample and find answers to the following questions.<br>
 

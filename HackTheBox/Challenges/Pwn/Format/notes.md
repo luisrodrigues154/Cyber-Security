@@ -164,3 +164,5 @@ uid=999(ctf) gid=999(ctf) groups=999(ctf)
 cmd: cat flag.txt
 HTB{mall0c_h00k_f0r_th3_w1n!}
 ```
+
+## FLAG: HTB{mall0c_h00k_f0r_th3_w1n!}
