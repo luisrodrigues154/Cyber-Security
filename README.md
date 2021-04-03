@@ -74,7 +74,7 @@ In this repository you can find solved (or on going) cyber security related chal
 | [0xDiablos](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Pwn/0xDiablos/notes.md) | Pwn | Solved |
 | [Format](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Pwn/Format/notes.md) | Pwn | Solved |
 | [Space](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Pwn/Space/notes.md) | Pwn | Solved |
-| [Hunting](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Pwn/0xDiablos/notes.md) | Pwn | Solved |
+| [Hunting](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Pwn/Hunting/notes.md) | Pwn | Solved |
 | [BabyRE](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Reverse/BabyRE/notes.md) | Reverse Engineering | Solved |
 | [Bypass](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Reverse/Bypass/notes.md) | Reverse Engineering | Solved |
 | [Exatlon](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Reverse/Exatlon/notes.md) | Reverse Engineering | Solved |
