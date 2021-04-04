@@ -1,0 +1,18 @@
+#!/bin/bash
+
+alias sublist3r='python /opt/Sublist3r/sublist3r.py'
+alias nessus='firefox https://localhost:8834/'
+alias volatility='sudo python2 /opt/volatility/vol.py'
+alias juice-shop='sudo docker run -e NODE_ENV=unsafe --rm -p 3000:3000 bkimminich/juice-shop'
+alias ssh-state='sudo systemctl status ssh'
+alias ssh-on='sudo systemctl start ssh && ssh-state'
+alias ssh-off='sudo systemctl stop ssh && ssh-state'
+alias rdpWin='/opt/rdpWin'
+alias ftkimager='/opt/ftkimager'
+alias py80='sudo python -m http.server 80'
+alias py8000='python -m http.server 8000'
+alias powershell='pwsh'
+alias stderr='echo $?'
+alias aslr-off='echo 0 | sudo tee /proc/sys/kernel/randomize_va_space'
+alias aslr-on='echo 1 | sudo tee /proc/sys/kernel/randomize_va_space'
+alias aslr-status='cat /proc/sys/kernel/randomize_va_space'

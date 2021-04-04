@@ -1,0 +1,57 @@
+# Nmap 7.91 scan initiated Sat Apr  3 18:34:03 2021 as: nmap -p- -A -sC -sV -vvv -oN nmap/all_ports 10.10.10.233
+Nmap scan report for 10.10.10.233
+Host is up, received echo-reply ttl 63 (0.098s latency).
+Scanned at 2021-04-03 18:34:04 WEST for 656s
+Not shown: 65533 closed ports
+Reason: 65533 resets
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 63 OpenSSH 7.4 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 82:c6:bb:c7:02:6a:93:bb:7c:cb:dd:9c:30:93:79:34 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDC2xdFP3J4cpINVArODYtbhv+uQNECQHDkzTeWL+4aLgKcJuIoA8dQdVuP2UaLUJ0XtbyuabPEBzJl3IHg3vztFZ8UEcS94KuWP09ghv6fhc7JbFYONVJTYLiEPD8nrS/V2EPEQJ2ubNXcZAR76X9SZqt11JTyQH/s6tPH+m3m/84NUU8PNb/dyhrFpCUmZzzJQ1zCDStLXJnCAOE7EfW2wNm1CBPCXn1wNvO3SKwokCm4GoMKHSM9rNb9FjGLIY0nq+8mt7RTJZ+WLdHsje3AkBk1yooGFF+0TdOj42YK2OtAKDQBWnBm1nqLQsmm/Va9T2bPYLLK5aUd4/578u7h
+|   256 3a:ca:95:30:f3:12:d7:ca:45:05:bc:c7:f1:16:bb:fc (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBE4kP4gQ5Th3eu3vz/kPWwlUCm+6BSM6M3Y43IuYVo3ppmJG+wKiabo/gVYLOwzG7js497Vr7eGIgsjUtbIGUrY=
+|   256 7a:d4:b3:68:79:cf:62:8a:7d:5a:61:e7:06:0f:5f:33 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG9ZlC3EA13xZbzvvdjZRWhnu9clFOUe7irG8kT0oR4A
+80/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.6 ((CentOS) PHP/5.4.16)
+|_http-favicon: Unknown favicon MD5: 1487A9908F898326EBABFFFD2407920D
+|_http-generator: Drupal 7 (http://drupal.org)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-robots.txt: 36 disallowed entries 
+| /includes/ /misc/ /modules/ /profiles/ /scripts/ 
+| /themes/ /CHANGELOG.txt /cron.php /INSTALL.mysql.txt 
+| /INSTALL.pgsql.txt /INSTALL.sqlite.txt /install.php /INSTALL.txt 
+| /LICENSE.txt /MAINTAINERS.txt /update.php /UPGRADE.txt /xmlrpc.php 
+| /admin/ /comment/reply/ /filter/tips/ /node/add/ /search/ 
+| /user/register/ /user/password/ /user/login/ /user/logout/ /?q=admin/ 
+| /?q=comment/reply/ /?q=filter/tips/ /?q=node/add/ /?q=search/ 
+|_/?q=user/password/ /?q=user/register/ /?q=user/login/ /?q=user/logout/
+|_http-server-header: Apache/2.4.6 (CentOS) PHP/5.4.16
+|_http-title: Welcome to  Armageddon |  Armageddon
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=4/3%OT=22%CT=1%CU=30236%PV=Y%DS=2%DC=T%G=Y%TM=6068A99C
+OS:%P=x86_64-pc-linux-gnu)SEQ(SP=101%GCD=1%ISR=105%TI=Z%II=I%TS=A)SEQ(SP=10
+OS:1%GCD=1%ISR=105%TI=Z%CI=I%II=I%TS=A)OPS(O1=M54BST11NW7%O2=M54BST11NW7%O3
+OS:=M54BNNT11NW7%O4=M54BST11NW7%O5=M54BST11NW7%O6=M54BST11)WIN(W1=7120%W2=7
+OS:120%W3=7120%W4=7120%W5=7120%W6=7120)ECN(R=Y%DF=Y%T=40%W=7210%O=M54BNNSNW
+OS:7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF
+OS:=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=
+OS:%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=
+OS:0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RI
+OS:PCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 0.026 days (since Sat Apr  3 18:07:34 2021)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=257 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 111/tcp)
+HOP RTT       ADDRESS
+1   130.48 ms 10.10.16.1
+2   43.18 ms  10.10.10.233
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Apr  3 18:45:00 2021 -- 1 IP address (1 host up) scanned in 657.17 seconds

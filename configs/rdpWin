@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ $# -ne 3 ]
+then
+	echo "Usage: ./rdpWin host_addr user password"
+	exit 1
+fi
+
+host=$1
+res='1600x1900'
+user=$2
+pswd=$3
+
+echo 'Connecting via RDP to WinVM @' $host
+
+xfreerdp +drives /size:$res /v:$host /u:$user /p:$pswd
+
