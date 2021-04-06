@@ -7,11 +7,10 @@ then
 fi
 
 host=$1
-res='1600x1900'
+res='2048x1350'
 user=$2
 pswd=$3
 
 echo 'Connecting via RDP to WinVM @' $host
 
-xfreerdp +drives /size:$res /v:$host /u:$user /p:$pswd
-
+xfreerdp /dynamic-resolution +drives /size:$res /v:$host /u:$user /p:$pswd
