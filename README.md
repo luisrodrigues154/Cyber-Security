@@ -80,6 +80,7 @@ In this repository you can find solved (or on going) cyber security related chal
 | [Exatlon](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Reverse/Exatlon/notes.md) | Reverse Engineering | Solved |
 | [ImpossiblePassword](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Reverse/ImpossiblePassword/notes.md) | Reverse Engineering | Solved |
 | [HackyBird](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Reverse/HackyBird/notes.md) | Reverse Engineering | Solved |
+| [Restaurant](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Pwn/Restaurant/notes.md) | Pwn | Solved |
 
 <br>
 
