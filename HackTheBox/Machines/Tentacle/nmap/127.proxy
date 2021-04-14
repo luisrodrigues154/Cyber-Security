@@ -1,0 +1,73 @@
+# Nmap 7.91 scan initiated Tue Apr 13 17:00:32 2021 as: nmap --dns-servers 10.10.10.224 -sC -sV -oN nmap/127.proxy 127.0.0.1
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.0000050s latency).
+Not shown: 998 closed ports
+PORT     STATE SERVICE    VERSION
+631/tcp  open  ipp        CUPS 2.3
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-server-header: CUPS/2.3 IPP/2.1
+|_http-title: Home - CUPS 2.3.3op2
+8080/tcp open  http-proxy
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Connection: close
+|     Cache-control: no-cache, no-store
+|     Pragma: no-cache
+|     X-Frame-Options: DENY
+|     Content-Type: text/html; charset=utf-8
+|     X-Content-Type-Options: nosniff
+|     <html><head><title>Burp Suite Community Edition</title>
+|     <style type="text/css">
+|     body { background: #dedede; font-family: Arial, sans-serif; color: #404042; -webkit-font-smoothing: antialiased; }
+|     #container { padding: 0 15px; margin: 10px auto; background-color: #ffffff; }
+|     word-wrap: break-word; }
+|     a:link, a:visited { color: #e06228; text-decoration: none; }
+|     a:hover, a:active { color: #404042; text-decoration: underline; }
+|     font-size: 1.6em; line-height: 1.2em; font-weight: normal; color: #404042; }
+|     font-size: 1.3em; line-height: 1.2em; padding: 0; margin: 0.8em 0 0.3em 0; font-weight: normal; color: #404042;}
+|_    .title, .navbar { color: #ffffff; background: #e06228; padding: 10px 15px;
+| http-open-proxy: Potentially OPEN proxy.
+|_Methods supported:CONNECTION
+|_http-title: Burp Suite Community Edition
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8080-TCP:V=7.91%I=7%D=4/13%Time=6075C026%P=x86_64-unknown-linux-gnu
+SF:%r(GetRequest,64B,"HTTP/1\.1\x20200\x20OK\r\nConnection:\x20close\r\nCa
+SF:che-control:\x20no-cache,\x20no-store\r\nPragma:\x20no-cache\r\nX-Frame
+SF:-Options:\x20DENY\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nX-
+SF:Content-Type-Options:\x20nosniff\r\n\r\n<html><head><title>Burp\x20Suit
+SF:e\x20Community\x20Edition</title>\r\n<style\x20type=\"text/css\">\r\nbo
+SF:dy\x20{\x20background:\x20#dedede;\x20font-family:\x20Arial,\x20sans-se
+SF:rif;\x20color:\x20#404042;\x20-webkit-font-smoothing:\x20antialiased;\x
+SF:20}\r\n#container\x20{\x20padding:\x200\x2015px;\x20margin:\x2010px\x20
+SF:auto;\x20background-color:\x20#ffffff;\x20}\r\na\x20{\x20word-wrap:\x20
+SF:break-word;\x20}\r\na:link,\x20a:visited\x20{\x20color:\x20#e06228;\x20
+SF:text-decoration:\x20none;\x20}\r\na:hover,\x20a:active\x20{\x20color:\x
+SF:20#404042;\x20text-decoration:\x20underline;\x20}\r\nh1\x20{\x20font-si
+SF:ze:\x201\.6em;\x20line-height:\x201\.2em;\x20font-weight:\x20normal;\x2
+SF:0color:\x20#404042;\x20}\r\nh2\x20{\x20font-size:\x201\.3em;\x20line-he
+SF:ight:\x201\.2em;\x20padding:\x200;\x20margin:\x200\.8em\x200\x200\.3em\
+SF:x200;\x20font-weight:\x20normal;\x20color:\x20#404042;}\r\n\.title,\x20
+SF:\.navbar\x20{\x20color:\x20#ffffff;\x20background:\x20#e06228;\x20paddi
+SF:ng:\x2010px\x2015px;\x20")%r(HTTPOptions,64B,"HTTP/1\.1\x20200\x20OK\r\
+SF:nConnection:\x20close\r\nCache-control:\x20no-cache,\x20no-store\r\nPra
+SF:gma:\x20no-cache\r\nX-Frame-Options:\x20DENY\r\nContent-Type:\x20text/h
+SF:tml;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\r\n\r\n<htm
+SF:l><head><title>Burp\x20Suite\x20Community\x20Edition</title>\r\n<style\
+SF:x20type=\"text/css\">\r\nbody\x20{\x20background:\x20#dedede;\x20font-f
+SF:amily:\x20Arial,\x20sans-serif;\x20color:\x20#404042;\x20-webkit-font-s
+SF:moothing:\x20antialiased;\x20}\r\n#container\x20{\x20padding:\x200\x201
+SF:5px;\x20margin:\x2010px\x20auto;\x20background-color:\x20#ffffff;\x20}\
+SF:r\na\x20{\x20word-wrap:\x20break-word;\x20}\r\na:link,\x20a:visited\x20
+SF:{\x20color:\x20#e06228;\x20text-decoration:\x20none;\x20}\r\na:hover,\x
+SF:20a:active\x20{\x20color:\x20#404042;\x20text-decoration:\x20underline;
+SF:\x20}\r\nh1\x20{\x20font-size:\x201\.6em;\x20line-height:\x201\.2em;\x2
+SF:0font-weight:\x20normal;\x20color:\x20#404042;\x20}\r\nh2\x20{\x20font-
+SF:size:\x201\.3em;\x20line-height:\x201\.2em;\x20padding:\x200;\x20margin
+SF::\x200\.8em\x200\x200\.3em\x200;\x20font-weight:\x20normal;\x20color:\x
+SF:20#404042;}\r\n\.title,\x20\.navbar\x20{\x20color:\x20#ffffff;\x20backg
+SF:round:\x20#e06228;\x20padding:\x2010px\x2015px;\x20");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Apr 13 17:03:37 2021 -- 1 IP address (1 host up) scanned in 185.55 seconds

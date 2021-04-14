@@ -1,0 +1,4 @@
+# Nmap 7.91 scan initiated Tue Apr 13 19:33:30 2021 as: nmap -sL -oN nmap/discover.2ndnet 10.241.251.0/24
+
+Nmap scan report for srvpod01.realcorp.htb (10.241.251.113)
+# Nmap done at Tue Apr 13 19:33:41 2021 -- 256 IP addresses (0 hosts up) scanned in 11.12 seconds

@@ -1,0 +1,24 @@
+# Nmap 7.91 scan initiated Mon Apr 12 22:01:56 2021 as: nmap -sC -sV -oN nmap/srv01.init srv01.realcorp.htb
+Nmap scan report for srv01.realcorp.htb (10.10.10.224)
+Host is up (0.10s latency).
+rDNS record for 10.10.10.224: realcorp.htb
+Not shown: 996 filtered ports
+PORT     STATE SERVICE      VERSION
+22/tcp   open  ssh          OpenSSH 8.0 (protocol 2.0)
+| ssh-hostkey: 
+|   3072 8d:dd:18:10:e5:7b:b0:da:a3:fa:14:37:a7:52:7a:9c (RSA)
+|   256 f6:a9:2e:57:f8:18:b6:f4:ee:03:41:27:1e:1f:93:99 (ECDSA)
+|_  256 04:74:dd:68:79:f4:22:78:d8:ce:dd:8b:3e:8c:76:3b (ED25519)
+53/tcp   open  domain?      (generic dns response: NOTIMP)
+| dns-nsid: 
+|_  bind.version: 9.11.20-RedHat-9.11.20-5.el8
+88/tcp   open  kerberos-sec MIT Kerberos (server time: 2021-04-12 21:14:21Z)
+3128/tcp open  http-proxy   Squid http proxy 4.11
+|_http-server-header: squid/4.11
+|_http-title: ERROR: The requested URL could not be retrieved
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port53-TCP:V=7.91%I=7%D=4/12%Time=6074B5AA%P=x86_64-unknown-linux-gnu%r
+SF:(DNSStatusRequestTCP,E,"\0\x0c\0\0\x90\x04\0\0\0\0\0\0\0\0");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Apr 12 22:03:56 2021 -- 1 IP address (1 host up) scanned in 120.56 seconds

@@ -1,0 +1,26 @@
+# Nmap 7.91 scan initiated Tue Apr 13 17:52:30 2021 as: nmap -sC -sV -oN nmap/31.proxy 10.197.243.31
+Nmap scan report for 10.197.243.31
+Host is up (0.58s latency).
+Not shown: 993 closed ports
+PORT     STATE SERVICE      VERSION
+22/tcp   open  ssh          OpenSSH 8.0 (protocol 2.0)
+| ssh-hostkey: 
+|   3072 8d:dd:18:10:e5:7b:b0:da:a3:fa:14:37:a7:52:7a:9c (RSA)
+|   256 f6:a9:2e:57:f8:18:b6:f4:ee:03:41:27:1e:1f:93:99 (ECDSA)
+|_  256 04:74:dd:68:79:f4:22:78:d8:ce:dd:8b:3e:8c:76:3b (ED25519)
+53/tcp   open  domain       ISC BIND 9.11.20 (RedHat Enterprise Linux 8)
+| dns-nsid: 
+|_  bind.version: 9.11.20-RedHat-9.11.20-5.el8
+80/tcp   open  http         nginx 1.14.1
+|_http-server-header: nginx/1.14.1
+|_http-title: Test Page for the Nginx HTTP Server on Red Hat Enterprise Linux
+88/tcp   open  kerberos-sec MIT Kerberos (server time: 2021-04-13 17:12:59Z)
+464/tcp  open  kerberos-sec MIT Kerberos (server time: 2021-04-13 17:12:57Z)
+749/tcp  open  rpcbind
+3128/tcp open  http-proxy   Squid http proxy 4.11
+|_http-server-header: squid/4.11
+|_http-title: ERROR: The requested URL could not be retrieved
+Service Info: Host: REALCORP.HTB; OS: Linux; CPE: cpe:/o:redhat:enterprise_linux:8
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Apr 13 18:04:34 2021 -- 1 IP address (1 host up) scanned in 724.14 seconds

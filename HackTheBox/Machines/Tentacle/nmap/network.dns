@@ -1,0 +1,5 @@
+# Nmap 7.91 scan initiated Tue Apr 13 15:49:16 2021 as: nmap --dns-servers 10.10.10.224 -sL -o nmap/network.dns 10.197.243.0/24
+Nmap scan report for wpad.realcorp.htb (10.197.243.31)
+Nmap scan report for ns.realcorp.htb (10.197.243.77)
+
+# Nmap done at Tue Apr 13 15:49:16 2021 -- 256 IP addresses (0 hosts up) scanned in 0.56 seconds

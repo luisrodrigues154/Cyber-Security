@@ -1,0 +1,10 @@
+function FindProxyForURL(url, host) {
+    if (dnsDomainIs(host, "realcorp.htb"))
+        return "DIRECT";
+    if (isInNet(dnsResolve(host), "10.197.243.0", "255.255.255.0"))
+        return "DIRECT"; 
+    if (isInNet(dnsResolve(host), "10.241.251.0", "255.255.255.0"))
+        return "DIRECT"; 
+ 
+    return "PROXY proxy.realcorp.htb:3128";
+}
