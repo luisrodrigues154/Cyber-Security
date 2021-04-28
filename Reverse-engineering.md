@@ -72,6 +72,21 @@ Used to check file composition (if it is and how it is packed ) <br>
   - ! - network (big-endian)
 - Print (payloads): sys.stdout.buffer.write()
 
+<br>
+
+## Python compiled binaries 
+
+- pyi_archive_viewer.py: Can List and extract python installers
+- pyinstxtractor: extracts all the files within the installer
+- uncompyle6/decompyle3: decompiles .pyc to .py
+
+### Notes
+1. This is a mess because the decompilers only allow until python 3.8 (the default installation is now 3.9)
+2. The .pyc's might have broken magic numbers
+   - Magic number for version: ```python -c "import importlib.util; from binascii import hexlify, unhexlify; print(hexlify(importlib.util.MAGIC_NUMBER))" ```
+   - Edit with hexedit (the ouput is a direct map, not in LE)
+
+<br>
 
 ## IDA debugging remote linux server
 

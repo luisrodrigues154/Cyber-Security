@@ -65,6 +65,7 @@ In this repository you can find solved (or on going) cyber security related chal
 |[The Notebook](https://github.com/luisrodrigues154/Cyber-Security/blob/master/HackTheBox/Machines/TheNotebook/notes.md)| Solved |
 |[Schooled](https://github.com/luisrodrigues154/Cyber-Security/blob/master/HackTheBox/Machines/Schooled/notes.md)| Solved |
 |[Armageddon](https://github.com/luisrodrigues154/Cyber-Security/blob/master/HackTheBox/Machines/Armageddon/notes.md)| Solved |
+|[Tentacle](https://github.com/luisrodrigues154/Cyber-Security/blob/master/HackTheBox/Machines/Tentacle/notes.md)| Solved |
 
 <br>
 
@@ -83,6 +84,8 @@ In this repository you can find solved (or on going) cyber security related chal
 | [ImpossiblePassword](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Reverse/ImpossiblePassword/notes.md) | Reverse Engineering | Solved |
 | [HackyBird](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Reverse/HackyBird/notes.md) | Reverse Engineering | Solved |
 | [Restaurant](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Pwn/Restaurant/notes.md) | Pwn | Solved |
+| [Bad Grades](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Pwn/BadGrades/notes.md) | Pwn | On-Going |
+
 
 <br>
 
