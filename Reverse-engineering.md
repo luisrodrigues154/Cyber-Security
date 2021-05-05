@@ -22,7 +22,8 @@
 
 | cmd | action |
 | :-: | :-: |
-| -x | print headers |
+| -h | print section headers |
+| -x | print all headers |
 | -d | disassemble |
 | -t | symbols |
 | -T | dynamic symbols |
@@ -84,7 +85,7 @@ Used to check file composition (if it is and how it is packed ) <br>
 1. This is a mess because the decompilers only allow until python 3.8 (the default installation is now 3.9)
 2. The .pyc's might have broken magic numbers
    - Magic number for version: ```python -c "import importlib.util; from binascii import hexlify, unhexlify; print(hexlify(importlib.util.MAGIC_NUMBER))" ```
-   - Edit with hexedit (the ouput is a direct map, not in LE)
+   - Edit with hexeditor (the ouput is a direct map, not in LE)
 
 <br>
 
@@ -96,3 +97,27 @@ Used to check file composition (if it is and how it is packed ) <br>
 4. In IDA (on the guest system), go to Debugger → Select debugger... in the menu bar and choose Remote Linux debugger.
 5. In IDA (on the guest system), go to Debugger → Process options... in the menu bar and specify the hostname or IP of your host system, the debugging port used by linux_serverx64, and the debugging password (if you specified one when running linux_serverx64).
 6. In IDA (on the guest system), select Debugger → Start process in the menu bar (or Attach to process... if the target is already running on the host system).
+
+## Anti-debugging 
+
+### Methods (ELFs)
+1. Strip (dynamic linked)
+2. Self modifying code
+3. Static compiled + stripped
+4. Packing 
+5. Dynamic loading (dlopen + dlsym)
+6. Syscalls 
+7. Sections permissions (.text)
+   
+### Detection
+1. .dynsym table 
+2. Tools and debug untill syscall call
+3. (Near) empty import table
+4. If public packer, use DIE (binary entropy would discolse it)
+5. Strace/ltrace
+6. Import tables (+ point 5)
+7. Strace/ltrace 
+   
+#### ptrace_traps through constructors
+- The program defines a constructor that ptraces itself, if the operation fails the program exits (other program already ptracing) 
+
