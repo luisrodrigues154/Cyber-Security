@@ -1,0 +1,14 @@
+301        9l       28w      316c http://10.10.10.235/downloads
+301        9l       28w      313c http://10.10.10.235/assets
+403        9l       28w      277c http://10.10.10.235/.htaccess
+403        9l       28w      277c http://10.10.10.235/.htpasswd
+403        9l       28w      277c http://10.10.10.235/downloads/.htaccess
+403        9l       28w      277c http://10.10.10.235/server-status
+301        9l       28w      313c http://10.10.10.235/images
+403        9l       28w      277c http://10.10.10.235/assets/.htaccess
+403        9l       28w      277c http://10.10.10.235/assets/.htpasswd
+301        9l       28w      316c http://10.10.10.235/assets/js
+403        9l       28w      277c http://10.10.10.235/images/.htaccess
+403        9l       28w      277c http://10.10.10.235/images/.htpasswd
+403        9l       28w      277c http://10.10.10.235/assets/js/.htaccess
+403        9l       28w      277c http://10.10.10.235/assets/js/.htpasswd

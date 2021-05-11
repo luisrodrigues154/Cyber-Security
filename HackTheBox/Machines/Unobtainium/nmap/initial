@@ -1,0 +1,100 @@
+# Nmap 7.91 scan initiated Wed May  5 18:21:33 2021 as: nmap -sC -sV -oN nmap/initial 10.10.10.235
+Nmap scan report for 10.10.10.235
+Host is up (0.27s latency).
+Not shown: 996 closed ports
+PORT      STATE SERVICE       VERSION
+22/tcp    open  ssh           OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 e4:bf:68:42:e5:74:4b:06:58:78:bd:ed:1e:6a:df:66 (RSA)
+|   256 bd:88:a1:d9:19:a0:12:35:ca:d3:fa:63:76:48:dc:65 (ECDSA)
+|_  256 cf:c4:19:25:19:fa:6e:2e:b7:a4:aa:7d:c3:f1:3d:9b (ED25519)
+80/tcp    open  http          Apache httpd 2.4.41 ((Ubuntu))
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-title: Unobtainium
+8443/tcp  open  ssl/https-alt
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 403 Forbidden
+|     Cache-Control: no-cache, private
+|     Content-Type: application/json
+|     X-Content-Type-Options: nosniff
+|     X-Kubernetes-Pf-Flowschema-Uid: 3082aa7f-e4b1-444a-a726-829587cd9e39
+|     X-Kubernetes-Pf-Prioritylevel-Uid: c4131e14-5fda-4a46-8349-09ccbed9efdd
+|     Date: Wed, 05 May 2021 17:32:40 GMT
+|     Content-Length: 212
+|     {"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"forbidden: User "system:anonymous" cannot get path "/nice ports,/Trinity.txt.bak"","reason":"Forbidden","details":{},"code":403}
+|   GenericLines: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/plain; charset=utf-8
+|     Connection: close
+|     Request
+|   GetRequest: 
+|     HTTP/1.0 403 Forbidden
+|     Cache-Control: no-cache, private
+|     Content-Type: application/json
+|     X-Content-Type-Options: nosniff
+|     X-Kubernetes-Pf-Flowschema-Uid: 3082aa7f-e4b1-444a-a726-829587cd9e39
+|     X-Kubernetes-Pf-Prioritylevel-Uid: c4131e14-5fda-4a46-8349-09ccbed9efdd
+|     Date: Wed, 05 May 2021 17:32:38 GMT
+|     Content-Length: 185
+|     {"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"forbidden: User "system:anonymous" cannot get path "/"","reason":"Forbidden","details":{},"code":403}
+|   HTTPOptions: 
+|     HTTP/1.0 403 Forbidden
+|     Cache-Control: no-cache, private
+|     Content-Type: application/json
+|     X-Content-Type-Options: nosniff
+|     X-Kubernetes-Pf-Flowschema-Uid: 3082aa7f-e4b1-444a-a726-829587cd9e39
+|     X-Kubernetes-Pf-Prioritylevel-Uid: c4131e14-5fda-4a46-8349-09ccbed9efdd
+|     Date: Wed, 05 May 2021 17:32:39 GMT
+|     Content-Length: 189
+|_    {"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"forbidden: User "system:anonymous" cannot options path "/"","reason":"Forbidden","details":{},"code":403}
+|_http-title: Site doesn't have a title (application/json).
+| ssl-cert: Subject: commonName=minikube/organizationName=system:masters
+| Subject Alternative Name: DNS:minikubeCA, DNS:control-plane.minikube.internal, DNS:kubernetes.default.svc.cluster.local, DNS:kubernetes.default.svc, DNS:kubernetes.default, DNS:kubernetes, DNS:localhost, IP Address:10.10.10.235, IP Address:10.96.0.1, IP Address:127.0.0.1, IP Address:10.0.0.1
+| Not valid before: 2021-05-04T04:18:49
+|_Not valid after:  2022-05-05T04:18:49
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|   h2
+|_  http/1.1
+31337/tcp open  http          Node.js Express framework
+| http-methods: 
+|_  Potentially risky methods: PUT DELETE
+|_http-title: Site doesn't have a title (application/json; charset=utf-8).
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8443-TCP:V=7.91%T=SSL%I=7%D=5/5%Time=6092D42D%P=x86_64-pc-linux-gnu
+SF:%r(GetRequest,1FF,"HTTP/1\.0\x20403\x20Forbidden\r\nCache-Control:\x20n
+SF:o-cache,\x20private\r\nContent-Type:\x20application/json\r\nX-Content-T
+SF:ype-Options:\x20nosniff\r\nX-Kubernetes-Pf-Flowschema-Uid:\x203082aa7f-
+SF:e4b1-444a-a726-829587cd9e39\r\nX-Kubernetes-Pf-Prioritylevel-Uid:\x20c4
+SF:131e14-5fda-4a46-8349-09ccbed9efdd\r\nDate:\x20Wed,\x2005\x20May\x20202
+SF:1\x2017:32:38\x20GMT\r\nContent-Length:\x20185\r\n\r\n{\"kind\":\"Statu
+SF:s\",\"apiVersion\":\"v1\",\"metadata\":{},\"status\":\"Failure\",\"mess
+SF:age\":\"forbidden:\x20User\x20\\\"system:anonymous\\\"\x20cannot\x20get
+SF:\x20path\x20\\\"/\\\"\",\"reason\":\"Forbidden\",\"details\":{},\"code\
+SF:":403}\n")%r(HTTPOptions,203,"HTTP/1\.0\x20403\x20Forbidden\r\nCache-Co
+SF:ntrol:\x20no-cache,\x20private\r\nContent-Type:\x20application/json\r\n
+SF:X-Content-Type-Options:\x20nosniff\r\nX-Kubernetes-Pf-Flowschema-Uid:\x
+SF:203082aa7f-e4b1-444a-a726-829587cd9e39\r\nX-Kubernetes-Pf-Prioritylevel
+SF:-Uid:\x20c4131e14-5fda-4a46-8349-09ccbed9efdd\r\nDate:\x20Wed,\x2005\x2
+SF:0May\x202021\x2017:32:39\x20GMT\r\nContent-Length:\x20189\r\n\r\n{\"kin
+SF:d\":\"Status\",\"apiVersion\":\"v1\",\"metadata\":{},\"status\":\"Failu
+SF:re\",\"message\":\"forbidden:\x20User\x20\\\"system:anonymous\\\"\x20ca
+SF:nnot\x20options\x20path\x20\\\"/\\\"\",\"reason\":\"Forbidden\",\"detai
+SF:ls\":{},\"code\":403}\n")%r(FourOhFourRequest,21A,"HTTP/1\.0\x20403\x20
+SF:Forbidden\r\nCache-Control:\x20no-cache,\x20private\r\nContent-Type:\x2
+SF:0application/json\r\nX-Content-Type-Options:\x20nosniff\r\nX-Kubernetes
+SF:-Pf-Flowschema-Uid:\x203082aa7f-e4b1-444a-a726-829587cd9e39\r\nX-Kubern
+SF:etes-Pf-Prioritylevel-Uid:\x20c4131e14-5fda-4a46-8349-09ccbed9efdd\r\nD
+SF:ate:\x20Wed,\x2005\x20May\x202021\x2017:32:40\x20GMT\r\nContent-Length:
+SF:\x20212\r\n\r\n{\"kind\":\"Status\",\"apiVersion\":\"v1\",\"metadata\":
+SF:{},\"status\":\"Failure\",\"message\":\"forbidden:\x20User\x20\\\"syste
+SF:m:anonymous\\\"\x20cannot\x20get\x20path\x20\\\"/nice\x20ports,/Trinity
+SF:\.txt\.bak\\\"\",\"reason\":\"Forbidden\",\"details\":{},\"code\":403}\
+SF:n")%r(GenericLines,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Ty
+SF:pe:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\
+SF:x20Bad\x20Request");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed May  5 18:23:29 2021 -- 1 IP address (1 host up) scanned in 115.78 seconds

@@ -66,6 +66,7 @@ In this repository you can find solved (or on going) cyber security related chal
 |[Schooled](https://github.com/luisrodrigues154/Cyber-Security/blob/master/HackTheBox/Machines/Schooled/notes.md)| Solved |
 |[Armageddon](https://github.com/luisrodrigues154/Cyber-Security/blob/master/HackTheBox/Machines/Armageddon/notes.md)| Solved |
 |[Tentacle](https://github.com/luisrodrigues154/Cyber-Security/blob/master/HackTheBox/Machines/Tentacle/notes.md)| Solved |
+|[Unobtainium](https://github.com/luisrodrigues154/Cyber-Security/blob/master/HackTheBox/Machines/Unobtainium/notes.md)| Solved |
 
 <br>
 

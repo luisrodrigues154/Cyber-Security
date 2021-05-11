@@ -1,0 +1,35 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority: ca.crt
+    server: https://10.10.10.235:8443
+  name: default
+- cluster:
+    certificate-authority: ca.crt
+    server: https://10.10.10.235:8443
+  name: development
+- cluster:
+    insecure-skip-tls-verify: true
+    server: https://10.10.10.235:8443
+  name: scratch
+contexts:
+- context:
+    cluster: ""
+    user: ""
+  name: dev-frontend
+- context:
+    cluster: ""
+    user: ""
+  name: dev-storage
+- context:
+    cluster: ""
+    user: ""
+  name: exp-scratch
+current-context: ""
+kind: Config
+preferences: {}
+users:
+- name: developer
+  user: {}
+- name: experimenter
+  user: {}

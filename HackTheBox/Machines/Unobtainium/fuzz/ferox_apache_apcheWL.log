@@ -1,0 +1,5 @@
+403        9l       28w      277c http://10.10.10.235/server-status
+403        9l       28w      277c http://10.10.10.235/.htaccess.bak
+403        9l       28w      277c http://10.10.10.235/.htpasswd
+200       50l      140w     1988c http://10.10.10.235/index.html
+403        9l       28w      277c http://10.10.10.235/.htaccess
