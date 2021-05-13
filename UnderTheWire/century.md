@@ -1,13 +1,13 @@
 # Century
 
-# Level 0
+## Level 0
 
 Just login via ssh 
 ```
 century1:century1
 ```
 
-# Level 1
+## Level 1
 
 The password for Century2 is the build version of the instance of PowerShell installed on this system. <br>
 
@@ -254,11 +254,11 @@ The password for Century15 is the number of times the word “polo” appears wi
 Well, for this i needed google
 ```ps1
 
-PS (..)\desktop > get-content .\countpolos | select-string -pattern "polo" -allmatches | measure-object -word
-19482
+PS (..)\desktop > (get-content .\countpolos | select-string -pattern "polo" -allmatches).matches.count
+158
 ``` 
 
-Creds: ```Century15:19482```
+Creds: ```Century15:158```
 
 ## Level 15
 
