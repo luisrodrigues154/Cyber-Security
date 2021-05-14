@@ -277,3 +277,47 @@ The password cyborg14 is the number of days the refresh interval is set to for D
 **NOTE:**
 - If the days are set to “08:00:00:00” and the file on the desktop is called “_tuesday”, then the password is “8_tuesday”.
 - The password will be lowercase no matter how it appears on the screen.
+
+```ps1 
+PS (..)\desktop > ls
+_days
+
+PS (..)\desktop > get-dnsserver
+ZoneName             : underthewire.tech
+AgingEnabled         : True
+AvailForScavengeTime : 9/21/2018 10:00:00 AM
+RefreshInterval      : 22.00:00:00
+NoRefreshInterval    : 7.00:00:00
+ScavengeServers      :
+```
+
+Creds: ```Cyborg14:22_days```
+
+## Level 14
+
+The password for cyborg15 is the caption for the DCOM application setting for application ID {59B8AFA0-229E-46D9-B980-DDA2C817EC7E} PLUS the name of the file on the desktop. <br>
+
+**NOTE:**
+- If the caption is “dcom” and the file on the desktop is called “_address”, then the password is “dcom_address”.
+- The password will be lowercase no matter how it appears on screen.
+
+DCOM is basically a distributed object that allows program execution over the network. The windows registry contains the DCOM config data for 3 identifiers:
+- CLSID -> class identifier
+- PROGID -> programmatic identifier (option)
+- APPID -> Application identifier. Identifies all classes that are part of the same executable
+
+```ps1
+PS (..)\desktop > ls
+_objects
+
+# again, powershell does not have a direct cmdlet for it. google is my friend tho
+PS (..)\desktop > get-wmiobject win32_dcomapplication | where-object {$_.appid -eq "{59B8AFA0-229E-46D9-B980-DDA2C817EC7E}"}
+# -- snip --
+{59B8AFA0-229E-46d9-B980-DDA2C817EC7E}             propshts
+```
+
+Creds: ```Cyborg15:propshts_objects```
+
+## Level 15
+
+END
