@@ -6,6 +6,9 @@
 In this repository you can find solved (or on going) cyber security related challenges from multiple of the available platforms (HackTheBox, TryHackMe, etc). The main purpose is that it may help other people getting through a difficulty or to simply view things from other prespective! 
 </p>
 
+**Note:** Just as a footnote, it is very noticeable the quality increase of the writeups during the whole process. With this being said, in each section, the bottom writeups are usually more recent and thus their quality is greater
+
+
 <br>
 
 ## [Blue Team Labs](https://blueteamlabs.online) 
@@ -86,6 +89,8 @@ In this repository you can find solved (or on going) cyber security related chal
 | [HackyBird](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Reverse/HackyBird/notes.md) | Reverse Engineering | Solved |
 | [Restaurant](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Pwn/Restaurant/notes.md) | Pwn | Solved |
 | [Bad Grades](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Pwn/BadGrades/notes.md) | Pwn | On-Going |
+| [Cat](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Mobile/Cat/notes.md) | Mobile | Solved |
+| [Cryptohorrific](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Mobile/Cryptohorrific/notes.md) | Mobile | Solved |
 
 
 <br>
@@ -103,6 +108,7 @@ In this repository you can find solved (or on going) cyber security related chal
 | Name Link (notes) | Progress |
 | :-: | :-: |
 | [Century](https://github.com/luisrodrigues154/Cyber-Security/tree/master/UnderTheWire/century.md) | Solved |
+| [Cyborg](https://github.com/luisrodrigues154/Cyber-Security/tree/master/UnderTheWire/Cyborg.md) | Solved |
 
 <br>
 
