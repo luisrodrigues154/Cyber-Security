@@ -10,9 +10,27 @@ gcc -nostdlib -static shellcode.s -o shellcode-elf
 
 ## Extract shell code opcodes
 
+To file 
+
 ```bash
 objcopy --dump-section .text=shellcode-raw shellcode-elf
 ``` 
+
+
+## Compilation + extraction to file (one line)
+
+```bash
+gcc -nostdlib -static shellcode.s -o shellcode-elf && objcopy --dump-section .text=shellcode-raw shellcode-elf
+```
+
+As escaped string
+```bash
+# Get all opcodes (raw)
+objdump -d ./your_program|grep '[0-9a-f]:'|grep -v 'file'|cut -f2 -d:|cut -f1-6 -d' '|tr -s ' '|tr '\t' ' '|sed 's/ $//g'|paste -d '' -s |sed 's/^/"/'|sed 's/$/"/g'
+
+# Get all opcodes (shellcode format)
+objdump -d ./your_program|grep '[0-9a-f]:'|grep -v 'file'|cut -f2 -d:|cut -f1-6 -d' '|tr -s ' '|tr '\t' ' '|sed 's/ $//g'|sed 's/ /\\x/g'|paste -d '' -s |sed 's/^/"/'|sed 's/$/"/g'
+ ```
 
 ## Basic empty template
 
@@ -27,29 +45,45 @@ _start:
 
 Below is a template with the length value harcoded
 ```assembly
-global _start
+.global _start
 _start:
-.intel_syntax noprefix
-        xor rax,rax
-        inc rax         ; x86-64 write syscall
-        xor rdi,rdi
-        lea rsi, [msg]  ; load address of string ; write accepts address to buffer
-        xor rdx, rdx    
-        jmp get_len     ; jump to len calculator loop
-finish:
-        mov rdx, rcx         ; set the length for write
-        syscall
+.intel_syntax noprefix 
 
-msg:
-.string "its me, waza!\n"
+do_write:               ; starts write syscall
+    xor rax,rax             
+    inc rax
+    lea rsi, [mystr]
+    jmp getstrlen       ; jmps to string length calc
+continue:
+    xor rdx, rdx 
+    add rdx, rcx
+    syscall             ; calls write
 
-get_len:
-    xor rcx,rcx
-len_cycle:
-    cmp byte[msg+rcx], 0x00
-    je finish
-    inc rcx
-    jmp len_cycle
+finish:                 ; start exit syscall
+    mov rax, 60
+    syscall             ; calls exit
 
+getstrlen:
+    xor rcx, rcx
+    xor rbx, rbx
+iteration:
+    mov dl, BYTE [rsi+rcx]  ; copies byte index by rcx
+    cmp dl, 0               ; if null, write str
+    je continue
+    inc rcx                 ; increment counter
+    jmp iteration           ; continue looping
 
+mystr:
+.string "sure\n"
 ```
+
+## C-code shell executor
+
+Usefull when need other code prior (avoiding writing all in assembly)
+
+```c
+page = mmap(0x1337000, 0x1000, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANON, 0,0);
+read(0, page, 0x1000);
+((void (*)())page)();
+```
+

@@ -11,6 +11,16 @@ In this repository you can find solved (or on going) cyber security related chal
 
 <br>
 
+## [pwn.college](https://cse466.pwn.college/challenges) 
+
+
+| Name Link (notes) | Category | Progress |
+| :-: | :-: | :-:|
+| [babysuid](https://github.com/luisrodrigues154/Cyber-Security/blob/master/CSE466/babysuid/notes.md) | Program misuse | 19/100 |
+| [babyshell](https://github.com/luisrodrigues154/Cyber-Security/blob/master/CSE466/babyshell/notes.md) | Shellcode | 2/14 |
+
+<br>
+
 ## [Blue Team Labs](https://blueteamlabs.online) 
 
 | Name Link (notes) | Category | Progress |
