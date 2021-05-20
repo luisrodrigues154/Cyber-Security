@@ -21,20 +21,7 @@ In this repository you can find solved (or on going) cyber security related chal
 
 <br>
 
-## [Blue Team Labs](https://blueteamlabs.online) 
 
-| Name Link (notes) | Category | Progress |
-| :-: | :-: | :-:|
-| [Phishing Analysis](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/PhishingAnalysis/notes.md)| Security Operations | Solved |
-| [ILOVEYOU](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/ILOVEYOU/notes.md)| Reverse Engineering | Solved |
-| [Network Analysis - Web Shell](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/WebShell/notes.md)| Security Operations | Solved |
-| [Reverse Engineering - A Classic Injection](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/ClassicInjection/notes.md)| Reverse Engineering | Solved |
-| [Log Analysis - Privilege Escalation](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/LogAnalysis_PrivEscalation/notes.md)| Ctf-like | Solved |
-| [Malicious PowerShell Analysis](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/MaliciousPowerShellAnalysis/notes.md)| Security Operations | Solved |
-| [Browser Forensics - Cryptominer](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/Criptominer/notes.md)| Incident Response | Solved |
-| [The Planet's Prestige](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/PlanetsPrestige/notes.md)| Ctf-like | Solved |
-
-<br>
 
 ## [OWASP - Juice-shop](https://owasp.org/www-project-juice-shop/) 
 
@@ -188,3 +175,20 @@ In this repository you can find solved (or on going) cyber security related chal
 |Name Link (notes) | Progres |
 | :-: | :-: |
 |[New Orleans](https://github.com/luisrodrigues154/Cyber-Security/tree/master/EmbeddedSecurity/NewOrleans.md) | Solved |
+
+
+<br>
+
+## [Blue Team Labs](https://blueteamlabs.online) 
+
+| Name Link (notes) | Category | Progress |
+| :-: | :-: | :-:|
+| [Phishing Analysis](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/PhishingAnalysis/notes.md)| Security Operations | Solved |
+| [ILOVEYOU](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/ILOVEYOU/notes.md)| Reverse Engineering | Solved |
+| [Network Analysis - Web Shell](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/WebShell/notes.md)| Security Operations | Solved |
+| [Reverse Engineering - A Classic Injection](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/ClassicInjection/notes.md)| Reverse Engineering | Solved |
+| [Log Analysis - Privilege Escalation](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/LogAnalysis_PrivEscalation/notes.md)| Ctf-like | Solved |
+| [Malicious PowerShell Analysis](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/MaliciousPowerShellAnalysis/notes.md)| Security Operations | Solved |
+| [Browser Forensics - Cryptominer](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/Criptominer/notes.md)| Incident Response | Solved |
+| [The Planet's Prestige](https://github.com/luisrodrigues154/Cyber-Security/blob/master/BlueTeamLabs/PlanetsPrestige/notes.md)| Ctf-like | Solved |
+
