@@ -101,6 +101,7 @@ In this repository you can find solved (or on going) cyber security related chal
 | [Bad Grades](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Pwn/BadGrades/notes.md) | Pwn | On-Going |
 | [Cat](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Mobile/Cat/notes.md) | Mobile | Solved |
 | [Cryptohorrific](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Mobile/Cryptohorrific/notes.md) | Mobile | Solved |
+| [DebugMe](https://github.com/luisrodrigues154/Cyber-Security/tree/master/HackTheBox/Challenges/Reverse/DebugMe/notes.md) | Reverse Engineering | Solved |
 
 
 <br>
