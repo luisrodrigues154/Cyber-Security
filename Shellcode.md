@@ -87,3 +87,13 @@ read(0, page, 0x1000);
 ((void (*)())page)();
 ```
 
+## (some) Problematic Bytes for methods
+
+| Byte | Method |
+|:-:| :-:|
+| Null byte \x00 (0x00) | strcpy |
+| New line \n (0x0a) | scanf, gets, <br> getline, fgets |
+| Carriage return \r (0x0d) | scanf |
+| Space (0x20) | scanf |
+| Tab \t (0x09) | scanf | 
+| DEL (0x7f) | protocol-specific (telnet, VT100, etc) |

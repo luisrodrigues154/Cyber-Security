@@ -1,5 +1,8 @@
 #!/bin/bash
 
+alias buildasm='assemble && extract'
+alias extract='objcopy --dump-section .text=shell.raw shell.elf'
+alias assemble='gcc -nostdlib -static shell.s -o shell.elf'
 alias rappel86='cd /opt/rappel && ARCH=x86 CC=gcc make && /opt/rappel/bin/rappel'
 alias rappel64='cd /opt/rappel && ARCH=amd64 CC=gcc make && /opt/rappel/bin/rappel'
 alias sublist3r='python /opt/Sublist3r/sublist3r.py'

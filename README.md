@@ -17,7 +17,7 @@ In this repository you can find solved (or on going) cyber security related chal
 | Name Link (notes) | Category | Progress |
 | :-: | :-: | :-:|
 | [babysuid](https://github.com/luisrodrigues154/Cyber-Security/blob/master/CSE466/babysuid/notes.md) | Program misuse | 19/100 |
-| [babyshell](https://github.com/luisrodrigues154/Cyber-Security/blob/master/CSE466/babyshell/notes.md) | Shellcode | 2/14 |
+| [babyshell](https://github.com/luisrodrigues154/Cyber-Security/blob/master/CSE466/babyshell/notes.md) | Shellcode writing | 7/14 |
 
 <br>
 
