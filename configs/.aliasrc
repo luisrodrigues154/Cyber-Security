@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 alias buildasm='assemble && extract'
 alias extract='objcopy --dump-section .text=shell.raw shell.elf'
