@@ -177,6 +177,8 @@ In this repository you can find solved (or on going) cyber security related chal
 |Name Link (notes) | Progres |
 | :-: | :-: |
 |[New Orleans](https://github.com/luisrodrigues154/Cyber-Security/tree/master/EmbeddedSecurity/NewOrleans.md) | Solved |
+|[Sydney](https://github.com/luisrodrigues154/Cyber-Security/tree/master/EmbeddedSecurity/Sydney.md) | Solved |
+|[Hanoi](https://github.com/luisrodrigues154/Cyber-Security/tree/master/EmbeddedSecurity/Hanoi.md) | Solved |
 
 
 <br>
