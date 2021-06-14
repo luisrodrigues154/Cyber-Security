@@ -21,18 +21,19 @@ In this repository you can find solved (or on going) cyber security related chal
 
 <br>
 
+## [Embedded Security CTF](https://microcorruption.com)
 
-
-## [OWASP - Juice-shop](https://owasp.org/www-project-juice-shop/) 
-
-| Level Link (notes) | Progress | 
-| :-: | :-:|
-| [Level 1](https://github.com/luisrodrigues154/Cyber-Security/blob/master/Juice-shop/Level_1.md) | Solved | 
-| [Level 2](https://github.com/luisrodrigues154/Cyber-Security/blob/master/Juice-shop/Level_2.md) | Solved | 
-| [Level 3](https://github.com/luisrodrigues154/Cyber-Security/blob/master/Juice-shop/Level_3.md) | Solved |
-| [Level 4](https://github.com/luisrodrigues154/Cyber-Security/blob/master/Juice-shop/Level_4.md) | On Going |
+|Name Link (notes) | Progres |
+| :-: | :-: |
+|[New Orleans](https://github.com/luisrodrigues154/Cyber-Security/tree/master/EmbeddedSecurity/NewOrleans.md) | Solved |
+|[Sydney](https://github.com/luisrodrigues154/Cyber-Security/tree/master/EmbeddedSecurity/Sydney.md) | Solved |
+|[Hanoi](https://github.com/luisrodrigues154/Cyber-Security/tree/master/EmbeddedSecurity/Hanoi.md) | Solved |
+|[Cusco](https://github.com/luisrodrigues154/Cyber-Security/tree/master/EmbeddedSecurity/Cusco.md) | Solved |
+|[Reykjavik](https://github.com/luisrodrigues154/Cyber-Security/tree/master/EmbeddedSecurity/Reykjavik.md) | Solved |
 
 <br>
+
+
 
 ## [HackTheBox](https://www.hackthebox.eu) 
 
@@ -120,6 +121,17 @@ In this repository you can find solved (or on going) cyber security related chal
 
 <br>
 
+## [OWASP - Juice-shop](https://owasp.org/www-project-juice-shop/) 
+
+| Level Link (notes) | Progress | 
+| :-: | :-:|
+| [Level 1](https://github.com/luisrodrigues154/Cyber-Security/blob/master/Juice-shop/Level_1.md) | Solved | 
+| [Level 2](https://github.com/luisrodrigues154/Cyber-Security/blob/master/Juice-shop/Level_2.md) | Solved | 
+| [Level 3](https://github.com/luisrodrigues154/Cyber-Security/blob/master/Juice-shop/Level_3.md) | Solved |
+| [Level 4](https://github.com/luisrodrigues154/Cyber-Security/blob/master/Juice-shop/Level_4.md) | On Going |
+
+<br>
+
 ## [TryHackMe](https://tryhackme.com/)
 
 | Name Link (notes) | Progress |
@@ -172,16 +184,6 @@ In this repository you can find solved (or on going) cyber security related chal
 
 <br>
 
-## [Embedded Security CTF](https://microcorruption.com)
-
-|Name Link (notes) | Progres |
-| :-: | :-: |
-|[New Orleans](https://github.com/luisrodrigues154/Cyber-Security/tree/master/EmbeddedSecurity/NewOrleans.md) | Solved |
-|[Sydney](https://github.com/luisrodrigues154/Cyber-Security/tree/master/EmbeddedSecurity/Sydney.md) | Solved |
-|[Hanoi](https://github.com/luisrodrigues154/Cyber-Security/tree/master/EmbeddedSecurity/Hanoi.md) | Solved |
-
-
-<br>
 
 ## [Blue Team Labs](https://blueteamlabs.online) 
 
