@@ -7,10 +7,12 @@
   - rdi, rsi, rdx, rcx, r8, r9, remaining in stack (reversed)
 
 
-## pwntools reminders
-
+## python/pwntools reminders
+- Sending double/float return addresses: ```def get_ready(raw_data): val = p64(raw_data).hex(); return (struct.unpack("d", bytes.fromhex(val))[0]) ``` 
 - Get header address: ```elf.get_section_by_name("<header>).header.sh_addr```
 
+## Scanf particularities
+- Bypass var modification: send '.', '-', '+'
 
 ## Compile c code with disabled protections (gcc)
 - canaries: ``` -fno-stack-protector``` 
