@@ -30,6 +30,8 @@ In this repository you can find solved (or on going) cyber security related chal
 |[Hanoi](https://github.com/luisrodrigues154/Cyber-Security/tree/master/EmbeddedSecurity/Hanoi.md) | Solved |
 |[Cusco](https://github.com/luisrodrigues154/Cyber-Security/tree/master/EmbeddedSecurity/Cusco.md) | Solved |
 |[Reykjavik](https://github.com/luisrodrigues154/Cyber-Security/tree/master/EmbeddedSecurity/Reykjavik.md) | Solved |
+|[Johannesburg](https://github.com/luisrodrigues154/Cyber-Security/tree/master/EmbeddedSecurity/Johannesburg.md) | Solved |
+
 
 <br>
 
