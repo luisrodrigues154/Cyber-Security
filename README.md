@@ -32,6 +32,7 @@ In this repository you can find solved (or on going) cyber security related chal
 |[Reykjavik](https://github.com/luisrodrigues154/Cyber-Security/tree/master/EmbeddedSecurity/Reykjavik.md) | Solved |
 |[Johannesburg](https://github.com/luisrodrigues154/Cyber-Security/tree/master/EmbeddedSecurity/Johannesburg.md) | Solved |
 |[Whitehorse](https://github.com/luisrodrigues154/Cyber-Security/tree/master/EmbeddedSecurity/Whitehorse.md) | Solved |
+|[Montevideo](https://github.com/luisrodrigues154/Cyber-Security/tree/master/EmbeddedSecurity/Montevideo.md) | Solved |
 
 
 <br>
