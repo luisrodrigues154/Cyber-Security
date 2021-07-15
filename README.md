@@ -158,6 +158,7 @@ In this repository you can find solved (or on going) cyber security related chal
 | [IntroTo x86-64](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/IntroTo_x86-64/notes.md) | Solved |
 | [Reverse Engineering](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/Reverse_Engineering/notes.md) | Solved |
 | [Classic Passwd](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/ClassicPasswd/notes.md) | Solved |
+| [Lazy Admin](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/LazyAdmin/notes.md) | Solved |
 
 <br>
 
