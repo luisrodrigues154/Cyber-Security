@@ -109,6 +109,34 @@ In this repository you can find solved (or on going) cyber security related chal
 
 <br>
 
+## [TryHackMe](https://tryhackme.com/)
+
+| Name Link (notes) | Progress |
+| :-: | :-: |
+| [AgentSudo](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/AgentSudo/notes.md) | Solved |
+| [BasicPentesting](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/BasicPentesting/notes.md) | Solved |
+| [BoilerCTF](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/BoilerCTF/notes.md) | Solved |
+| [BountyHacker](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/BountyHacker/notes.md) | Solved |
+| [Ignite](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/Ignite/notes.md) | Solved |
+| [LinuxPrivEsc](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/LinuxPrivEsc/notes.md) | Solved |
+| [Metasploit](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/Metasploit/notes.md) | Solved |
+| [MrRobotCTF](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/MrRobotCTF/notes.md) | Solved |
+| [PickleRick](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/PickleRick/notes.md) | Solved |
+| [PostExploitationBasics](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/PostExploitationBasics/notes.md) | On Going |
+| [RootMe](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/RootMe/notes.md) | Solved |
+| [Tartarus](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/Tartarus/notes.md) | Solved |
+| [TheFindCommand](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/TheFindCommand/notes.md) | Solved |
+| [VulnUniversity](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/VulnUniversity/notes.md) | Solved |
+| [IntroTo x86-64](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/IntroTo_x86-64/notes.md) | Solved |
+| [Reverse Engineering](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/Reverse_Engineering/notes.md) | Solved |
+| [Classic Passwd](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/ClassicPasswd/notes.md) | Solved |
+| [Lazy Admin](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/LazyAdmin/notes.md) | Solved |
+| [Wonderland](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/Wonderland/notes.md) | Solved |
+| [REloaded](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/REloaded/notes.md) | Solved |
+| [Anonymous](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/Anonymous/notes.md) | Solved |
+
+<br>
+
 ## [UnderTheWire](https://underthewire.tech/)
 
 | Name Link (notes) | Progress |
@@ -137,31 +165,6 @@ In this repository you can find solved (or on going) cyber security related chal
 
 <br>
 
-## [TryHackMe](https://tryhackme.com/)
-
-| Name Link (notes) | Progress |
-| :-: | :-: |
-| [AgentSudo](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/AgentSudo/notes.md) | Solved |
-| [BasicPentesting](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/BasicPentesting/notes.md) | Solved |
-| [BoilerCTF](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/BoilerCTF/notes.md) | Solved |
-| [BountyHacker](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/BountyHacker/notes.md) | Solved |
-| [Ignite](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/Ignite/notes.md) | Solved |
-| [LinuxPrivEsc](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/LinuxPrivEsc/notes.md) | Solved |
-| [Metasploit](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/Metasploit/notes.md) | Solved |
-| [MrRobotCTF](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/MrRobotCTF/notes.md) | Solved |
-| [PickleRick](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/PickleRick/notes.md) | Solved |
-| [PostExploitationBasics](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/PostExploitationBasics/notes.md) | On Going |
-| [RootMe](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/RootMe/notes.md) | Solved |
-| [Tartarus](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/Tartarus/notes.md) | Solved |
-| [TheFindCommand](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/TheFindCommand/notes.md) | Solved |
-| [VulnUniversity](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/VulnUniversity/notes.md) | Solved |
-| [IntroTo x86-64](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/IntroTo_x86-64/notes.md) | Solved |
-| [Reverse Engineering](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/Reverse_Engineering/notes.md) | Solved |
-| [Classic Passwd](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/ClassicPasswd/notes.md) | Solved |
-| [Lazy Admin](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/LazyAdmin/notes.md) | Solved |
-| [Wonderland](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/Wonderland/notes.md) | Solved |
-
-<br>
 
 ## [Exploit Education](https://exploit.education/)
 
