@@ -1,0 +1,72 @@
+diff --git a/config.def.h b/config.def.h
+index dcffd38..a42d28b 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -1,6 +1,7 @@
+ /* See LICENSE file for copyright and license details. */
+ /* Default settings; can be overriden by command line. */
+ 
++static int instant = 0;
+ static int topbar = 1;                      /* -b  option; if 0, dmenu appears at bottom     */
+ /* -fn option overrides fonts[0]; default X11 font or font set */
+ static const char *fonts[] = {
+diff --git a/dmenu.1 b/dmenu.1
+index d3ab805..8806d4d 100644
+--- a/dmenu.1
++++ b/dmenu.1
+@@ -6,6 +6,7 @@ dmenu \- dynamic menu
+ .RB [ \-b ]
+ .RB [ \-f ]
+ .RB [ \-i ]
++.RB [ \-n ]
+ .RB [ \-l
+ .RB [ \-m
+ .IR monitor ]
+@@ -48,6 +49,9 @@ X until stdin reaches end\-of\-file.
+ .B \-i
+ dmenu matches menu items case insensitively.
+ .TP
++.B \-n
++dmenu instantly selects if only one match.
++.TP
+ .BI \-l " lines"
+ dmenu lists items vertically, with the given number of lines.
+ .TP
+diff --git a/dmenu.c b/dmenu.c
+index e0c2f80..f079479 100644
+--- a/dmenu.c
++++ b/dmenu.c
+@@ -250,6 +250,13 @@ match(void)
+ 		matchend = substrend;
+ 	}
+ 	curr = sel = matches;
++
++	if(instant && matches && matches==matchend && !lsubstr) {
++		puts(matches->text);
++		cleanup();
++		exit(0);
++	}
++
+ 	calcoffsets();
+ }
+ 
+@@ -610,7 +617,7 @@ setup(void)
+ static void
+ usage(void)
+ {
+-	fputs("usage: dmenu [-b] [-f] [-i] [-l lines] [-p prompt] [-fn font] [-m monitor]\n"
++	fputs("usage: dmenu [-b] [-f] [-i] [-n] [-l lines] [-p prompt] [-fn font] [-m monitor]\n"
+ 	      "             [-nb color] [-nf color] [-sb color] [-sf color] [-v]\n", stderr);
+ 	exit(1);
+ }
+@@ -632,7 +639,9 @@ main(int argc, char *argv[])
+ 		else if (!strcmp(argv[i], "-i")) { /* case-insensitive item matching */
+ 			fstrncmp = strncasecmp;
+ 			fstrstr = cistrstr;
+-		} else if (i + 1 == argc)
++    } else if (!strcmp(argv[i], "-n")) /* instant select only match */
++			instant = 1;
++		else if (i + 1 == argc)
+ 			usage();
+ 		/* these options take one argument */
+ 		else if (!strcmp(argv[i], "-l"))   /* number of lines in vertical list */

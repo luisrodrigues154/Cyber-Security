@@ -1,6 +1,0 @@
-https://tryhackme.com/room/windows10privesc
-https://tryhackme.com/room/bufferoverflowprep
-https://tryhackme.com/module/threat-and-vulnerability-management
-https://tryhackme.com/room/ccradare2
-https://tryhackme.com/module/incident-response-and-forensics
-https://tryhackme.com/module/malware-analysis

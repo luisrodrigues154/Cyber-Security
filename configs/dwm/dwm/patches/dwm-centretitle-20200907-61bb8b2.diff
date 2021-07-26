@@ -1,0 +1,38 @@
+From fe22e3d1434be1819fe0c0200d4a20967b02f3f6 Mon Sep 17 00:00:00 2001
+From: Felix Chen <sryvk.pura@protonmail.com>
+Date: Mon, 7 Sep 2020 11:45:01 +0800
+Subject: [PATCH] Place title in the middle of barwin
+
+---
+ dwm.c | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+diff --git a/dwm.c b/dwm.c
+index 664c527..23e94f5 100644
+--- a/dwm.c
++++ b/dwm.c
+@@ -697,6 +697,7 @@ void
+ drawbar(Monitor *m)
+ {
+ 	int x, w, tw = 0;
++	int tlpad;
+ 	int boxs = drw->fonts->h / 9;
+ 	int boxw = drw->fonts->h / 6 + 2;
+ 	unsigned int i, occ = 0, urg = 0;
+@@ -732,9 +733,11 @@ drawbar(Monitor *m)
+ 	if ((w = m->ww - tw - x) > bh) {
+ 		if (m->sel) {
+ 			drw_setscheme(drw, scheme[m == selmon ? SchemeSel : SchemeNorm]);
+-			drw_text(drw, x, 0, w, bh, lrpad / 2, m->sel->name, 0);
++			tlpad = MAX((m->ww - ((int)TEXTW(m->sel->name) - lrpad)) / 2 - x, lrpad / 2);
++			drw_text(drw, x, 0, w, bh, tlpad, m->sel->name, 0);
+ 			if (m->sel->isfloating)
+-				drw_rect(drw, x + boxs, boxs, boxw, boxw, m->sel->isfixed, 0);
++				drw_rect(drw, x + boxs + tlpad - lrpad / 2, boxs,
++					boxw, boxw, m->sel->isfixed, 0);
+ 		} else {
+ 			drw_setscheme(drw, scheme[SchemeNorm]);
+ 			drw_rect(drw, x, 0, w, bh, 1, 1);
+-- 
+2.28.0
+
