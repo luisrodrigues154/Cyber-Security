@@ -128,15 +128,10 @@ static Key keys[] = {
 	{ Mod1Mask,           			XK_h,      focusleft,      {0} },					// focus left
 	{ Mod1Mask,           			XK_k,      focusdown,      {0} },					// focus down
 	{ Mod1Mask,           			XK_j,      focusup,        {0} },					// focus up
-	
-	{ Mod1Mask,			           	XK_Up,	   incrgaps,       {.i = +1} },				// increment all gaps
-	{ Mod1Mask,			           	XK_Down,   incrgaps,       {.i = -1} },				// increment all gaps
-	
 	{ Mod1Mask,           			XK_plus,   incnmaster,     {.i = +1} },				// increment no of masters
 	{ Mod1Mask,           			XK_minus,  incnmaster,     {.i = -1 } },			// decrement no of masters
 	{ Mod1Mask,                     XK_minus,  setmfact,       {.f = -0.05} },			// increase master width
 	{ Mod1Mask,                     XK_plus,   setmfact,       {.f = +0.05} },			// decrease master width
-
 	{ Mod1Mask,             		XK_Return, zoom,           {0} },					// make active master
 	{ Mod1Mask,                     XK_Tab,    view,           {0} },					// toggle to last tag
 	{ Mod1Mask,		                XK_q,      killclient,     {0} },				
@@ -145,7 +140,6 @@ static Key keys[] = {
 	{ Mod1Mask,                     XK_f,      setlayout,      {.v = &layouts[2]} },
 	{ Mod1Mask,                     XK_g,      setlayout,      {.v = &layouts[3]} },
 	{ Mod1Mask,                     XK_d,      setlayout,      {.v = &layouts[4]} },
-
 	{ Mod1Mask,		                XK_space,  togglefloating, {0} },
 	{ Mod1Mask,                     XK_0,      view,           {.ui = ~0 } },
 	{ Mod1Mask|ShiftMask,           XK_0,      tag,            {.ui = ~0 } },

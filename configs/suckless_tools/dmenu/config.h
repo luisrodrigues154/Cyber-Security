@@ -116,39 +116,39 @@ static const char *shutdowncmd[]    = { "sutdown", "now", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,            			XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-    { MODKEY|ShiftMask,             XK_b,      spawn,          {.v = chromiumcmd } },
-    { MODKEY,		                XK_b,      spawn,          {.v = firefoxcmd } },
-    { MODKEY,                       XK_u,      spawn,          {.v = unicodecmd } },
-    { MODKEY,						XK_Print,  spawn,          {.v = printZonecmd } },
-	{ MODKEY|ShiftMask,             		   XK_Print,  spawn,          {.v = printFullcmd } },
+	{ Mod1Mask,            			XK_p,      spawn,          {.v = dmenucmd } },
+	{ Mod1Mask,                     XK_Return, spawn,          {.v = termcmd } },
+    { Mod1Mask|ShiftMask,           XK_b,      spawn,          {.v = chromiumcmd } },
+    { Mod1Mask,		               	XK_b,      spawn,          {.v = firefoxcmd } },
+    { Mod1Mask,                    	XK_u,      spawn,          {.v = unicodecmd } },
+    { Mod1Mask,				       	XK_Print,  spawn,          {.v = printZonecmd } },
+	{ Mod1Mask|ShiftMask,  		   	XK_Print,  spawn,          {.v = printFullcmd } },
 	//directional focus
-	{ Mod1Mask|ShiftMask,           XK_l,      focusright,     {0} },					// focus right
-	{ Mod1Mask|ShiftMask,           XK_h,      focusleft,      {0} },					// focus left
-	{ Mod1Mask|ShiftMask,           XK_k,      focusdown,      {0} },					// focus down
-	{ Mod1Mask|ShiftMask,           XK_j,      focusup,        {0} },					// focus up
+	{ Mod1Mask,           			XK_l,      focusright,     {0} },					// focus right
+	{ Mod1Mask,           			XK_h,      focusleft,      {0} },					// focus left
+	{ Mod1Mask,           			XK_k,      focusdown,      {0} },					// focus down
+	{ Mod1Mask,           			XK_j,      focusup,        {0} },					// focus up
 	
-	{ MODKEY,			           	XK_Up,	   incrgaps,       {.i = +1} },				// increment all gaps
-	{ MODKEY,			           	XK_Down,   incrgaps,       {.i = -1} },				// increment all gaps
+	{ Mod1Mask,			           	XK_Up,	   incrgaps,       {.i = +1} },				// increment all gaps
+	{ Mod1Mask,			           	XK_Down,   incrgaps,       {.i = -1} },				// increment all gaps
 	
-	{ MODKEY|ShiftMask,           	XK_plus,   incnmaster,     {.i = +1} },				// increment no of masters
-	{ MODKEY|ShiftMask,           	XK_minus,  incnmaster,     {.i = -1 } },			// decrement no of masters
-	{ MODKEY,                       XK_minus,  setmfact,       {.f = -0.05} },			// increase master width
-	{ MODKEY,                       XK_plus,   setmfact,       {.f = +0.05} },			// decrease master width
+	{ Mod1Mask,           			XK_plus,   incnmaster,     {.i = +1} },				// increment no of masters
+	{ Mod1Mask,           			XK_minus,  incnmaster,     {.i = -1 } },			// decrement no of masters
+	{ Mod1Mask,                     XK_minus,  setmfact,       {.f = -0.05} },			// increase master width
+	{ Mod1Mask,                     XK_plus,   setmfact,       {.f = +0.05} },			// decrease master width
 
-	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },					// make active master
-	{ MODKEY,                       XK_Tab,    view,           {0} },					// toggle to last tag
-	{ MODKEY,		                XK_q,      killclient,     {0} },				
-	{ Mod1Mask,                       XK_s,      setlayout,      {.v = &layouts[1]} },
-	{ Mod1Mask,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ Mod1Mask,                       XK_f,      setlayout,      {.v = &layouts[2]} },
-	{ Mod1Mask,                       XK_g,      setlayout,      {.v = &layouts[3]} },
-	{ Mod1Mask,                       XK_d,      setlayout,      {.v = &layouts[4]} },
+	{ Mod1Mask,             		XK_Return, zoom,           {0} },					// make active master
+	{ Mod1Mask,                     XK_Tab,    view,           {0} },					// toggle to last tag
+	{ Mod1Mask,		                XK_q,      killclient,     {0} },				
+	{ Mod1Mask,                     XK_s,      setlayout,      {.v = &layouts[1]} },
+	{ Mod1Mask,                     XK_t,      setlayout,      {.v = &layouts[0]} },
+	{ Mod1Mask,                     XK_f,      setlayout,      {.v = &layouts[2]} },
+	{ Mod1Mask,                     XK_g,      setlayout,      {.v = &layouts[3]} },
+	{ Mod1Mask,                     XK_d,      setlayout,      {.v = &layouts[4]} },
 
-	{ MODKEY,		                XK_space,  togglefloating, {0} },
-	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
-	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
+	{ Mod1Mask,		                XK_space,  togglefloating, {0} },
+	{ Mod1Mask,                     XK_0,      view,           {.ui = ~0 } },
+	{ Mod1Mask|ShiftMask,           XK_0,      tag,            {.ui = ~0 } },
 //  change monitor focus, not needed for now
 //	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
 //	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
@@ -159,8 +159,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_3,                      2)
 	TAGKEYS(                        XK_4,                      3)
 	TAGKEYS(                        XK_5,                      4)
-	{ MODKEY|ShiftMask,             XK_BackSpace,      spawn,          {.v = shutdowncmd } },
-    { MODKEY|ShiftMask,             XK_r,           quit,           {1} },
+	{ Mod1Mask|ShiftMask,             XK_BackSpace,      spawn,          {.v = shutdowncmd } },
+    { Mod1Mask|ShiftMask,             XK_r,           quit,           {1} },
 };
 
 /* button definitions */
