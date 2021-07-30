@@ -134,6 +134,7 @@ In this repository you can find solved (or on going) cyber security related chal
 | [Wonderland](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/Wonderland/notes.md) | Solved |
 | [REloaded](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/REloaded/notes.md) | Solved |
 | [Anonymous](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/Anonymous/notes.md) | Solved |
+| [DogCat](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/DogCat/notes.md) | Solved |
 
 <br>
 
