@@ -75,12 +75,9 @@ static const int attachbelow = 1;    /* 1 means attach after the currently activ
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "Tiling",      tile },    /* first entry is default */
-	{ "Spiral",      spiral},
-	{ "Floating",      NULL },    /* no layout function means floating behavior */
-	{ "Monocle",      monocle },
-	{ "Grid" , gaplessgrid},
-	{ "Dwindle",      dwindle},
+	{ "Dwindle",      dwindle}, /* first entry is default */
+	{ "Tiling",      tile },    
+	{ "Floating",      NULL },    /* no layout function means floating behavior */	
 };
 
 /* key definitions */
@@ -132,14 +129,11 @@ static Key keys[] = {
 	{ Mod1Mask,           			XK_minus,  incnmaster,     {.i = -1 } },			// decrement no of masters
 	{ Mod1Mask,                     XK_minus,  setmfact,       {.f = -0.05} },			// increase master width
 	{ Mod1Mask,                     XK_plus,   setmfact,       {.f = +0.05} },			// decrease master width
-	{ Mod1Mask,             		XK_Return, zoom,           {0} },					// make active master
+	{ Mod1Mask|ShiftMask,      		XK_Return, zoom,           {0} },					// make active master
 	{ Mod1Mask,                     XK_Tab,    view,           {0} },					// toggle to last tag
 	{ Mod1Mask,		                XK_q,      killclient,     {0} },				
-	{ Mod1Mask,                     XK_s,      setlayout,      {.v = &layouts[1]} },
-	{ Mod1Mask,                     XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ Mod1Mask,                     XK_f,      setlayout,      {.v = &layouts[2]} },
-	{ Mod1Mask,                     XK_g,      setlayout,      {.v = &layouts[3]} },
-	{ Mod1Mask,                     XK_d,      setlayout,      {.v = &layouts[4]} },
+	{ Mod1Mask,                     XK_d,      setlayout,      {.v = &layouts[0]} },
+	{ Mod1Mask,                     XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ Mod1Mask,		                XK_space,  togglefloating, {0} },
 	{ Mod1Mask,                     XK_0,      view,           {.ui = ~0 } },
 	{ Mod1Mask|ShiftMask,           XK_0,      tag,            {.ui = ~0 } },
