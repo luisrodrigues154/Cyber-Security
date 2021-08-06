@@ -1,0 +1,130 @@
+# Nmap 7.91 scan initiated Fri Aug  6 16:37:30 2021 as: nmap -sC -sV -oN nmap/initial -vv 10.10.10.239
+Nmap scan report for 10.10.10.239
+Host is up, received echo-reply ttl 127 (0.17s latency).
+Scanned at 2021-08-06 16:37:31 WEST for 36s
+Not shown: 993 closed ports
+Reason: 993 resets
+PORT     STATE SERVICE      REASON          VERSION
+80/tcp   open  http         syn-ack ttl 127 Apache httpd 2.4.46 ((Win64) OpenSSL/1.1.1j PHP/7.3.27)
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/7.3.27
+|_http-title: Voting System using PHP
+135/tcp  open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+139/tcp  open  netbios-ssn  syn-ack ttl 127 Microsoft Windows netbios-ssn
+443/tcp  open  ssl/http     syn-ack ttl 127 Apache httpd 2.4.46 (OpenSSL/1.1.1j PHP/7.3.27)
+|_http-server-header: Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/7.3.27
+|_http-title: 403 Forbidden
+| ssl-cert: Subject: commonName=staging.love.htb/organizationName=ValentineCorp/stateOrProvinceName=m/countryName=in/localityName=norway/emailAddress=roy@love.htb/organizationalUnitName=love.htb
+| Issuer: commonName=staging.love.htb/organizationName=ValentineCorp/stateOrProvinceName=m/countryName=in/localityName=norway/emailAddress=roy@love.htb/organizationalUnitName=love.htb
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-01-18T14:00:16
+| Not valid after:  2022-01-18T14:00:16
+| MD5:   bff0 1add 5048 afc8 b3cf 7140 6e68 5ff6
+| SHA-1: 83ed 29c4 70f6 4036 a6f4 2d4d 4cf6 18a2 e9e4 96c2
+| -----BEGIN CERTIFICATE-----
+| MIIDozCCAosCFFhDHcnclWJmeuqOK/LQv3XDNEu4MA0GCSqGSIb3DQEBCwUAMIGN
+| MQswCQYDVQQGEwJpbjEKMAgGA1UECAwBbTEPMA0GA1UEBwwGbm9yd2F5MRYwFAYD
+| VQQKDA1WYWxlbnRpbmVDb3JwMREwDwYDVQQLDAhsb3ZlLmh0YjEZMBcGA1UEAwwQ
+| c3RhZ2luZy5sb3ZlLmh0YjEbMBkGCSqGSIb3DQEJARYMcm95QGxvdmUuaHRiMB4X
+| DTIxMDExODE0MDAxNloXDTIyMDExODE0MDAxNlowgY0xCzAJBgNVBAYTAmluMQow
+| CAYDVQQIDAFtMQ8wDQYDVQQHDAZub3J3YXkxFjAUBgNVBAoMDVZhbGVudGluZUNv
+| cnAxETAPBgNVBAsMCGxvdmUuaHRiMRkwFwYDVQQDDBBzdGFnaW5nLmxvdmUuaHRi
+| MRswGQYJKoZIhvcNAQkBFgxyb3lAbG92ZS5odGIwggEiMA0GCSqGSIb3DQEBAQUA
+| A4IBDwAwggEKAoIBAQDQlH1J/AwbEm2Hnh4Bizch08sUHlHg7vAMGEB14LPq9G20
+| PL/6QmYxJOWBPjBWWywNYK3cPIFY8yUmYlLBiVI0piRfaSj7wTLW3GFSPhrpmfz0
+| 0zJMKeyBOD0+1K9BxiUQNVyEnihsULZKLmZcF6LhOIhiONEL6mKKr2/mHLgfoR7U
+| vM7OmmywdLRgLfXN2Cgpkv7ciEARU0phRq2p1s4W9Hn3XEU8iVqgfFXs/ZNyX3r8
+| LtDiQUavwn2s+Hta0mslI0waTmyOsNrE4wgcdcF9kLK/9ttM1ugTJSQAQWbYo5LD
+| 2bVw7JidPhX8mELviftIv5W1LguCb3uVb6ipfShxAgMBAAEwDQYJKoZIhvcNAQEL
+| BQADggEBANB5x2U0QuQdc9niiW8XtGVqlUZOpmToxstBm4r0Djdqv/Z73I/qys0A
+| y7crcy9dRO7M80Dnvj0ReGxoWN/95ZA4GSL8TUfIfXbonrCKFiXOOuS8jCzC9LWE
+| nP4jUUlAOJv6uYDajoD3NfbhW8uBvopO+8nywbQdiffatKO35McSl7ukvIK+d7gz
+| oool/rMp/fQ40A1nxVHeLPOexyB3YJIMAhm4NexfJ2TKxs10C+lJcuOxt7MhOk0h
+| zSPL/pMbMouLTXnIsh4SdJEzEkNnuO69yQoN8XgjM7vHvZQIlzs1R5pk4WIgKHSZ
+| 0drwvFE50xML9h2wrGh7L9/CSbhIhO8=
+|_-----END CERTIFICATE-----
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|_  http/1.1
+445/tcp  open  microsoft-ds syn-ack ttl 127 Windows 10 Pro 19042 microsoft-ds (workgroup: WORKGROUP)
+3306/tcp open  mysql?       syn-ack ttl 127
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, HTTPOptions, Help, Kerberos, LDAPBindReq, LDAPSearchReq, LPDString, RPCCheck, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie, X11Probe: 
+|_    Host '10.10.16.38' is not allowed to connect to this MariaDB server
+| mysql-info: 
+|_  MySQL Error: Host '10.10.16.38' is not allowed to connect to this MariaDB server
+5000/tcp open  http         syn-ack ttl 127 Apache httpd 2.4.46 (OpenSSL/1.1.1j PHP/7.3.27)
+|_http-server-header: Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/7.3.27
+|_http-title: 403 Forbidden
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3306-TCP:V=7.91%I=7%D=8/6%Time=610D574B%P=x86_64-pc-linux-gnu%r(HTT
+SF:POptions,4A,"F\0\0\x01\xffj\x04Host\x20'10\.10\.16\.38'\x20is\x20not\x2
+SF:0allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(RPCChe
+SF:ck,4A,"F\0\0\x01\xffj\x04Host\x20'10\.10\.16\.38'\x20is\x20not\x20allow
+SF:ed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(DNSVersionBi
+SF:ndReqTCP,4A,"F\0\0\x01\xffj\x04Host\x20'10\.10\.16\.38'\x20is\x20not\x2
+SF:0allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(DNSSta
+SF:tusRequestTCP,4A,"F\0\0\x01\xffj\x04Host\x20'10\.10\.16\.38'\x20is\x20n
+SF:ot\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(H
+SF:elp,4A,"F\0\0\x01\xffj\x04Host\x20'10\.10\.16\.38'\x20is\x20not\x20allo
+SF:wed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(SSLSessionR
+SF:eq,4A,"F\0\0\x01\xffj\x04Host\x20'10\.10\.16\.38'\x20is\x20not\x20allow
+SF:ed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(TerminalServ
+SF:erCookie,4A,"F\0\0\x01\xffj\x04Host\x20'10\.10\.16\.38'\x20is\x20not\x2
+SF:0allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(TLSSes
+SF:sionReq,4A,"F\0\0\x01\xffj\x04Host\x20'10\.10\.16\.38'\x20is\x20not\x20
+SF:allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(Kerbero
+SF:s,4A,"F\0\0\x01\xffj\x04Host\x20'10\.10\.16\.38'\x20is\x20not\x20allowe
+SF:d\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(SMBProgNeg,4A
+SF:,"F\0\0\x01\xffj\x04Host\x20'10\.10\.16\.38'\x20is\x20not\x20allowed\x2
+SF:0to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(X11Probe,4A,"F\0\
+SF:0\x01\xffj\x04Host\x20'10\.10\.16\.38'\x20is\x20not\x20allowed\x20to\x2
+SF:0connect\x20to\x20this\x20MariaDB\x20server")%r(FourOhFourRequest,4A,"F
+SF:\0\0\x01\xffj\x04Host\x20'10\.10\.16\.38'\x20is\x20not\x20allowed\x20to
+SF:\x20connect\x20to\x20this\x20MariaDB\x20server")%r(LPDString,4A,"F\0\0\
+SF:x01\xffj\x04Host\x20'10\.10\.16\.38'\x20is\x20not\x20allowed\x20to\x20c
+SF:onnect\x20to\x20this\x20MariaDB\x20server")%r(LDAPSearchReq,4A,"F\0\0\x
+SF:01\xffj\x04Host\x20'10\.10\.16\.38'\x20is\x20not\x20allowed\x20to\x20co
+SF:nnect\x20to\x20this\x20MariaDB\x20server")%r(LDAPBindReq,4A,"F\0\0\x01\
+SF:xffj\x04Host\x20'10\.10\.16\.38'\x20is\x20not\x20allowed\x20to\x20conne
+SF:ct\x20to\x20this\x20MariaDB\x20server");
+Service Info: Hosts: www.example.com, LOVE, www.love.htb; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 2h41m32s, deviation: 4h02m30s, median: 21m31s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 17572/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 46453/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 58543/udp): CLEAN (Timeout)
+|   Check 4 (port 21885/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-os-discovery: 
+|   OS: Windows 10 Pro 19042 (Windows 10 Pro 6.3)
+|   OS CPE: cpe:/o:microsoft:windows_10::-
+|   Computer name: Love
+|   NetBIOS computer name: LOVE\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2021-08-06T08:59:30-07:00
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2021-08-06T15:59:29
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Aug  6 16:38:07 2021 -- 1 IP address (1 host up) scanned in 37.33 seconds

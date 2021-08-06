@@ -75,6 +75,7 @@ In this repository you can find solved (or on going) cyber security related chal
 |[Unobtainium](https://github.com/luisrodrigues154/Cyber-Security/blob/master/HackTheBox/Machines/Unobtainium/notes.md)| Solved |
 |[Knife](https://github.com/luisrodrigues154/Cyber-Security/blob/master/HackTheBox/Machines/Knife/notes.md)| Solved |
 |[Pit](https://github.com/luisrodrigues154/Cyber-Security/blob/master/HackTheBox/Machines/Pit/notes.md)| Solved |
+|[Love](https://github.com/luisrodrigues154/Cyber-Security/blob/master/HackTheBox/Machines/Love/notes.md)| Solved |
 
 <br>
 
