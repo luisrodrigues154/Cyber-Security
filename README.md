@@ -137,6 +137,7 @@ In this repository you can find solved (or on going) cyber security related chal
 | [Anonymous](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/Anonymous/notes.md) | Solved |
 | [DogCat](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/DogCat/notes.md) | Solved |
 | [Blueprint](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/Blueprint/notes.md) | Solved |
+| [VulnNet](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/VulnNet/VulnNet/notes.md) | Solved |
 
 <br>
 
