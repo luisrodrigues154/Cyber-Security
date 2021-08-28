@@ -138,7 +138,8 @@ In this repository you can find solved (or on going) cyber security related chal
 | [DogCat](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/DogCat/notes.md) | Solved |
 | [Blueprint](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/Blueprint/notes.md) | Solved |
 | [VulnNet](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/VulnNet/VulnNet/notes.md) | Solved |
-
+| [VulnNet: Node](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/VulnNet/Node/notes.md) | Solved |
+| [VulnNet: dotpy](https://github.com/luisrodrigues154/Cyber-Security/tree/master/TryHackMe/VulnNet/dotpy/notes.md) | Solved |
 <br>
 
 ## [UnderTheWire](https://underthewire.tech/)

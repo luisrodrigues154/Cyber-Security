@@ -1,0 +1,9 @@
+# Nmap 7.91 scan initiated Wed Aug 18 15:49:26 2021 as: nmap -sC -sV -oN nmap/initial -vv 10.10.9.165
+Increasing send delay for 10.10.9.165 from 0 to 5 due to 67 out of 221 dropped probes since last increase.
+Nmap scan report for 10.10.9.165
+Host is up, received echo-reply ttl 63 (0.078s latency).
+All 1000 scanned ports on 10.10.9.165 are closed because of 1000 resets
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Aug 18 15:49:44 2021 -- 1 IP address (1 host up) scanned in 18.69 seconds
