@@ -157,7 +157,9 @@ User system-adm may run the following commands on vulnnet-dotpy:
 ## Exploitation
 
 cmd: ```mkdir /tmp/waza```
+
 cmd: ```cd /tmp/waza```
+
 cmd: ```nano zipfile.py```
 
 ```python
