@@ -125,8 +125,8 @@ static Key keys[] = {
 	{ Mod1Mask,           			XK_h,      focusleft,      {0} },					// focus left
 	{ Mod1Mask,           			XK_k,      focusdown,      {0} },					// focus down
 	{ Mod1Mask,           			XK_j,      focusup,        {0} },					// focus up
-	{ Mod1Mask,           			XK_plus,   incnmaster,     {.i = +1} },				// increment no of masters
-	{ Mod1Mask,           			XK_minus,  incnmaster,     {.i = -1 } },			// decrement no of masters
+	{ Mod1Mask|ShiftMask,           			XK_plus,   incnmaster,     {.i = +1} },				// increment no of masters
+	{ Mod1Mask|ShiftMask,           			XK_minus,  incnmaster,     {.i = -1 } },			// decrement no of masters
 	{ Mod1Mask,                     XK_minus,  setmfact,       {.f = -0.05} },			// increase master width
 	{ Mod1Mask,                     XK_plus,   setmfact,       {.f = +0.05} },			// decrease master width
 	{ Mod1Mask|ShiftMask,      		XK_Return, zoom,           {0} },					// make active master

@@ -1,0 +1,8 @@
+/[                    (Status: 400) [Size: 762]
+/]                    (Status: 400) [Size: 762]
+/docs                 (Status: 302) [Size: 0] [--> /docs/]
+/examples             (Status: 302) [Size: 0] [--> /examples/]
+/favicon.ico          (Status: 200) [Size: 21630]
+/manager              (Status: 302) [Size: 0] [--> /manager/]
+/plain]               (Status: 400) [Size: 762]
+/quote]               (Status: 400) [Size: 762]
